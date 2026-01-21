@@ -1,19 +1,200 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import '../styles/global.css'
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import NivelCard from '../components/NivelCard.astro';
+import HeroCarousel from '../components/HeroCarousel.astro';
+
+const heroSlides = [
+  {
+    title: 'Educación que <span class="text-transparent bg-clip-text bg-gradient-to-r from-colegio-yellow via-yellow-300 to-amber-400">Inspira</span> el Futuro',
+    subtitle: '✨ Ciclo Escolar 2026 - Inscripciones Abiertas',
+    description: 'Formamos líderes con valores, excelencia académica y visión global para transformar el mundo.',
+    image: '/Banner0.webp',
+    cta: {
+      text: 'Proceso de Admisión',
+      link: '/admisiones'
+    }
+  },
+  {
+    title: 'Excelencia <span class="text-transparent bg-clip-text bg-gradient-to-r from-colegio-yellow via-yellow-300 to-amber-400">Académica</span> Comprobada',
+    subtitle: '🏆 25 Años de Trayectoria',
+    description: '98% de nuestros egresados ingresan a las mejores universidades del país.',
+    image: '/Banner0.webp',
+    cta: {
+      text: 'Conoce Nuestros Logros',
+      link: '/nosotros'
+    }
+  },
+  {
+    title: 'Formación <span class="text-transparent bg-clip-text bg-gradient-to-r from-colegio-yellow via-yellow-300 to-amber-400">Bilingüe</span> y Tecnológica',
+    subtitle: '🌎 Visión Global',
+    description: 'Preparamos estudiantes competitivos con dominio del inglés y habilidades digitales del siglo XXI.',
+    image: '/Banner0.webp',
+    cta: {
+      text: 'Descubre Nuestro Modelo',
+      link: '/modelo-educativo'
+    }
+  },
+  {
+    title: 'Instalaciones de <span class="text-transparent bg-clip-text bg-gradient-to-r from-colegio-yellow via-yellow-300 to-amber-400">Primera Clase</span>',
+    subtitle: '🏫 Espacios Modernos',
+    description: 'Laboratorios, canchas deportivas, biblioteca digital y aulas equipadas con tecnología de punta.',
+    image: '/Banner0.webp',
+    cta: {
+      text: 'Conoce el Campus',
+      link: '/instalaciones'
+    }
+  }
+];
 ---
 
-<Layout>
-	
-</Layout>
-<body>
-	<div class="flex justify-center items-center h-screen bg-slate-100">
-		<button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-colors shadow-lg">
-		¡Bienvenidos al Colegio!
-		</button>
-	</div>
-</body>
+<Layout title="Bienvenidos | BRÜNING SCHOOL">
+  <!-- Hero Carousel -->
+  <HeroCarousel slides={heroSlides} autoplayInterval={6000} />
 
+  <!-- Sección de Estadísticas -->
+  <section class="py-16 bg-gradient-to-r from-colegio-blue to-blue-800 text-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="stat-item">
+          <div class="text-5xl font-black text-colegio-yellow mb-2 counter" data-target="25">0</div>
+          <div class="text-sm md:text-base font-semibold opacity-90">Años de Excelencia</div>
+        </div>
+        <div class="stat-item">
+          <div class="text-5xl font-black text-colegio-yellow mb-2 counter" data-target="1200">0</div>
+          <div class="text-sm md:text-base font-semibold opacity-90">Estudiantes Activos</div>
+        </div>
+        <div class="stat-item">
+          <div class="text-5xl font-black text-colegio-yellow mb-2"><span class="counter" data-target="98">0</span>%</div>
+          <div class="text-sm md:text-base font-semibold opacity-90">Satisfacción Familiar</div>
+        </div>
+        <div class="stat-item">
+          <div class="text-5xl font-black text-colegio-yellow mb-2 counter" data-target="50">0</div>
+          <div class="text-sm md:text-base font-semibold opacity-90">Talleres y Actividades</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Niveles Educativos -->
+  <section class="py-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-colegio-yellow/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-6xl mx-auto px-4 relative z-10">
+      <div class="text-center mb-16 fade-in-section">
+        <span class="text-colegio-yellow font-bold text-sm tracking-wider uppercase mb-2 block">Nuestra Oferta</span>
+        <h2 class="text-4xl md:text-5xl font-black text-blue-900 mb-4">Niveles Educativos</h2>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-transparent via-colegio-yellow to-transparent mx-auto"></div>
+        <p class="mt-6 text-gray-600 text-lg max-w-2xl mx-auto">
+          Acompañamos el desarrollo integral de tus hijos en cada etapa de su formación académica.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="fade-in-section">
+          <NivelCard 
+            titulo="Pre-escolar" 
+            descripcion="Desarrollo creativo y emocional para los más pequeños."
+            imagen="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600"
+          />
+        </div>
+
+        <div class="fade-in-section" style="animation-delay: 0.1s;">
+          <NivelCard 
+            titulo="Primaria" 
+            descripcion="Excelencia académica con un enfoque bilingüe y tecnológico."
+            imagen="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600"
+          />
+        </div>
+
+        <div class="fade-in-section" style="animation-delay: 0.2s;">
+          <NivelCard 
+            titulo="Secundaria" 
+            descripcion="Preparación integral para los retos universitarios y la vida."
+            imagen="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .stat-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .stat-item:nth-child(1) { animation-delay: 0.1s; }
+  .stat-item:nth-child(2) { animation-delay: 0.2s; }
+  .stat-item:nth-child(3) { animation-delay: 0.3s; }
+  .stat-item:nth-child(4) { animation-delay: 0.4s; }
+</style>
+
+<script>
+  // Intersection Observer para animaciones al hacer scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+
+  // Counter animation para estadísticas
+  function animateCounter(element: HTMLElement) {
+    const target = parseInt(element.getAttribute('data-target') || '0');
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const updateCounter = () => {
+      current += increment;
+      if (current < target) {
+        element.textContent = Math.floor(current).toString();
+        requestAnimationFrame(updateCounter);
+      } else {
+        element.textContent = target.toString();
+      }
+    };
+
+    updateCounter();
+  }
+
+  // Observar contadores
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        animateCounter(entry.target as HTMLElement);
+        entry.target.classList.add('counted');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.counter').forEach(counter => counterObserver.observe(counter));
+</script>

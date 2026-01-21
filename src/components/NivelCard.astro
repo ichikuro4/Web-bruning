@@ -1,0 +1,43 @@
+---
+const { titulo, descripcion, imagen, enlace = "#" } = Astro.props;
+---
+
+<div class="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100 transform hover:-translate-y-2">
+  <!-- Efecto de brillo en hover -->
+  <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-full transform"></div>
+  
+  <div class="relative h-56 overflow-hidden">
+    <img 
+      src={imagen} 
+      alt={titulo} 
+      class="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-2 transition-transform duration-700" 
+    />
+    <!-- Overlay gradient -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  </div>
+  
+  <div class="p-8 relative">
+    <!-- Icon badge -->
+    <div class="absolute -top-6 right-6 w-12 h-12 bg-gradient-to-br from-colegio-yellow to-yellow-400 rounded-full flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10.394 2.827a1 1 0 00-.788 0l-7 3a1 1 0 000 1.848L10 9.92l7.394-3.245a1 1 0 000-1.848l-7-3zM10 12.93l-6.206-2.73a1 1 0 00-.788 1.836L10 15.291l6.994-3.254a1 1 0 00-.788-1.836L10 12.931z"/>
+      </svg>
+    </div>
+    
+    <h3 class="text-2xl font-black text-blue-900 mb-3 group-hover:text-colegio-blue transition-colors">{titulo}</h3>
+    <p class="text-gray-600 mb-6 leading-relaxed">{descripcion}</p>
+    
+    <a 
+      href={enlace} 
+      class="inline-flex items-center text-colegio-blue font-bold group-hover:text-colegio-yellow transition-all group-hover:gap-3 gap-2"
+    >
+      <span>Ver más</span>
+      <svg class="w-5 h-5 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Corner decoration -->
+  <div class="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-colegio-blue/5 to-transparent rounded-br-full"></div>
+</div>

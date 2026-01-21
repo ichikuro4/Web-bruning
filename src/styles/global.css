@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+  --color-colegio-blue: #003399;
+  --color-colegio-yellow: #FFCC00;
+}

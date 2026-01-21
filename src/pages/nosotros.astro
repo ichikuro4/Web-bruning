@@ -1,0 +1,43 @@
+---
+// Importamos el Layout que configuramos antes
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css'
+---
+
+<Layout title="Sobre Nosotros | Colegio Ejemplo">
+  <main class="max-w-5xl mx-auto px-4 py-12">
+    
+    <section class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4">
+        Nuestra Institución
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Formando líderes con valores y excelencia académica desde 1995.
+      </p>
+    </section>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02] duration-300">
+        <img 
+          src="https://images.unsplash.com/photo-1523050853063-915894360ef7?auto=format&fit=crop&q=80&w=800" 
+          alt="Edificio del colegio"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      
+      <div class="space-y-6">
+        <h2 class="text-3xl font-bold text-blue-800">Misión y Visión</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Nuestra misión es proporcionar una educación integral de calidad, 
+          fomentando el pensamiento crítico y el respeto mutuo en un ambiente seguro.
+        </p>
+        <div class="flex gap-4">
+           <a href="/admisiones" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-md">
+             Conoce más
+           </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Layout>

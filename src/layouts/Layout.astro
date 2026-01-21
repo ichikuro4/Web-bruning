@@ -1,23 +1,61 @@
+---
+import '../styles/global.css'
+import Navbar from '../components/Navbar.astro';
+// Aquí va la lógica (JS/TS)
+import { ClientRouter } from 'astro:transitions'; //
 
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+
+---
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="Sitio web del colegio" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
+	<body class="antialiased">
+		<Navbar />
+		
+		<main class="min-h-screen">
+			<slot />
+		</main>
+
+		<footer class="bg-gradient-to-r from-colegio-blue via-blue-800 to-colegio-blue text-white py-12">
+			<div class="max-w-6xl mx-auto px-4">
+				<div class="grid md:grid-cols-3 gap-8 mb-8">
+					<div>
+						<h3 class="font-bold text-xl mb-4 text-colegio-yellow">BRÜNING SCHOOL</h3>
+						<p class="text-blue-200 text-sm leading-relaxed">
+							Formando líderes con valores y excelencia académica desde hace 25 años.
+						</p>
+					</div>
+					<div>
+						<h4 class="font-bold mb-4">Enlaces Rápidos</h4>
+						<ul class="space-y-2 text-blue-200 text-sm">
+							<li><a href="/" class="hover:text-colegio-yellow transition-colors">Inicio</a></li>
+							<li><a href="/nosotros" class="hover:text-colegio-yellow transition-colors">Nosotros</a></li>
+							<li><a href="/admision" class="hover:text-colegio-yellow transition-colors">Admisión</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4 class="font-bold mb-4">Contacto</h4>
+						<ul class="space-y-2 text-blue-200 text-sm">
+							<li>📧 informes@bruningschool.edu.pe</li>
+							<li>📱 +51 999 928 258</li>
+							<li>📍 Av. Chan Chan N° 100 - Villa del Mar (Carretera a Huanchaco)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="border-t border-white/10 pt-6 text-center text-blue-200 text-sm">
+					<p>&copy; 2026 BRÜNING SCHOOL - Excelencia Educativa</p>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

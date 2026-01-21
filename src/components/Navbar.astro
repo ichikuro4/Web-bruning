@@ -1,0 +1,132 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<nav id="navbar" class="fixed top-0 w-full z-[100] transition-all duration-500 bg-colegio-blue/95 backdrop-blur-lg border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-20 items-center">
+      
+      <!-- Logo con animación -->
+      <div class="flex-shrink-0 flex items-center gap-3 group">
+        <div class="w-12 h-12 bg-gradient-to-br from-white to-colegio-yellow rounded-full flex items-center justify-center text-colegio-blue font-bold shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+          B
+        </div>
+        <span class="hidden md:block font-extrabold text-xl text-white tracking-tight">
+          BRÜNING SCHOOL
+        </span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex space-x-1">
+        {['Inicio', 'Nosotros', 'Niveles', 'Admisión', 'Talleres', 'Logros'].map((item) => {
+          const href = item === 'Inicio' ? '/' : `/${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`;
+          const isActive = currentPath === href;
+          return (
+            <a 
+              href={href} 
+              class={`nav-link relative text-white/90 font-semibold px-4 py-2 rounded-lg transition-all duration-300 ${isActive ? 'text-colegio-yellow' : 'hover:text-white hover:bg-white/10'}`}
+            >
+              {item}
+              <span class={`nav-underline ${isActive ? 'active' : ''}`}></span>
+            </a>
+          );
+        })}
+      </div>
+
+      <div class="flex items-center gap-4">
+        <!-- Botón Aula Virtual mejorado -->
+        <a 
+          href="https://campusschool.bruningcolegio.edu.pe/login/index.php" 
+          target="_blank"
+          class="bg-gradient-to-r from-colegio-yellow to-yellow-400 text-colegio-blue px-6 py-2.5 rounded-full font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10.394 2.827a1 1 0 00-.788 0l-7 3a1 1 0 000 1.848l.788.338v3.656a1 1 0 00.553.894l4.5 2.25a1 1 0 00.894 0l4.5-2.25a1 1 0 00.553-.894V8.013l.788-.338a1 1 0 000-1.848l-7-3zM7.333 11.5l3.277 1.639 3.277-1.639V8.834l-3.277 1.405a1 1 0 01-.788 0L7.333 8.834V11.5z" />
+          </svg>
+          <span class="hidden sm:inline">Aula Virtual</span>
+        </a>
+
+        <!-- Hamburger Menu Button -->
+        <button id="mobile-menu-button" class="lg:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-all">
+          <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-colegio-blue/98 backdrop-blur-xl border-t border-white/10">
+    <div class="px-4 pt-2 pb-4 space-y-2">
+      {['Inicio', 'Nosotros', 'Niveles', 'Admisión', 'Talleres', 'Logros'].map((item) => {
+        const href = item === 'Inicio' ? '/' : `/${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`;
+        const isActive = currentPath === href;
+        return (
+          <a 
+            href={href} 
+            class={`block text-white font-semibold px-4 py-3 rounded-lg transition-all hover:bg-white/10 ${isActive ? 'bg-white/20 text-colegio-yellow' : ''}`}
+          >
+            {item}
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav-underline {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-colegio-yellow), transparent);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover .nav-underline,
+  .nav-underline.active {
+    width: 100%;
+  }
+
+  #navbar.scrolled {
+    background-color: rgb(0 51 153 / 0.98);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  }
+</style>
+
+<script>
+  // Scroll effect
+  let lastScroll = 0;
+  const navbar = document.getElementById('navbar');
+  
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 50) {
+      navbar?.classList.add('scrolled');
+    } else {
+      navbar?.classList.remove('scrolled');
+    }
+    
+    lastScroll = currentScroll;
+  });
+
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+    menuIcon?.classList.toggle('hidden');
+    closeIcon?.classList.toggle('hidden');
+  });
+</script>
