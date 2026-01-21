@@ -28,12 +28,19 @@ const { title } = Astro.props;
 			<slot />
 		</main>
 
-		<footer class="bg-gradient-to-r from-colegio-blue via-blue-800 to-colegio-blue text-white py-12">
+		<footer class="bg-gradient-to-r from-colegio-blue via-blue-800 to-colegio-blue text-white py-10">
 			<div class="max-w-6xl mx-auto px-4">
 				<div class="grid md:grid-cols-3 gap-8 mb-8">
 					<div>
-						<h3 class="font-bold text-xl mb-4 text-colegio-yellow">BRÜNING SCHOOL</h3>
-						<p class="text-blue-200 text-sm leading-relaxed">
+						<!-- Logo con animación -->
+						<a href="/" class="flex-shrink-0 flex items-center gap-3 group">
+							<img 
+							src="/LOGO BLANCO.webp" 
+							alt="BRÜNING SCHOOL" 
+							class="h-14 md:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+							/>
+						</a>
+						<p class="text-blue-200 text-sm leading-relaxed mt-5">
 							Formando líderes con valores y excelencia académica desde hace 25 años.
 						</p>
 					</div>
