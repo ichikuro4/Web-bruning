@@ -7,17 +7,16 @@ const currentPath = Astro.url.pathname;
     <div class="flex justify-between h-20 items-center">
       
       <!-- Logo con animación -->
-      <div class="flex-shrink-0 flex items-center gap-3 group">
-        <div class="w-12 h-12 bg-gradient-to-br from-white to-colegio-yellow rounded-full flex items-center justify-center text-colegio-blue font-bold shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-          B
-        </div>
-        <span class="hidden md:block font-extrabold text-xl text-white tracking-tight">
-          BRÜNING SCHOOL
-        </span>
-      </div>
+      <a href="/" class="flex-shrink-0 flex items-center gap-3 group">
+        <img 
+          src="/LOGO BLANCO.webp" 
+          alt="BRÜNING SCHOOL" 
+          class="h-14 md:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+        />
+      </a>
 
       <!-- Desktop Menu -->
-      <div class="hidden lg:flex space-x-1">
+      <div class="hidden lg:flex space-x-1 items-center">
         {['Inicio', 'Nosotros', 'Niveles', 'Admisión', 'Talleres', 'Logros'].map((item) => {
           const href = item === 'Inicio' ? '/' : `/${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`;
           const isActive = currentPath === href;
@@ -31,22 +30,33 @@ const currentPath = Astro.url.pathname;
             </a>
           );
         })}
+        
+        <!-- Botón Más (Desktop) -->
+        <button 
+          id="sidebar-open-btn"
+          class="nav-link relative text-white/90 font-semibold px-4 py-2 rounded-lg transition-all duration-300 hover:text-white hover:bg-white/10 flex items-center gap-2"
+        >
+          <span>Más</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+          </svg>
+        </button>
       </div>
 
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2 md:gap-4">
         <!-- Botón Aula Virtual mejorado -->
         <a 
           href="https://campusschool.bruningcolegio.edu.pe/login/index.php" 
           target="_blank"
-          class="bg-gradient-to-r from-colegio-yellow to-yellow-400 text-colegio-blue px-6 py-2.5 rounded-full font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg"
+          class="bg-gradient-to-r from-colegio-yellow to-yellow-400 text-colegio-blue px-4 md:px-6 py-2.5 rounded-full font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg text-sm md:text-base"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" viewBox="0 0 20 20" fill="currentColor">
             <path d="M10.394 2.827a1 1 0 00-.788 0l-7 3a1 1 0 000 1.848l.788.338v3.656a1 1 0 00.553.894l4.5 2.25a1 1 0 00.894 0l4.5-2.25a1 1 0 00.553-.894V8.013l.788-.338a1 1 0 000-1.848l-7-3zM7.333 11.5l3.277 1.639 3.277-1.639V8.834l-3.277 1.405a1 1 0 01-.788 0L7.333 8.834V11.5z" />
           </svg>
           <span class="hidden sm:inline">Aula Virtual</span>
         </a>
 
-        <!-- Hamburger Menu Button -->
+        <!-- Hamburger Menu Button (Mobile/Tablet) -->
         <button id="mobile-menu-button" class="lg:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-all">
           <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -74,6 +84,20 @@ const currentPath = Astro.url.pathname;
           </a>
         );
       })}
+      
+      <!-- Botón Ver Más en Mobile -->
+      <button 
+        id="mobile-sidebar-btn"
+        class="w-full flex items-center justify-between text-white font-semibold px-4 py-3 rounded-lg transition-all hover:bg-white/10 border border-colegio-yellow/30 bg-colegio-yellow/10 mt-3"
+      >
+        <span class="flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+          </svg>
+          Ver Más Opciones
+        </span>
+        <span class="bg-colegio-yellow text-colegio-blue text-xs font-bold px-2 py-1 rounded-full">+6</span>
+      </button>
     </div>
   </div>
 </nav>
@@ -128,5 +152,27 @@ const currentPath = Astro.url.pathname;
     mobileMenu?.classList.toggle('hidden');
     menuIcon?.classList.toggle('hidden');
     closeIcon?.classList.toggle('hidden');
+  });
+
+  // Sidebar toggle (Desktop)
+  const sidebarOpenBtn = document.getElementById('sidebar-open-btn');
+  sidebarOpenBtn?.addEventListener('click', () => {
+    if ((window as any).openSidebar) {
+      (window as any).openSidebar();
+    }
+  });
+
+  // Sidebar toggle (Mobile)
+  const mobileSidebarBtn = document.getElementById('mobile-sidebar-btn');
+  mobileSidebarBtn?.addEventListener('click', () => {
+    // Cerrar el menú móvil primero
+    mobileMenu?.classList.add('hidden');
+    menuIcon?.classList.remove('hidden');
+    closeIcon?.classList.add('hidden');
+    
+    // Abrir el sidebar
+    if ((window as any).openSidebar) {
+      (window as any).openSidebar();
+    }
   });
 </script>

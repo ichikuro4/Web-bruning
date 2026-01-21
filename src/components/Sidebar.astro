@@ -1,0 +1,277 @@
+---
+---
+
+<!-- Overlay -->
+<div id="sidebar-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[150] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+<!-- Sidebar Panel -->
+<aside id="sidebar-panel" class="fixed right-0 top-0 h-full w-full md:w-96 bg-white z-[200] shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out overflow-y-auto">
+  <!-- Header -->
+  <div class="bg-gradient-to-r from-colegio-blue to-blue-800 text-white p-6 sticky top-0 z-10">
+    <div class="flex justify-between items-center">
+      <div>
+        <h2 class="text-2xl font-black">Menú Completo</h2>
+        <p class="text-blue-200 text-sm">Accede a toda la información</p>
+      </div>
+      <button id="sidebar-close" class="p-2 hover:bg-white/20 rounded-full transition-all">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="p-6 space-y-6">
+    
+    <!-- Información Institucional -->
+    <div class="sidebar-section">
+      <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+          <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+        </svg>
+        Información
+      </h3>
+      <div class="space-y-2">
+        <a href="/informacion-2026" class="sidebar-link group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-yellow-100 flex items-center justify-center group-hover:bg-colegio-yellow transition-colors">
+              <svg class="w-5 h-5 text-colegio-blue" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="font-semibold text-gray-800 group-hover:text-colegio-blue transition-colors">Información 2026</div>
+              <div class="text-xs text-gray-500">Ciclo escolar actual</div>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </a>
+
+        <a href="/descargas" class="sidebar-link group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center group-hover:bg-blue-500 transition-colors">
+              <svg class="w-5 h-5 text-blue-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="font-semibold text-gray-800 group-hover:text-colegio-blue transition-colors">Descargas</div>
+              <div class="text-xs text-gray-500">Documentos y formularios</div>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Campus & Galería -->
+    <div class="sidebar-section">
+      <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+        </svg>
+        Campus & Galería
+      </h3>
+      <div class="space-y-2">
+        <a href="/galeria-campus" class="sidebar-link group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center group-hover:bg-purple-500 transition-colors">
+              <svg class="w-5 h-5 text-purple-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="font-semibold text-gray-800 group-hover:text-colegio-blue transition-colors">Galería del Campus</div>
+              <div class="text-xs text-gray-500">Instalaciones y espacios</div>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </a>
+
+        <a href="/album-fotos" class="sidebar-link group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-pink-100 flex items-center justify-center group-hover:bg-pink-500 transition-colors">
+              <svg class="w-5 h-5 text-pink-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="font-semibold text-gray-800 group-hover:text-colegio-blue transition-colors">Álbum de Fotos</div>
+              <div class="text-xs text-gray-500">Eventos y actividades</div>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Testimonios & Comunidad -->
+    <div class="sidebar-section">
+      <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+        </svg>
+        Comunidad
+      </h3>
+      <div class="space-y-2">
+        <a href="/testimonios" class="sidebar-link group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center group-hover:bg-green-500 transition-colors">
+              <svg class="w-5 h-5 text-green-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <div class="font-semibold text-gray-800 group-hover:text-colegio-blue transition-colors">Testimonios</div>
+              <div class="text-xs text-gray-500">Experiencias de familias</div>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Contacto -->
+    <div class="sidebar-section">
+      <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+        </svg>
+        Contacto
+      </h3>
+      <a href="/contacto" class="sidebar-link group">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center group-hover:bg-red-500 transition-colors">
+            <svg class="w-5 h-5 text-red-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="font-semibold text-gray-800 group-hover:text-colegio-blue transition-colors">Contáctanos</div>
+            <div class="text-xs text-gray-500">Estamos aquí para ayudarte</div>
+          </div>
+          <svg class="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick Access -->
+    <div class="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-xl p-4 border border-blue-100">
+      <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+        <svg class="w-5 h-5 text-colegio-blue" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+        </svg>
+        Acceso Rápido
+      </h4>
+      <div class="space-y-2">
+        <a href="https://campusschool.bruningcolegio.edu.pe/login/index.php" target="_blank" class="flex items-center gap-2 text-sm font-medium text-colegio-blue hover:text-blue-800 transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10.394 2.827a1 1 0 00-.788 0l-7 3a1 1 0 000 1.848L3.394 7.03A1.99 1.99 0 003 8v6a2 2 0 002 2h10a2 2 0 002-2V8c0-.345-.088-.666-.228-.961l.788-.338a1 1 0 000-1.848l-7-3z"/>
+          </svg>
+          Aula Virtual
+        </a>
+        <a href="/admision" class="flex items-center gap-2 text-sm font-medium text-colegio-blue hover:text-blue-800 transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Proceso de Admisión
+        </a>
+      </div>
+    </div>
+
+  </div>
+</aside>
+
+<style>
+  .sidebar-link {
+    display: block;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+
+  .sidebar-link:hover {
+    background-color: #f9fafb;
+    border-color: #e5e7eb;
+  }
+
+  .sidebar-section {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .sidebar-section:last-child {
+    border-bottom: 0;
+  }
+
+  /* Smooth scrollbar */
+  #sidebar-panel {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+  }
+
+  #sidebar-panel::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  #sidebar-panel::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+
+  #sidebar-panel::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+
+  #sidebar-panel::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+</style>
+
+<script>
+  const sidebarPanel = document.getElementById('sidebar-panel');
+  const sidebarOverlay = document.getElementById('sidebar-overlay');
+  const sidebarClose = document.getElementById('sidebar-close');
+
+  function openSidebar() {
+    sidebarPanel?.classList.remove('translate-x-full');
+    sidebarOverlay?.classList.remove('opacity-0', 'pointer-events-none');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSidebar() {
+    sidebarPanel?.classList.add('translate-x-full');
+    sidebarOverlay?.classList.add('opacity-0', 'pointer-events-none');
+    document.body.style.overflow = '';
+  }
+
+  // Export function to window for navbar to use
+  (window as any).openSidebar = openSidebar;
+
+  sidebarClose?.addEventListener('click', closeSidebar);
+  sidebarOverlay?.addEventListener('click', closeSidebar);
+
+  // Close on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSidebar();
+  });
+</script>
