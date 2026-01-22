@@ -1,5 +1,54 @@
 ---
 const currentPath = Astro.url.pathname;
+
+// Estructura de menús con submenús
+const menuItems = [
+  { name: 'Inicio', href: '/', subItems: [] },
+  {
+    name: 'Nosotros',
+    href: '/nosotros',
+    subItems: [
+      { name: 'Bienvenido', href: '/nosotros/bienvenido' },
+      { name: 'Misión y Visión', href: '/nosotros/mision-vision' },
+      { name: 'Compromiso con el éxito', href: '/nosotros/compromiso' },
+      { name: 'Filosofía', href: '/nosotros/filosofia' },
+      { name: 'Campus', href: '/nosotros/campus' },
+    ]
+  },
+  {
+    name: 'Niveles',
+    href: '/niveles',
+    subItems: [
+      { name: 'Primaria', href: '/niveles/primaria' },
+      { name: 'Secundaria', href: '/niveles/secundaria' },
+    ]
+  },
+  {
+    name: 'Admisión',
+    href: '/admision',
+    subItems: [
+      { name: 'Admisión-Matrícula', href: '/admision/matricula' },
+      { name: 'Costos', href: '/admision/costos' },
+    ]
+  },
+  {
+    name: 'Talleres',
+    href: '/talleres',
+    subItems: [
+      { name: 'Artísticos', href: '/talleres/artisticos' },
+      { name: 'Deportivos', href: '/talleres/deportivos' },
+    ]
+  },
+  {
+    name: 'Logros',
+    href: '/logros',
+    subItems: [
+      { name: 'Académicos', href: '/logros/academicos' },
+      { name: 'Empresariales', href: '/logros/empresariales' },
+      { name: 'Deportivos', href: '/logros/deportivos' },
+    ]
+  },
+];
 ---
 
 <nav id="navbar" class="fixed top-0 w-full z-[100] transition-all duration-500 bg-colegio-blue/95 backdrop-blur-lg border-b border-white/10">
@@ -17,17 +66,54 @@ const currentPath = Astro.url.pathname;
 
       <!-- Desktop Menu -->
       <div class="hidden lg:flex space-x-1 items-center">
-        {['Inicio', 'Nosotros', 'Niveles', 'Admisión', 'Talleres', 'Logros'].map((item) => {
-          const href = item === 'Inicio' ? '/' : `/${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`;
-          const isActive = currentPath === href;
+        {menuItems.map((item) => {
+          const isActive = currentPath === item.href || item.subItems.some(sub => currentPath === sub.href);
+          const hasSubmenu = item.subItems.length > 0;
+          
           return (
-            <a 
-              href={href} 
-              class={`nav-link relative text-white/90 font-semibold px-4 py-2 rounded-lg transition-all duration-300 ${isActive ? 'text-colegio-yellow' : 'hover:text-white hover:bg-white/10'}`}
-            >
-              {item}
-              <span class={`nav-underline ${isActive ? 'active' : ''}`}></span>
-            </a>
+            <div class="relative group">
+              {hasSubmenu ? (
+                <button 
+                  class={`nav-link relative text-white/90 font-semibold px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-1 ${isActive ? 'text-colegio-yellow' : 'hover:text-white hover:bg-white/10'}`}
+                >
+                  {item.name}
+                  <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                  <span class={`nav-underline ${isActive ? 'active' : ''}`}></span>
+                </button>
+              ) : (
+                <a 
+                  href={item.href} 
+                  class={`nav-link relative text-white/90 font-semibold px-4 py-2 rounded-lg transition-all duration-300 ${isActive ? 'text-colegio-yellow' : 'hover:text-white hover:bg-white/10'}`}
+                >
+                  {item.name}
+                  <span class={`nav-underline ${isActive ? 'active' : ''}`}></span>
+                </a>
+              )}
+              
+              {hasSubmenu && (
+                <div class="submenu absolute left-0 top-full mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                  <div class="py-2">
+                    {item.subItems.map((subItem, index) => {
+                      const isSubActive = currentPath === subItem.href;
+                      return (
+                        <a 
+                          href={subItem.href}
+                          class={`block px-5 py-3 text-sm font-medium transition-all duration-200 ${
+                            isSubActive 
+                              ? 'bg-colegio-blue text-white' 
+                              : 'text-gray-700 hover:bg-colegio-blue/10 hover:text-colegio-blue hover:pl-6'
+                          }`}
+                        >
+                          {subItem.name}
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
           );
         })}
         
@@ -72,16 +158,50 @@ const currentPath = Astro.url.pathname;
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="lg:hidden hidden bg-colegio-blue/98 backdrop-blur-xl border-t border-white/10">
     <div class="px-4 pt-2 pb-4 space-y-2">
-      {['Inicio', 'Nosotros', 'Niveles', 'Admisión', 'Talleres', 'Logros'].map((item) => {
-        const href = item === 'Inicio' ? '/' : `/${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`;
-        const isActive = currentPath === href;
+      {menuItems.map((item, itemIndex) => {
+        const isActive = currentPath === item.href || item.subItems.some(sub => currentPath === sub.href);
+        const hasSubmenu = item.subItems.length > 0;
+        
         return (
-          <a 
-            href={href} 
-            class={`block text-white font-semibold px-4 py-3 rounded-lg transition-all hover:bg-white/10 ${isActive ? 'bg-white/20 text-colegio-yellow' : ''}`}
-          >
-            {item}
-          </a>
+          <div class="mobile-menu-item">
+            {hasSubmenu ? (
+              <>
+                <button 
+                  class={`mobile-menu-toggle w-full flex items-center justify-between text-white font-semibold px-4 py-3 rounded-lg transition-all hover:bg-white/10 ${isActive ? 'bg-white/20 text-colegio-yellow' : ''}`}
+                  data-menu-index={itemIndex}
+                >
+                  <span>{item.name}</span>
+                  <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="mobile-submenu hidden pl-4 mt-1 space-y-1">
+                  {item.subItems.map((subItem) => {
+                    const isSubActive = currentPath === subItem.href;
+                    return (
+                      <a 
+                        href={subItem.href}
+                        class={`block text-sm px-4 py-2.5 rounded-lg transition-all ${
+                          isSubActive 
+                            ? 'bg-colegio-yellow/20 text-colegio-yellow font-semibold' 
+                            : 'text-white/80 hover:bg-white/10 hover:text-white'
+                        }`}
+                      >
+                        {subItem.name}
+                      </a>
+                    );
+                  })}
+                </div>
+              </>
+            ) : (
+              <a 
+                href={item.href}
+                class={`block text-white font-semibold px-4 py-3 rounded-lg transition-all hover:bg-white/10 ${isActive ? 'bg-white/20 text-colegio-yellow' : ''}`}
+              >
+                {item.name}
+              </a>
+            )}
+          </div>
         );
       })}
       
@@ -123,6 +243,26 @@ const currentPath = Astro.url.pathname;
     background-color: rgb(0 51 153 / 0.98);
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   }
+
+  /* Submenu styles */
+  .submenu {
+    z-index: 1000;
+  }
+
+  .group:hover .submenu {
+    pointer-events: auto;
+  }
+
+  /* Mobile submenu animation */
+  .mobile-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .mobile-submenu.open {
+    max-height: 500px;
+  }
 </style>
 
 <script>
@@ -152,6 +292,20 @@ const currentPath = Astro.url.pathname;
     mobileMenu?.classList.toggle('hidden');
     menuIcon?.classList.toggle('hidden');
     closeIcon?.classList.toggle('hidden');
+  });
+
+  // Mobile submenu toggles
+  document.querySelectorAll('.mobile-menu-toggle').forEach((toggle) => {
+    toggle.addEventListener('click', (e) => {
+      const submenu = toggle.nextElementSibling as HTMLElement;
+      const icon = toggle.querySelector('svg');
+      
+      if (submenu && submenu.classList.contains('mobile-submenu')) {
+        submenu.classList.toggle('hidden');
+        submenu.classList.toggle('open');
+        icon?.classList.toggle('rotate-180');
+      }
+    });
   });
 
   // Sidebar toggle (Desktop)
