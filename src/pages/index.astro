@@ -303,7 +303,265 @@ const heroSlides = [
       </div>
     </div>
   </section>
+
+  <!-- Galería de Fotos -->
+  <section class="py-24 bg-gradient-to-br from-colegio-blue via-colegio-blue/95 to-colegio-blue relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-colegio-yellow/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-6xl mx-auto px-4 relative z-10">
+      <div class="text-center mb-16 fade-in-section">
+        <span class="text-colegio-yellow font-bold text-sm tracking-wider uppercase mb-2 block">Momentos Especiales</span>
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-4">Galería de Fotos</h2>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-transparent via-colegio-yellow to-transparent mx-auto"></div>
+        <p class="mt-6 text-white/90 text-lg max-w-2xl mx-auto">
+          Revive los momentos más importantes de nuestra comunidad educativa.
+        </p>
+      </div>
+
+      <!-- Carrusel de festividades -->
+      <div class="relative fade-in-section">
+        <div class="overflow-hidden">
+          <div id="festividades-carousel" class="flex gap-6 transition-transform duration-500 ease-out">
+            <!-- Festividad 1: Aniversario -->
+            <div class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] cursor-pointer group" data-festividad="aniversario">
+              <div class="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <img src="/Galeria/Prueba1.webp" alt="Aniversario" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 class="text-3xl font-black text-white mb-2">Aniversario</h3>
+                  <p class="text-white/90 text-sm">Celebrando años de excelencia educativa</p>
+                  <div class="mt-4 flex items-center text-colegio-yellow font-bold">
+                    <span>Ver galería completa</span>
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Festividad 2: Día del Logro -->
+            <div class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] cursor-pointer group" data-festividad="dia-logro">
+              <div class="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <img src="/Galeria/Prueba2.webp" alt="Día del Logro" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 class="text-3xl font-black text-white mb-2">Día del Logro</h3>
+                  <p class="text-white/90 text-sm">Presentación de proyectos estudiantiles</p>
+                  <div class="mt-4 flex items-center text-colegio-yellow font-bold">
+                    <span>Ver galería completa</span>
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Festividad 3: Feria de Ciencias -->
+            <div class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] cursor-pointer group" data-festividad="feria-ciencias">
+              <div class="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <img src="/Galeria/Prueba3.webp" alt="Feria de Ciencias" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 class="text-3xl font-black text-white mb-2">Feria de Ciencias</h3>
+                  <p class="text-white/90 text-sm">Innovación y creatividad estudiantil</p>
+                  <div class="mt-4 flex items-center text-colegio-yellow font-bold">
+                    <span>Ver galería completa</span>
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Festividad 4: Graduación -->
+            <div class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] cursor-pointer group" data-festividad="graduacion">
+              <div class="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <img src="/Galeria/Prueba4.webp" alt="Graduación" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 class="text-3xl font-black text-white mb-2">Graduación</h3>
+                  <p class="text-white/90 text-sm">Nuestros estudiantes listos para el futuro</p>
+                  <div class="mt-4 flex items-center text-colegio-yellow font-bold">
+                    <span>Ver galería completa</span>
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Festividad 5: Día del Deporte -->
+            <div class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] cursor-pointer group" data-festividad="dia-deporte">
+              <div class="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <img src="/Galeria/Prueba5.webp" alt="Día del Deporte" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 class="text-3xl font-black text-white mb-2">Día del Deporte</h3>
+                  <p class="text-white/90 text-sm">Promoviendo vida activa y saludable</p>
+                  <div class="mt-4 flex items-center text-colegio-yellow font-bold">
+                    <span>Ver galería completa</span>
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles del carrusel -->
+        <button id="prev-festividad" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white hover:bg-colegio-yellow text-colegio-blue hover:text-white p-3 rounded-full shadow-xl transition-all duration-300 z-10">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <button id="next-festividad" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white hover:bg-colegio-yellow text-colegio-blue hover:text-white p-3 rounded-full shadow-xl transition-all duration-300 z-10">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas Frecuentes -->
+  <section class="py-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in-section">
+        <span class="text-colegio-yellow font-bold text-sm tracking-wider uppercase mb-2 block">Resolvemos tus dudas</span>
+        <h2 class="text-4xl md:text-5xl font-black text-colegio-blue mb-4">Preguntas Frecuentes</h2>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-transparent via-colegio-yellow to-transparent mx-auto"></div>
+        <p class="mt-6 text-gray-600 text-lg max-w-2xl mx-auto">
+          Encuentra respuestas rápidas a las preguntas más comunes sobre nuestro colegio.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="fade-in-section">
+          <details class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-colegio-yellow">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-bold text-lg text-colegio-blue list-none">
+              <span>¿Cuál es el proceso de admisión?</span>
+              <svg class="w-6 h-6 transform group-open:rotate-180 transition-transform text-colegio-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+              El proceso de admisión incluye: 1) Solicitud de información, 2) Visita guiada al campus, 3) Evaluación académica del estudiante, 4) Entrevista con los padres, 5) Matrícula y documentación. Todo el proceso puede completarse en aproximadamente 2 semanas.
+            </div>
+          </details>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="fade-in-section" style="animation-delay: 0.1s;">
+          <details class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-colegio-yellow">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-bold text-lg text-colegio-blue list-none">
+              <span>¿Qué horarios de clases tienen?</span>
+              <svg class="w-6 h-6 transform group-open:rotate-180 transition-transform text-colegio-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+              El horario regular de primaria es de 8:00 AM a 2:30 PM, y secundaria de 8:00 AM a 3:30 PM. Ofrecemos actividades extracurriculares de 3:30 PM a 5:30 PM en deportes, arte, música y robótica.
+            </div>
+          </details>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="fade-in-section" style="animation-delay: 0.2s;">
+          <details class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-colegio-yellow">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-bold text-lg text-colegio-blue list-none">
+              <span>¿Ofrecen transporte escolar?</span>
+              <svg class="w-6 h-6 transform group-open:rotate-180 transition-transform text-colegio-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+              Sí, contamos con servicio de transporte escolar con cobertura en diferentes zonas de la ciudad. Las unidades están equipadas con GPS, seguro y personal capacitado. Consulta disponibilidad para tu zona.
+            </div>
+          </details>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="fade-in-section" style="animation-delay: 0.3s;">
+          <details class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-colegio-yellow">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-bold text-lg text-colegio-blue list-none">
+              <span>¿Cuál es el nivel de inglés al egresar?</span>
+              <svg class="w-6 h-6 transform group-open:rotate-180 transition-transform text-colegio-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+              Nuestros egresados alcanzan un nivel B2-C1 según el Marco Común Europeo. Como centro autorizado Cambridge, los estudiantes pueden certificarse internacionalmente antes de culminar secundaria.
+            </div>
+          </details>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="fade-in-section" style="animation-delay: 0.4s;">
+          <details class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-colegio-yellow">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-bold text-lg text-colegio-blue list-none">
+              <span>¿Qué incluye la pensión mensual?</span>
+              <svg class="w-6 h-6 transform group-open:rotate-180 transition-transform text-colegio-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+              La pensión incluye: clases regulares, materiales educativos digitales, acceso a plataformas online, seguro estudiantil, uso de biblioteca y laboratorios, actividades deportivas básicas y eventos institucionales. Las actividades extracurriculares tienen un costo adicional opcional.
+            </div>
+          </details>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="fade-in-section" style="animation-delay: 0.5s;">
+          <details class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-colegio-yellow">
+            <summary class="flex justify-between items-center cursor-pointer p-6 font-bold text-lg text-colegio-blue list-none">
+              <span>¿Cómo puedo agendar una visita al campus?</span>
+              <svg class="w-6 h-6 transform group-open:rotate-180 transition-transform text-colegio-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+              Puedes agendar tu visita llamando al (XXX) XXX-XXXX, enviando un WhatsApp o completando el formulario en nuestra sección de admisiones. Las visitas guiadas se realizan de lunes a viernes de 9:00 AM a 4:00 PM.
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- CTA al final del FAQ -->
+      <div class="mt-12 text-center fade-in-section" style="animation-delay: 0.6s;">
+        <p class="text-gray-600 mb-4">¿No encontraste la respuesta que buscabas?</p>
+        <a href="/contacto" class="inline-block bg-colegio-blue hover:bg-colegio-yellow text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          Contáctanos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Galería -->
+  <div id="galeria-modal" class="fixed inset-0 bg-black/95 z-50 hidden items-center justify-center p-4">
+    <button id="close-modal" class="absolute top-4 right-4 text-white hover:text-colegio-yellow transition-colors">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    
+    <div class="max-w-7xl w-full">
+      <h3 id="modal-title" class="text-3xl font-black text-white mb-8 text-center"></h3>
+      <div id="modal-galeria" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[70vh] overflow-y-auto p-4">
+        <!-- Las fotos se cargarán dinámicamente aquí -->
+      </div>
+    </div>
+  </div>
 </Layout>
+
 
 <style>
   @keyframes fadeIn {
@@ -382,4 +640,100 @@ const heroSlides = [
   }, { threshold: 0.5 });
 
   document.querySelectorAll('.counter').forEach(counter => counterObserver.observe(counter));
+
+  // Carrusel de festividades
+  const carousel = document.getElementById('festividades-carousel');
+  const prevBtn = document.getElementById('prev-festividad');
+  const nextBtn = document.getElementById('next-festividad');
+  let currentIndex = 0;
+
+  // Galerías de fotos por festividad
+  const galeriasData = {
+    'aniversario': {
+      title: 'Aniversario',
+      photos: ['/Galeria/Prueba1.webp', '/Galeria/Prueba2.webp', '/Galeria/Prueba3.webp']
+    },
+    'dia-logro': {
+      title: 'Día del Logro',
+      photos: ['/Galeria/Prueba2.webp', '/Galeria/Prueba3.webp', '/Galeria/Prueba4.webp']
+    },
+    'feria-ciencias': {
+      title: 'Feria de Ciencias',
+      photos: ['/Galeria/Prueba3.webp', '/Galeria/Prueba4.webp', '/Galeria/Prueba5.webp']
+    },
+    'graduacion': {
+      title: 'Graduación',
+      photos: ['/Galeria/Prueba4.webp', '/Galeria/Prueba5.webp', '/Galeria/Prueba1.webp']
+    },
+    'dia-deporte': {
+      title: 'Día del Deporte',
+      photos: ['/Galeria/Prueba5.webp', '/Galeria/Prueba1.webp', '/Galeria/Prueba2.webp']
+    }
+  };
+
+  function getItemWidth() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 1024) return 33.333; // lg: 3 items
+    if (screenWidth >= 768) return 50; // md: 2 items
+    return 100; // mobile: 1 item
+  }
+
+  function updateCarousel() {
+    const itemWidth = getItemWidth();
+    carousel!.style.transform = `translateX(-${currentIndex * itemWidth}%)`;
+  }
+
+  prevBtn!.addEventListener('click', () => {
+    const itemsPerView = getItemWidth() === 100 ? 1 : getItemWidth() === 50 ? 2 : 3;
+    const totalItems = carousel!.children.length;
+    const maxIndex = Math.max(0, totalItems - itemsPerView);
+    currentIndex = Math.max(0, currentIndex - 1);
+    updateCarousel();
+  });
+
+  nextBtn!.addEventListener('click', () => {
+    const itemsPerView = getItemWidth() === 100 ? 1 : getItemWidth() === 50 ? 2 : 3;
+    const totalItems = carousel!.children.length;
+    const maxIndex = Math.max(0, totalItems - itemsPerView);
+    currentIndex = Math.min(maxIndex, currentIndex + 1);
+    updateCarousel();
+  });
+
+  window.addEventListener('resize', updateCarousel);
+
+  // Modal de galería
+  const modal = document.getElementById('galeria-modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalGaleria = document.getElementById('modal-galeria');
+  const closeModal = document.getElementById('close-modal');
+
+  document.querySelectorAll('[data-festividad]').forEach(item => {
+    item.addEventListener('click', () => {
+      const festividad = item.getAttribute('data-festividad');
+      const data = galeriasData[festividad as keyof typeof galeriasData];
+      
+      if (data) {
+        modalTitle!.textContent = data.title;
+        modalGaleria!.innerHTML = data.photos.map(photo => `
+          <div class="aspect-square overflow-hidden rounded-xl">
+            <img src="${photo}" alt="${data.title}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer" />
+          </div>
+        `).join('');
+        modal!.classList.remove('hidden');
+        modal!.classList.add('flex');
+      }
+    });
+  });
+
+  closeModal!.addEventListener('click', () => {
+    modal!.classList.add('hidden');
+    modal!.classList.remove('flex');
+  });
+
+  modal!.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal!.classList.add('hidden');
+      modal!.classList.remove('flex');
+    }
+  });
 </script>
