@@ -8,7 +8,7 @@ const heroSlides = [
     title: 'Educación que <span class="text-transparent bg-clip-text bg-gradient-to-r from-colegio-yellow via-yellow-300 to-amber-400">Inspira</span> el Futuro',
     subtitle: '✨ Ciclo Escolar 2026 - Inscripciones Abiertas',
     description: 'Formamos líderes con valores, excelencia académica y visión global para transformar el mundo.',
-    image: '/banner-rescale (1).webp',
+    image: '/banner-rescale (2).webp',
     cta: {
       text: 'Proceso de Admisión',
       link: '/admisiones'
@@ -91,16 +91,8 @@ const heroSlides = [
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <div class="fade-in-section">
-          <NivelCard 
-            titulo="Pre-escolar" 
-            descripcion="Desarrollo creativo y emocional para los más pequeños."
-            imagen="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600"
-          />
-        </div>
-
-        <div class="fade-in-section" style="animation-delay: 0.1s;">
           <NivelCard 
             titulo="Primaria" 
             descripcion="Excelencia académica con un enfoque bilingüe y tecnológico."
@@ -108,12 +100,110 @@ const heroSlides = [
           />
         </div>
 
-        <div class="fade-in-section" style="animation-delay: 0.2s;">
+        <div class="fade-in-section" style="animation-delay: 0.1s;">
           <NivelCard 
             titulo="Secundaria" 
             descripcion="Preparación integral para los retos universitarios y la vida."
             imagen="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600"
           />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por qué elegir Brüning School -->
+  <section class="py-24 bg-gradient-to-br from-colegio-blue via-colegio-blue/95 to-colegio-blue text-white relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-colegio-yellow/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-6xl mx-auto px-4 relative z-10">
+      <div class="text-center mb-16 fade-in-section">
+        <span class="text-colegio-yellow font-bold text-sm tracking-wider uppercase mb-2 block">¿Por qué nosotros?</span>
+        <h2 class="text-4xl md:text-5xl font-black mb-4">Razones para Elegir BRÜNING SCHOOL</h2>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-transparent via-colegio-yellow to-transparent mx-auto"></div>
+        <p class="mt-6 text-white/90 text-lg max-w-2xl mx-auto">
+          Somos más que una institución educativa, somos tu aliado en la formación de líderes del mañana.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Razón 1 -->
+        <div class="fade-in-section">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20 h-full">
+            <div class="bg-colegio-yellow rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
+              <img src="/Logos/LOGO BLANCO.webp" alt="Logo" class="w-10 h-10 object-contain invert brightness-0" />
+            </div>
+            <h3 class="text-2xl font-black text-colegio-yellow mb-4">Excelencia Académica</h3>
+            <p class="text-white/80 leading-relaxed">
+              Nuestro modelo educativo de alto rendimiento garantiza resultados sobresalientes. El 98% de nuestros egresados ingresan a universidades de prestigio.
+            </p>
+          </div>
+        </div>
+
+        <!-- Razón 2 -->
+        <div class="fade-in-section" style="animation-delay: 0.1s;">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20 h-full">
+            <div class="bg-colegio-yellow rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
+              <img src="/Logos/LOGO BLANCO.webp" alt="Logo" class="w-10 h-10 object-contain invert brightness-0" />
+            </div>
+            <h3 class="text-2xl font-black text-colegio-yellow mb-4">Educación Bilingüe</h3>
+            <p class="text-white/80 leading-relaxed">
+              Centro autorizado Cambridge. Formamos estudiantes con dominio del inglés certificado internacionalmente para competir en un mundo globalizado.
+            </p>
+          </div>
+        </div>
+
+        <!-- Razón 3 -->
+        <div class="fade-in-section" style="animation-delay: 0.2s;">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20 h-full">
+            <div class="bg-colegio-yellow rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
+              <img src="/Logos/LOGO BLANCO.webp" alt="Logo" class="w-10 h-10 object-contain invert brightness-0" />
+            </div>
+            <h3 class="text-2xl font-black text-colegio-yellow mb-4">Formación en Valores</h3>
+            <p class="text-white/80 leading-relaxed">
+              Desarrollamos personas íntegras con principios sólidos, liderazgo responsable y compromiso social para transformar positivamente su entorno.
+            </p>
+          </div>
+        </div>
+
+        <!-- Razón 4 -->
+        <div class="fade-in-section" style="animation-delay: 0.3s;">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20 h-full">
+            <div class="bg-colegio-yellow rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
+              <img src="/Logos/LOGO BLANCO.webp" alt="Logo" class="w-10 h-10 object-contain invert brightness-0" />
+            </div>
+            <h3 class="text-2xl font-black text-colegio-yellow mb-4">Tecnología Educativa</h3>
+            <p class="text-white/80 leading-relaxed">
+              Aulas digitales, plataformas interactivas y herramientas innovadoras que preparan a nuestros estudiantes para los desafíos del siglo XXI.
+            </p>
+          </div>
+        </div>
+
+        <!-- Razón 5 -->
+        <div class="fade-in-section" style="animation-delay: 0.4s;">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20 h-full">
+            <div class="bg-colegio-yellow rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
+              <img src="/Logos/LOGO BLANCO.webp" alt="Logo" class="w-10 h-10 object-contain invert brightness-0" />
+            </div>
+            <h3 class="text-2xl font-black text-colegio-yellow mb-4">Instalaciones Modernas</h3>
+            <p class="text-white/80 leading-relaxed">
+              Campus equipado con laboratorios, biblioteca digital, canchas deportivas y espacios diseñados para potenciar el aprendizaje y desarrollo integral.
+            </p>
+          </div>
+        </div>
+
+        <!-- Razón 6 -->
+        <div class="fade-in-section" style="animation-delay: 0.5s;">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20 h-full">
+            <div class="bg-colegio-yellow rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
+              <img src="/Logos/LOGO BLANCO.webp" alt="Logo" class="w-10 h-10 object-contain invert brightness-0" />
+            </div>
+            <h3 class="text-2xl font-black text-colegio-yellow mb-4">Docentes Especializados</h3>
+            <p class="text-white/80 leading-relaxed">
+              Equipo pedagógico altamente capacitado y comprometido con la excelencia, que acompaña de cerca el progreso académico y personal de cada estudiante.
+            </p>
+          </div>
         </div>
       </div>
     </div>
