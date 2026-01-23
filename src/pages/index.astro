@@ -551,16 +551,16 @@ const heroSlides = [
   </section>
 
   <!-- Modal de Galería -->
-  <div id="galeria-modal" class="fixed inset-0 bg-black/95 z-50 hidden items-center justify-center p-4 md:p-8 overflow-y-auto">
+  <div id="galeria-modal" class="fixed inset-0 bg-black/95 z-50 hidden md:items-center md:justify-center overflow-y-auto pt-16 md:pt-0">
     <button id="close-modal" class="fixed top-2 right-2 md:top-4 md:right-4 text-white hover:text-colegio-yellow transition-colors z-10 bg-black/50 rounded-full p-2">
       <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
     </button>
     
-    <div class="max-w-7xl w-full my-8">
-      <h3 id="modal-title" class="text-2xl md:text-3xl font-black text-white mb-4 md:mb-8 text-center px-4"></h3>
-      <div id="modal-galeria" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
+    <div class="max-w-7xl w-full mx-auto py-8 px-4 md:p-8">
+      <h3 id="modal-title" class="text-2xl md:text-3xl font-black text-white mb-6 md:mb-8 text-center"></h3>
+      <div id="modal-galeria" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-8">
         <!-- Las fotos se cargarán dinámicamente aquí -->
       </div>
     </div>
