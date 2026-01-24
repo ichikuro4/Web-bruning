@@ -1,0 +1,216 @@
+---
+interface Props {
+  phoneNumber: string;
+  message?: string;
+}
+
+const { phoneNumber, message = "¡Hola! Me gustaría obtener más información sobre BRÜNING SCHOOL." } = Astro.props;
+
+const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+---
+
+<!-- Botón flotante de WhatsApp -->
+<div class="whatsapp-container">
+  <!-- Burbuja de mensaje -->
+  <div class="whatsapp-bubble">
+    <div class="bubble-content">
+      <div class="bubble-header">
+        <strong>BRÜNING SCHOOL</strong>
+      </div>
+      <div class="bubble-message">
+        ¿Necesitas ayuda? 👋<br>
+        <span class="bubble-submessage">Estamos aquí para ti</span>
+      </div>
+    </div>
+    <div class="bubble-arrow"></div>
+  </div>
+
+  <!-- Botón de WhatsApp -->
+  <a 
+    href={whatsappUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-button"
+    aria-label="Contactar por WhatsApp"
+  >
+    <svg class="whatsapp-icon" viewBox="0 0 32 32" fill="currentColor">
+      <path d="M16.003 0C7.17 0 0.008 7.162 0.008 15.997c0 2.84 0.748 5.508 2.052 7.82L0.142 31.95l8.375-2.185c2.19 1.166 4.692 1.831 7.486 1.831 8.833 0 15.995-7.162 15.995-15.997S24.836 0 16.003 0zm9.366 22.595c-0.393 1.104-2.312 2.148-3.213 2.245-0.825 0.088-1.893 0.127-3.052-0.193-0.703-0.193-1.604-0.452-2.755-0.883-4.836-1.822-8.004-6.674-8.246-6.98-0.232-0.306-1.922-2.579-1.922-4.92 0-2.342 1.209-3.486 1.648-3.962 0.438-0.476 0.955-0.595 1.274-0.595 0.319 0 0.638 0.003 0.916 0.014 0.294 0.012 0.69-0.112 1.079 0.827 0.398 0.962 1.362 3.303 1.482 3.543 0.12 0.24 0.2 0.52 0.04 0.825-0.16 0.306-0.24 0.496-0.478 0.767-0.239 0.271-0.502 0.606-0.717 0.814-0.239 0.231-0.487 0.481-0.209 0.943 0.278 0.462 1.235 2.036 2.649 3.298 1.82 1.623 3.354 2.126 3.832 2.366 0.478 0.24 0.757 0.2 1.035-0.12 0.278-0.32 1.195-1.395 1.514-1.871 0.319-0.476 0.638-0.397 1.076-0.24 0.438 0.157 2.779 1.311 3.257 1.551 0.478 0.24 0.797 0.36 0.916 0.56 0.12 0.2 0.12 1.151-0.273 2.255z"/>
+    </svg>
+  </a>
+
+  <!-- Pulso animado -->
+  <div class="whatsapp-pulse"></div>
+</div>
+
+<style>
+  .whatsapp-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  .whatsapp-bubble {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    max-width: 220px;
+    opacity: 0;
+    transform: translateX(20px) scale(0.8);
+    animation: slideInBubble 0.5s ease-out 1s forwards;
+  }
+
+  .bubble-content {
+    padding: 14px 16px;
+  }
+
+  .bubble-header {
+    font-size: 13px;
+    color: #075e54;
+    margin-bottom: 6px;
+  }
+
+  .bubble-message {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+  }
+
+  .bubble-submessage {
+    font-size: 12px;
+    color: #666;
+  }
+
+  .bubble-arrow {
+    position: absolute;
+    right: -8px;
+    bottom: 16px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 10px;
+    border-color: transparent transparent transparent white;
+    filter: drop-shadow(2px 0 2px rgba(0, 0, 0, 0.1));
+  }
+
+  .whatsapp-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: slideInButton 0.5s ease-out;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  }
+
+  .whatsapp-button:active {
+    transform: scale(1.05);
+  }
+
+  .whatsapp-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .whatsapp-pulse {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: rgba(37, 211, 102, 0.5);
+    border-radius: 50%;
+    animation: pulse 1.8s infinite;
+    z-index: 1;
+  }
+
+  /* Ocultar burbuja en móviles pequeños */
+  @media (max-width: 480px) {
+    .whatsapp-bubble {
+      display: none;
+    }
+
+    .whatsapp-container {
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .whatsapp-button {
+      width: 56px;
+      height: 56px;
+    }
+
+    .whatsapp-icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .whatsapp-pulse {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  /* Animaciones */
+  @keyframes slideInButton {
+    from {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideInBubble {
+    from {
+      opacity: 0;
+      transform: translateX(20px) scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0;
+      transform: scale(1.4);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.4);
+    }
+  }
+
+  /* Evitar que el botón tape contenido importante */
+  @media print {
+    .whatsapp-container {
+      display: none;
+    }
+  }
+</style>
