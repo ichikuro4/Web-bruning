@@ -1,43 +1,203 @@
 ---
-// Importamos el Layout que configuramos antes
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css'
 ---
 
-<Layout title="Sobre Nosotros | Colegio Ejemplo">
-  <main class="max-w-5xl mx-auto px-4 py-12">
+<Layout title="Nosotros | BRÜNING SCHOOL">
+  <main class="pt-20">
     
-    <section class="text-center mb-16">
-      <h1 class="text-4xl md:text-5xl font-extrabold text-colegio-blue mb-4">
-        Nuestra Institución
-      </h1>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        Formando líderes con valores y excelencia académica desde 1995.
-      </p>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-colegio-blue via-colegio-blue to-blue-900 text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+          Conoce BRÜNING SCHOOL
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+          Formando líderes con valores y excelencia académica
+        </p>
+      </div>
     </section>
 
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div class="rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02] duration-300">
-        <img 
-          src="https://images.unsplash.com/photo-1523050853063-915894360ef7?auto=format&fit=crop&q=80&w=800" 
-          alt="Edificio del colegio"
-          class="w-full h-full object-cover"
-        />
-      </div>
+    <div class="max-w-7xl mx-auto px-4 py-16 space-y-20">
       
-      <div class="space-y-6">
-        <h2 class="text-3xl font-bold text-colegio-blue">Misión y Visión</h2>
-        <p class="text-gray-700 leading-relaxed">
-          Nuestra misión es proporcionar una educación integral de calidad, 
-          fomentando el pensamiento crítico y el respeto mutuo en un ambiente seguro.
-        </p>
-        <div class="flex gap-4">
-           <a href="/admisiones" class="bg-colegio-blue text-white px-6 py-3 rounded-full font-semibold hover:bg-colegio-blue/90 transition-all shadow-md">
-             Conoce más
-           </a>
+      <!-- SECCIÓN 1: IDENTIDAD -->
+      <section id="identidad" class="scroll-mt-24">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-colegio-blue mb-3">Identidad</h2>
+          <div class="w-24 h-1 bg-colegio-yellow mx-auto"></div>
         </div>
-      </div>
-    </div>
 
+        <!-- Quiénes somos -->
+        <div class="mb-16">
+          <h3 class="text-3xl font-bold text-gray-800 mb-6">Quiénes somos</h3>
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4 text-gray-700 text-lg leading-relaxed">
+              <p>
+                El Colegio Bruning es una institución privada, que brinda un lugar confiable y dedicado a la educación, para que sus niños puedan crecer y madurar de la mejor manera. 
+                Cada año nos proponemos nuevas metas y desafíos, a fin de alcanzar nuestra visión, ser reconocidos por la formación de calidad con visión empresarial.
+                Nuestro colegio se encuentra sólidamente preparado para lograr este objetivo; junto con la experiencia adquirida, un excelente programa del dominio del idioma Inglés y la educación con actitud emprendedora y empresarial, garantizamos la excelencia de nuestros alumnos.
+                El Colegio Bruning ha mantenido y mantiene un compromiso con la sociedad más allá de su actividad educativa. Tenemos como ideal formar jóvenes líderes, seguros de sí mismos para que puedan asumir con responsabilidad sus propias acciones a lo largo de su vida.
+                Diariamente trabajamos, en conjunto con nuestros padres de familia y tutores en este proceso de formación, contribuyendo con el desarrollo de un país mejor.
+                Nuestro compromiso es siempre,  “SER MEJORES CADA DÍA”.
+              </p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-xl">
+              <img 
+                src="https://images.unsplash.com/photo-1523050853063-915894360ef7?auto=format&fit=crop&q=80&w=800" 
+                alt="BRÜNING SCHOOL"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Misión y Visión -->
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="bg-gradient-to-br from-colegio-blue to-blue-800 text-white p-8 rounded-2xl shadow-xl">
+            <h3 class="text-3xl font-bold mb-4">Misión</h3>
+            <p class="text-lg leading-relaxed">
+              Potenciar en nuestros alumnos  capacidades creativas e innovadoras, con una actitud emprendedora con visión empresarial.
+              De igual modo, ofrecemos una enseñanza de calidad, propiciando  la honestidad, el respeto  y la solidaridad.
+              Buscamos que nuestros alumnos se conviertan en personas responsables con la comunidad y la patria, con  respeto por la familia.
+              Para lograr esta meta, trabajamos constantemente para brindar nuestro mejor servicio.
+            </p>
+          </div>
+          <div class="bg-gradient-to-br from-colegio-yellow to-yellow-500 text-colegio-blue p-8 rounded-2xl shadow-xl">
+            <h3 class="text-3xl font-bold mb-4">Visión</h3>
+            <p class="text-lg leading-relaxed">
+              Ser reconocidos por la formación integral de calidad con visión empresarial. Permitiendo la formación de jóvenes líderes, seguros de sí mismos y con competencias personales. 
+              Constituyéndonos en un colegio líder en el país,  con alumnos egresados capaces de enfrentar las demandas del mundo universitario.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 2: FILOSOFÍA -->
+      <section id="filosofia" class="scroll-mt-24">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-colegio-blue mb-3">Filosofía</h2>
+          <div class="w-24 h-1 bg-colegio-yellow mx-auto"></div>
+        </div>
+
+        <!-- Valores -->
+        <div class="mb-16">
+          <h3 class="text-3xl font-bold text-gray-800 mb-8 text-center">Nuestros Valores</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+              <div class="text-4xl mb-4 text-center">🤝</div>
+              <h4 class="text-xl font-bold text-colegio-blue mb-2 text-center">El Respeto</h4>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+              <div class="text-4xl mb-4 text-center">📋</div>
+              <h4 class="text-xl font-bold text-colegio-blue mb-2 text-center">La Responsabilidad</h4>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+              <div class="text-4xl mb-4 text-center">💼</div>
+              <h4 class="text-xl font-bold text-colegio-blue mb-2 text-center">El Trabajo</h4>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+              <div class="text-4xl mb-4 text-center">🙏</div>
+              <h4 class="text-xl font-bold text-colegio-blue mb-2 text-center">La Humildad</h4>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+              <div class="text-4xl mb-4 text-center">🎯</div>
+              <h4 class="text-xl font-bold text-colegio-blue mb-2 text-center">La Constancia</h4>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+              <div class="text-4xl mb-4 text-center">✨</div>
+              <h4 class="text-xl font-bold text-colegio-blue mb-2 text-center">La Honestidad</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Objetivo -->
+        <div class="mb-16 bg-gray-50 p-8 rounded-2xl">
+          <h3 class="text-3xl font-bold text-gray-800 mb-6">Nuestro Objetivo</h3>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            El objetivo principal es que nuestros alumnos tengan un desarrollo integral de sus capacidades cognoscitivas 
+            y a la vez reforzar los valores que promueve el colegio ya que ambas se complementan, de esta manera formaremos 
+            personas con un futuro exitoso.
+          </p>
+        </div>
+
+        <!-- Himno Bruning -->
+        <div class="bg-gradient-to-r from-colegio-blue to-blue-800 text-white p-8 rounded-2xl shadow-xl">
+          <h3 class="text-3xl font-bold mb-6 text-center">Himno BRÜNING</h3>
+          <div class="max-w-2xl mx-auto text-center space-y-4 text-lg leading-relaxed">
+            <p class="italic">
+              [Aquí puedes agregar la letra del himno de tu institución]
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: COMPROMISO CON EL ÉXITO -->
+      <section id="compromiso" class="scroll-mt-24">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-colegio-blue mb-3">Compromiso con el Éxito</h2>
+          <div class="w-24 h-1 bg-colegio-yellow mx-auto"></div>
+        </div>
+
+        <!-- Nuestros Maestros -->
+        <div class="mb-16">
+          <h3 class="text-3xl font-bold text-gray-800 mb-6">Nuestros Maestros</h3>
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="rounded-2xl overflow-hidden shadow-xl order-2 md:order-1">
+              <img 
+                src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=800" 
+                alt="Maestros"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="space-y-4 text-gray-700 text-lg leading-relaxed order-1 md:order-2">
+              <p>
+                Contamos con un equipo de docentes altamente calificados y comprometidos con la educación de excelencia.
+              </p>
+              <p>
+                Nuestros maestros se actualizan constantemente para brindar las mejores herramientas pedagógicas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nuestros Alumnos -->
+        <div class="mb-16">
+          <h3 class="text-3xl font-bold text-gray-800 mb-6">Nuestros Alumnos</h3>
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4 text-gray-700 text-lg leading-relaxed">
+              <p>
+                Nuestros estudiantes son el centro de nuestra misión educativa, desarrollando su potencial al máximo.
+              </p>
+              <p>
+                Fomentamos el liderazgo, la creatividad y el pensamiento crítico en cada uno de ellos.
+              </p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-xl">
+              <img 
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800" 
+                alt="Alumnos"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Nuestros Padres de Familia -->
+        <div class="bg-gradient-to-br from-colegio-yellow/10 to-yellow-100/50 p-8 rounded-2xl">
+          <h3 class="text-3xl font-bold text-gray-800 mb-6">Nuestros Padres de Familia</h3>
+          <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+            <p>
+              La familia es un pilar fundamental en el proceso educativo. Trabajamos en conjunto con los padres 
+              para garantizar el desarrollo integral de nuestros estudiantes.
+            </p>
+            <p>
+              Mantenemos una comunicación constante y fomentamos la participación activa de las familias 
+              en la vida escolar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
   </main>
 </Layout>

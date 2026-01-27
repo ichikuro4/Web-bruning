@@ -4,17 +4,7 @@ const currentPath = Astro.url.pathname;
 // Estructura de menús con submenús
 const menuItems = [
   { name: 'Inicio', href: '/', subItems: [] },
-  {
-    name: 'Nosotros',
-    href: '/nosotros',
-    subItems: [
-      { name: 'Bienvenido', href: '/nosotros/bienvenido' },
-      { name: 'Misión y Visión', href: '/nosotros/mision-vision' },
-      { name: 'Compromiso con el éxito', href: '/nosotros/compromiso' },
-      { name: 'Filosofía', href: '/nosotros/filosofia' },
-      { name: 'Campus', href: '/nosotros/campus' },
-    ]
-  },
+  { name: 'Nosotros', href: '/nosotros', subItems: [] },
   {
     name: 'Niveles',
     href: '/niveles',
