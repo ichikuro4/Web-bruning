@@ -4,7 +4,17 @@ const currentPath = Astro.url.pathname;
 // Estructura de menús con submenús
 const menuItems = [
   { name: 'Inicio', href: '/', subItems: [] },
-  { name: 'Nosotros', href: '/nosotros', subItems: [] },
+  {
+    name: 'Nosotros',
+    href: '/nosotros',
+    subItems: [
+      { name: 'Bienvenido', href: '/nosotros/bienvenido' },
+      { name: 'Misión y Visión', href: '/nosotros/mision-vision' },
+      { name: 'Compromiso con el éxito', href: '/nosotros/compromiso' },
+      { name: 'Filosofía', href: '/nosotros/filosofia' },
+      { name: 'Campus', href: '/nosotros/campus' },
+    ]
+  },
   {
     name: 'Niveles',
     href: '/niveles',
@@ -21,6 +31,10 @@ const menuItems = [
       { name: 'Costos', href: '/admision/costos' },
     ]
   },
+];
+
+// Elementos para el menú "Más"
+const moreMenuItems = [
   {
     name: 'Talleres',
     href: '/talleres',
@@ -42,20 +56,22 @@ const menuItems = [
 ---
 
 <nav id="navbar" class="fixed top-0 w-full z-[100] transition-all duration-500 bg-colegio-blue/95 backdrop-blur-lg border-b border-white/10">
+  <!-- Franja superior -->
+  
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-20 items-center">
+    <div class="flex h-24 items-center">
       
-      <!-- Logo con animación -->
+      <!-- Logo con animación - Alineado a la izquierda -->
       <a href="/" class="flex-shrink-0 flex items-center gap-3 group">
         <img 
           src="/LOGO BLANCO.webp" 
           alt="BRÜNING SCHOOL" 
-          class="h-14 md:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+          class="h-16 md:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
         />
       </a>
 
-      <!-- Desktop Menu -->
-      <div class="hidden lg:flex space-x-1 items-center">
+      <!-- Desktop Menu - Centrado -->
+      <div class="hidden lg:flex space-x-1 items-center mx-auto">
         {menuItems.map((item) => {
           const isActive = currentPath === item.href || item.subItems.some(sub => currentPath === sub.href);
           const hasSubmenu = item.subItems.length > 0;
@@ -64,10 +80,10 @@ const menuItems = [
             <div class="relative group">
               {hasSubmenu ? (
                 <button 
-                  class={`nav-link relative text-white/90 font-semibold px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-1 ${isActive ? 'text-colegio-yellow' : 'hover:text-white hover:bg-white/10'}`}
+                  class={`nav-link relative text-white/90 font-bold text-lg px-5 py-3 rounded-lg transition-all duration-300 flex items-center gap-1 ${isActive ? 'text-colegio-yellow' : 'hover:text-white hover:bg-white/10'}`}
                 >
                   {item.name}
-                  <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="w-5 h-5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                   <span class={`nav-underline ${isActive ? 'active' : ''}`}></span>
@@ -75,7 +91,7 @@ const menuItems = [
               ) : (
                 <a 
                   href={item.href} 
-                  class={`nav-link relative text-white/90 font-semibold px-4 py-2 rounded-lg transition-all duration-300 ${isActive ? 'text-colegio-yellow' : 'hover:text-white hover:bg-white/10'}`}
+                  class={`nav-link relative text-white/90 font-bold text-lg px-5 py-3 rounded-lg transition-all duration-300 ${isActive ? 'text-colegio-yellow' : 'hover:text-white hover:bg-white/10'}`}
                 >
                   {item.name}
                   <span class={`nav-underline ${isActive ? 'active' : ''}`}></span>
@@ -83,14 +99,14 @@ const menuItems = [
               )}
               
               {hasSubmenu && (
-                <div class="submenu absolute left-0 top-full mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 overflow-hidden">
+                <div class="submenu absolute left-0 top-full mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 overflow-hidden">
                   <div class="py-2">
                     {item.subItems.map((subItem, index) => {
                       const isSubActive = currentPath === subItem.href;
                       return (
                         <a 
                           href={subItem.href}
-                          class={`block px-5 py-3 text-sm font-medium transition-all duration-200 ${
+                          class={`block px-5 py-3 text-base font-medium transition-all duration-200 ${
                             isSubActive 
                               ? 'bg-colegio-blue text-white' 
                               : 'text-gray-700 hover:bg-colegio-blue/10 hover:text-colegio-blue hover:pl-6'
@@ -110,10 +126,10 @@ const menuItems = [
         <!-- Botón Más (Desktop) -->
         <button 
           id="sidebar-open-btn"
-          class="nav-link relative text-white/90 font-semibold px-4 py-2 rounded-lg transition-all duration-300 hover:text-white hover:bg-white/10 flex items-center gap-2"
+          class="nav-link relative text-white/90 font-bold text-lg px-5 py-3 rounded-lg transition-all duration-300 hover:text-white hover:bg-white/10 flex items-center gap-2"
         >
           <span>Más</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
           </svg>
         </button>
@@ -144,6 +160,8 @@ const menuItems = [
       </div>
     </div>
   </div>
+  <!-- Franja inferior -->
+  <div class="w-full h-1 bg-[#FFFFFF]"></div>
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="lg:hidden hidden bg-colegio-blue/98 backdrop-blur-xl border-t border-white/10">
@@ -206,7 +224,7 @@ const menuItems = [
           </svg>
           Ver Más Opciones
         </span>
-        <span class="bg-colegio-yellow text-colegio-blue text-xs font-bold px-2 py-1 rounded-full">+6</span>
+        <span class="bg-colegio-yellow text-colegio-blue text-xs font-bold px-2 py-1 rounded-full">+12</span>
       </button>
     </div>
   </div>
