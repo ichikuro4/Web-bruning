@@ -47,30 +47,29 @@ const { title } = Astro.props;
 						</p>
 					</div>
 					<div>
-						<h4 class="font-bold mb-4">Enlaces Rápidos</h4>
-						<ul class="space-y-2 text-blue-200 text-sm">
-							<li><a href="/" class="hover:text-colegio-yellow transition-colors">Inicio</a></li>
-							<li><a href="/nosotros" class="hover:text-colegio-yellow transition-colors">Nosotros</a></li>
-							<li><a href="/admision" class="hover:text-colegio-yellow transition-colors">Admisión</a></li>
-						</ul>
-					</div>
-					<div>
 						<h4 class="font-bold mb-4">Contacto</h4>
 						<ul class="space-y-2 text-blue-200 text-sm">
 							<li>📧 informes@bruningschool.edu.pe</li>
 							<li>📱 +51 999 928 258</li>
 							<li>📍 Av. Chan Chan N° 100 - Villa del Mar (Carretera a Huanchaco)</li>
 						</ul>
-					</div>
-				</div>
-
-				<!-- Redes Sociales -->
-				<div class="border-t border-white/10 pt-8 pb-6">
-					<div class="flex flex-col md:flex-row items-center justify-between gap-6">
-						<div class="text-center md:text-left">
-							<h4 class="font-bold mb-3 text-lg">Síguenos en Redes Sociales</h4>
-							<p class="text-blue-200 text-sm">Mantente conectado con nuestra comunidad educativa</p>
+						<!-- Mapa de ubicación -->
+						<div class="mt-4 rounded-lg overflow-hidden shadow-lg border-2 border-white/20">
+							<iframe 
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.0118357297765!2d-79.0612349!3d-8.100274299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3db464fe96a9%3A0xc58f067710ea469d!2sBr%C3%BCning%20School!5e0!3m2!1ses!2spe!4v1769692220299!5m2!1ses!2spe" 
+								width="100%" 
+								height="200" 
+								style="border:0;" 
+								allowfullscreen="" 
+								loading="lazy" 
+								referrerpolicy="no-referrer-when-downgrade"
+								title="Ubicación de BRÜNING SCHOOL"
+							></iframe>
 						</div>
+					</div>
+					<div>
+						<h4 class="font-bold mb-4">Síguenos en Redes Sociales</h4>
+						<p class="text-blue-200 text-sm mb-4">Mantente conectado con nuestra comunidad educativa</p>
 						<div class="flex gap-4">
 							<!-- Facebook -->
 							<a 
