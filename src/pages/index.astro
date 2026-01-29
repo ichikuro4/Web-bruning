@@ -149,7 +149,7 @@ const heroSlides = [
     </div>
   </section>
 
-  <!-- Por qué elegir Brüning School -->
+  <!-- Universidades -->
   <section class="py-24 bg-gradient-to-br from-colegio-blue via-colegio-blue/95 to-colegio-blue text-white relative overflow-hidden">
     <!-- Decorative elements -->
     <div class="absolute top-0 right-0 w-96 h-96 bg-colegio-yellow/10 rounded-full blur-3xl"></div>
@@ -157,92 +157,66 @@ const heroSlides = [
     
     <div class="max-w-6xl mx-auto px-4 relative z-10">
       <div class="text-center mb-16 fade-in-section">
-        <span class="text-colegio-yellow font-bold text-sm tracking-wider uppercase mb-2 block">¿Por qué nosotros?</span>
-        <h2 class="text-4xl md:text-5xl font-black mb-4">Razones para Elegir BRÜNING SCHOOL</h2>
+        <span class="text-colegio-yellow font-bold text-sm tracking-wider uppercase mb-2 block">Nuestro Orgullo</span>
+        <h2 class="text-4xl md:text-5xl font-black mb-4">Universidades de Destino</h2>
         <div class="w-24 h-1.5 bg-gradient-to-r from-transparent via-colegio-yellow to-transparent mx-auto"></div>
         <p class="mt-6 text-white/90 text-lg max-w-2xl mx-auto">
-          Somos más que una institución educativa, somos tu aliado en la formación de líderes del mañana.
+          Nuestros egresados ingresan a las universidades más prestigiosas del país, demostrando la excelencia de su formación académica.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Razón 1 -->
-        <div class="fade-in-section">
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20 h-full">
-            <div class="bg-colegio-yellow rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
-              <img src="/Logos/LOGO BLANCO.webp" alt="Logo" class="w-10 h-10 object-contain invert brightness-0" />
+      <!-- Carrusel de Universidades Estilo Coverflow -->
+      <div class="relative max-w-6xl mx-auto px-4">
+        <div class="flex items-center justify-center gap-4 md:gap-8 perspective-1000">
+          <!-- Imagen Izquierda -->
+          <div id="universidad-left" class="hidden md:block cursor-pointer transform scale-75 opacity-50 hover:opacity-75 transition-all duration-300 hover:scale-80">
+            <div class="bg-white rounded-2xl shadow-xl p-8 w-48 h-48 flex items-center justify-center">
+              <img src="" alt="" class="max-w-full max-h-32 object-contain" />
             </div>
-            <h3 class="text-2xl font-black text-colegio-yellow mb-4">Excelencia Académica</h3>
-            <p class="text-white/80 leading-relaxed">
-              Nuestro modelo educativo de alto rendimiento garantiza resultados sobresalientes. El 98% de nuestros egresados ingresan a universidades de prestigio.
-            </p>
+          </div>
+
+          <!-- Imagen Central (Principal) -->
+          <div id="universidad-center" class="transform scale-100 z-10">
+            <div class="bg-white rounded-3xl shadow-2xl p-12 w-64 md:w-80 h-64 md:h-80 flex items-center justify-center border-4 border-colegio-yellow">
+              <img src="" alt="" class="max-w-full max-h-48 md:max-h-56 object-contain" />
+            </div>
+          </div>
+
+          <!-- Imagen Derecha -->
+          <div id="universidad-right" class="hidden md:block cursor-pointer transform scale-75 opacity-50 hover:opacity-75 transition-all duration-300 hover:scale-80">
+            <div class="bg-white rounded-2xl shadow-xl p-8 w-48 h-48 flex items-center justify-center">
+              <img src="" alt="" class="max-w-full max-h-32 object-contain" />
+            </div>
           </div>
         </div>
 
-        <!-- Razón 2 -->
-        <div class="fade-in-section" style="animation-delay: 0.1s;">
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20 h-full">
-            <div class="bg-colegio-yellow rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
-              <img src="/Logos/LOGO BLANCO.webp" alt="Logo" class="w-10 h-10 object-contain invert brightness-0" />
-            </div>
-            <h3 class="text-2xl font-black text-colegio-yellow mb-4">Educación Bilingüe</h3>
-            <p class="text-white/80 leading-relaxed">
-              Centro autorizado Cambridge. Formamos estudiantes con dominio del inglés certificado internacionalmente para competir en un mundo globalizado.
-            </p>
-          </div>
-        </div>
+        <!-- Flechas de navegación -->
+        <button id="prev-universidad" class="absolute left-0 md:left-4 top-1/2 -translate-y-1/2 bg-colegio-yellow hover:bg-white text-white hover:text-colegio-blue p-4 rounded-full shadow-xl transition-all duration-300 z-20 hover:scale-110">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <button id="next-universidad" class="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 bg-colegio-yellow hover:bg-white text-white hover:text-colegio-blue p-4 rounded-full shadow-xl transition-all duration-300 z-20 hover:scale-110">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
 
-        <!-- Razón 3 -->
-        <div class="fade-in-section" style="animation-delay: 0.2s;">
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20 h-full">
-            <div class="bg-colegio-yellow rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
-              <img src="/Logos/LOGO BLANCO.webp" alt="Logo" class="w-10 h-10 object-contain invert brightness-0" />
-            </div>
-            <h3 class="text-2xl font-black text-colegio-yellow mb-4">Formación en Valores</h3>
-            <p class="text-white/80 leading-relaxed">
-              Desarrollamos personas íntegras con principios sólidos, liderazgo responsable y compromiso social para transformar positivamente su entorno.
-            </p>
-          </div>
+        <!-- Indicadores de puntos -->
+        <div class="flex justify-center gap-3 mt-12">
+          <button class="universidad-dot w-3 h-3 rounded-full bg-colegio-yellow transition-all duration-300" data-index="0"></button>
+          <button class="universidad-dot w-3 h-3 rounded-full bg-white/30 transition-all duration-300" data-index="1"></button>
+          <button class="universidad-dot w-3 h-3 rounded-full bg-white/30 transition-all duration-300" data-index="2"></button>
+          <button class="universidad-dot w-3 h-3 rounded-full bg-white/30 transition-all duration-300" data-index="3"></button>
+          <button class="universidad-dot w-3 h-3 rounded-full bg-white/30 transition-all duration-300" data-index="4"></button>
         </div>
+      </div>
 
-        <!-- Razón 4 -->
-        <div class="fade-in-section" style="animation-delay: 0.3s;">
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20 h-full">
-            <div class="bg-colegio-yellow rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
-              <img src="/Logos/LOGO BLANCO.webp" alt="Logo" class="w-10 h-10 object-contain invert brightness-0" />
-            </div>
-            <h3 class="text-2xl font-black text-colegio-yellow mb-4">Tecnología Educativa</h3>
-            <p class="text-white/80 leading-relaxed">
-              Aulas digitales, plataformas interactivas y herramientas innovadoras que preparan a nuestros estudiantes para los desafíos del siglo XXI.
-            </p>
-          </div>
-        </div>
-
-        <!-- Razón 5 -->
-        <div class="fade-in-section" style="animation-delay: 0.4s;">
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20 h-full">
-            <div class="bg-colegio-yellow rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
-              <img src="/Logos/LOGO BLANCO.webp" alt="Logo" class="w-10 h-10 object-contain invert brightness-0" />
-            </div>
-            <h3 class="text-2xl font-black text-colegio-yellow mb-4">Instalaciones Modernas</h3>
-            <p class="text-white/80 leading-relaxed">
-              Campus equipado con laboratorios, biblioteca digital, canchas deportivas y espacios diseñados para potenciar el aprendizaje y desarrollo integral.
-            </p>
-          </div>
-        </div>
-
-        <!-- Razón 6 -->
-        <div class="fade-in-section" style="animation-delay: 0.5s;">
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20 h-full">
-            <div class="bg-colegio-yellow rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
-              <img src="/Logos/LOGO BLANCO.webp" alt="Logo" class="w-10 h-10 object-contain invert brightness-0" />
-            </div>
-            <h3 class="text-2xl font-black text-colegio-yellow mb-4">Docentes Especializados</h3>
-            <p class="text-white/80 leading-relaxed">
-              Equipo pedagógico altamente capacitado y comprometido con la excelencia, que acompaña de cerca el progreso académico y personal de cada estudiante.
-            </p>
-          </div>
-        </div>
+      <!-- Mensaje adicional -->
+      <div class="mt-12 text-center fade-in-section" style="animation-delay: 0.5s;">
+        <p class="text-white/90 text-lg font-semibold">
+          🎓 El <span class="text-colegio-yellow font-black">98%</span> de nuestros egresados ingresan a universidades de prestigio
+        </p>
       </div>
     </div>
   </section>
@@ -996,4 +970,99 @@ const heroSlides = [
       updateTestimonioCarousel();
     });
   });
+
+  // Carrusel de Universidades Estilo Coverflow
+  const universidades = [
+    { src: '/Universidades/UNT.webp', alt: 'Universidad Nacional de Trujillo' },
+    { src: '/Universidades/UNMSM.webp', alt: 'Universidad Nacional Mayor de San Marcos' },
+    { src: '/Universidades/UPCH.webp', alt: 'Universidad Peruana Cayetano Heredia' },
+    { src: '/Universidades/USIL.webp', alt: 'Universidad San Ignacio de Loyola' },
+    { src: '/Universidades/USMP1.webp', alt: 'Universidad de San Martín de Porres' }
+  ];
+
+  let currentUniversidadIndex = 0;
+  const universidadLeft = document.getElementById('universidad-left');
+  const universidadCenter = document.getElementById('universidad-center');
+  const universidadRight = document.getElementById('universidad-right');
+  const prevUniversidad = document.getElementById('prev-universidad');
+  const nextUniversidad = document.getElementById('next-universidad');
+  const universidadDots = document.querySelectorAll('.universidad-dot');
+
+  function updateUniversidadCarousel() {
+    const total = universidades.length;
+    
+    // Calcular índices
+    const leftIndex = (currentUniversidadIndex - 1 + total) % total;
+    const centerIndex = currentUniversidadIndex;
+    const rightIndex = (currentUniversidadIndex + 1) % total;
+    
+    // Actualizar imágenes
+    if (universidadLeft) {
+      const leftImg = universidadLeft.querySelector('img');
+      if (leftImg) {
+        leftImg.src = universidades[leftIndex].src;
+        leftImg.alt = universidades[leftIndex].alt;
+      }
+    }
+    
+    if (universidadCenter) {
+      const centerImg = universidadCenter.querySelector('img');
+      if (centerImg) {
+        centerImg.src = universidades[centerIndex].src;
+        centerImg.alt = universidades[centerIndex].alt;
+      }
+    }
+    
+    if (universidadRight) {
+      const rightImg = universidadRight.querySelector('img');
+      if (rightImg) {
+        rightImg.src = universidades[rightIndex].src;
+        rightImg.alt = universidades[rightIndex].alt;
+      }
+    }
+    
+    // Actualizar indicadores
+    universidadDots.forEach((dot, index) => {
+      if (index === currentUniversidadIndex) {
+        dot.classList.remove('bg-white/30');
+        dot.classList.add('bg-colegio-yellow');
+      } else {
+        dot.classList.remove('bg-colegio-yellow');
+        dot.classList.add('bg-white/30');
+      }
+    });
+  }
+
+  // Navegación
+  prevUniversidad?.addEventListener('click', () => {
+    currentUniversidadIndex = (currentUniversidadIndex - 1 + universidades.length) % universidades.length;
+    updateUniversidadCarousel();
+  });
+
+  nextUniversidad?.addEventListener('click', () => {
+    currentUniversidadIndex = (currentUniversidadIndex + 1) % universidades.length;
+    updateUniversidadCarousel();
+  });
+
+  // Click en imágenes laterales
+  universidadLeft?.addEventListener('click', () => {
+    currentUniversidadIndex = (currentUniversidadIndex - 1 + universidades.length) % universidades.length;
+    updateUniversidadCarousel();
+  });
+
+  universidadRight?.addEventListener('click', () => {
+    currentUniversidadIndex = (currentUniversidadIndex + 1) % universidades.length;
+    updateUniversidadCarousel();
+  });
+
+  // Click en indicadores
+  universidadDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentUniversidadIndex = index;
+      updateUniversidadCarousel();
+    });
+  });
+
+  // Inicializar carrusel
+  updateUniversidadCarousel();
 </script>
