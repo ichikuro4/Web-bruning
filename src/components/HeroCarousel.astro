@@ -3,7 +3,8 @@ interface Slide {
   title: string;
   subtitle: string;
   description: string;
-  image: string;
+  image?: string;
+  video?: string;
   cta?: {
     text: string;
     link: string;
@@ -26,29 +27,48 @@ const { slides, autoplayInterval = 5000 } = Astro.props;
         class={`slide absolute inset-0 min-h-[calc(100vh-80px)] transition-opacity duration-1000 ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
         data-slide={index}
       >
-        <!-- Background Image with Overlay -->
+        <!-- Background Image or Video with Overlay -->
         <div class="absolute inset-0">
-          <img 
-            src={slide.image} 
-            alt={slide.title}
-            class="w-full h-full object-cover object-center"
-            loading="eager"
-          />
-          <div class="absolute inset-0 bg-gradient-to-br from-colegio-blue/70 via-colegio-blue/60 to-colegio-blue/70"></div>
-          <div class="absolute inset-0 bg-black/25"></div>
+          {slide.video ? (
+            <video 
+              src={slide.video}
+              class="w-full h-full object-cover object-center"
+              autoplay
+              muted
+              loop
+              playsinline
+              data-slide-video={index}
+            />
+          ) : (
+            <>
+              <img 
+                src={slide.image} 
+                alt={slide.title}
+                class="w-full h-full object-cover object-center"
+                loading="eager"
+              />
+              <div class="absolute inset-0 bg-gradient-to-br from-colegio-blue/70 via-colegio-blue/60 to-colegio-blue/70"></div>
+              <div class="absolute inset-0 bg-black/25"></div>
+            </>
+          )}
         </div>
 
-        <!-- Animated gradient overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-colegio-yellow/10 via-transparent to-purple-500/10 animate-gradient"></div>
+        {!slide.video && (
+          <>
+            <!-- Animated gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-colegio-yellow/10 via-transparent to-purple-500/10 animate-gradient"></div>
 
-        <!-- Floating shapes -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-          <div class="absolute top-20 left-10 w-72 h-72 bg-colegio-yellow/10 rounded-full blur-3xl animate-float"></div>
-          <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float-delayed"></div>
-        </div>
+            <!-- Floating shapes -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+              <div class="absolute top-20 left-10 w-72 h-72 bg-colegio-yellow/10 rounded-full blur-3xl animate-float"></div>
+              <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float-delayed"></div>
+            </div>
+          </>
+        )}
 
         <!-- Content -->
-        <div class="relative z-20 flex items-center justify-center min-h-screen px-4">
+        {!slide.video && (
+          <div class="relative z-20 flex items-center justify-center min-h-screen px-4">
           <div class="text-center max-w-5xl">
             <div class="inline-block mb-6 px-6 py-2 bg-colegio-yellow/20 backdrop-blur-sm border border-colegio-yellow/30 rounded-full text-colegio-yellow font-semibold animate-fade-in">
               {slide.subtitle}
@@ -88,6 +108,7 @@ const { slides, autoplayInterval = 5000 } = Astro.props;
             )}
           </div>
         </div>
+        )}
       </div>
     ))}
   </div>
@@ -185,15 +206,29 @@ const { slides, autoplayInterval = 5000 } = Astro.props;
   const prevBtn = document.querySelector('.carousel-btn.prev');
   const nextBtn = document.querySelector('.carousel-btn.next');
   const carousel = document.querySelector('.hero-carousel');
+  const videos = document.querySelectorAll('[data-slide-video]');
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
       if (i === index) {
         slide.classList.add('opacity-100', 'z-10');
         slide.classList.remove('opacity-0', 'z-0');
+        
+        // Play video if this slide has one
+        const video = slide.querySelector('video');
+        if (video) {
+          video.currentTime = 0;
+          video.play().catch(e => console.log('Video autoplay failed:', e));
+        }
       } else {
         slide.classList.remove('opacity-100', 'z-10');
         slide.classList.add('opacity-0', 'z-0');
+        
+        // Pause video if leaving a video slide
+        const video = slide.querySelector('video');
+        if (video) {
+          video.pause();
+        }
       }
     });
 
