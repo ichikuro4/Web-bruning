@@ -1,46 +1,101 @@
 ---
-interface Props {
-  phoneNumber: string;
-  message?: string;
-}
-
-const { phoneNumber, message = "¡Hola! Me gustaría obtener más información sobre BRÜNING SCHOOL." } = Astro.props;
-
-const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+const departments = [
+  {
+    name: "Atención al Cliente",
+    phone: "51999999999",
+    schedule: "Lun-Vie: 8:00am - 5:00pm",
+    icon: "💬"
+  },
+  {
+    name: "Dirección General",
+    phone: "51988888888",
+    schedule: "Lun-Vie: 9:00am - 4:00pm",
+    icon: "👔"
+  },
+  {
+    name: "Coordinación Primaria",
+    phone: "51977777777",
+    schedule: "Lun-Vie: 8:00am - 3:00pm",
+    icon: "📚"
+  },
+  {
+    name: "Coordinación Secundaria",
+    phone: "51966666666",
+    schedule: "Lun-Vie: 8:00am - 3:00pm",
+    icon: "🎓"
+  },
+  {
+    name: "Coordinación TI",
+    phone: "51955555555",
+    schedule: "Lun-Vie: 8:00am - 5:00pm",
+    icon: "💻"
+  }
+];
 ---
 
 <!-- Botón flotante de WhatsApp -->
 <div class="whatsapp-container">
-  <!-- Burbuja de mensaje -->
-  <div class="whatsapp-bubble">
-    <div class="bubble-content">
-      <!-- <div class="bubble-header">
-        <strong>BRÜNING SCHOOL</strong>
-      </div> -->
-      <div class="bubble-message">
-        ¿Necesitas ayuda? 👋<br>
-        <span class="bubble-submessage">Estamos aquí para ti</span>
-      </div>
+  <!-- Panel de selección de áreas -->
+  <div class="whatsapp-menu">
+    <div class="menu-header">
+      <strong>Selecciona un área</strong>
     </div>
-    <div class="bubble-arrow"></div>
+    <div class="menu-options">
+      {departments.map(dept => (
+        <a 
+          href={`https://wa.me/${dept.phone}?text=${encodeURIComponent("¡Hola! Me gustaría obtener más información.")}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="menu-option"
+        >
+          <span class="option-emoji">{dept.icon}</span>
+          <div class="option-content">
+            <span class="option-name">{dept.name}</span>
+            <span class="option-schedule">{dept.schedule}</span>
+          </div>
+          <svg class="option-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+          </svg>
+        </a>
+      ))}
+    </div>
   </div>
 
   <!-- Botón de WhatsApp -->
-  <a 
-    href={whatsappUrl}
-    target="_blank"
-    rel="noopener noreferrer"
+  <button 
     class="whatsapp-button"
     aria-label="Contactar por WhatsApp"
+    id="whatsapp-toggle"
   >
     <svg class="whatsapp-icon" viewBox="0 0 32 32" fill="currentColor">
       <path d="M16.003 0C7.17 0 0.008 7.162 0.008 15.997c0 2.84 0.748 5.508 2.052 7.82L0.142 31.95l8.375-2.185c2.19 1.166 4.692 1.831 7.486 1.831 8.833 0 15.995-7.162 15.995-15.997S24.836 0 16.003 0zm9.366 22.595c-0.393 1.104-2.312 2.148-3.213 2.245-0.825 0.088-1.893 0.127-3.052-0.193-0.703-0.193-1.604-0.452-2.755-0.883-4.836-1.822-8.004-6.674-8.246-6.98-0.232-0.306-1.922-2.579-1.922-4.92 0-2.342 1.209-3.486 1.648-3.962 0.438-0.476 0.955-0.595 1.274-0.595 0.319 0 0.638 0.003 0.916 0.014 0.294 0.012 0.69-0.112 1.079 0.827 0.398 0.962 1.362 3.303 1.482 3.543 0.12 0.24 0.2 0.52 0.04 0.825-0.16 0.306-0.24 0.496-0.478 0.767-0.239 0.271-0.502 0.606-0.717 0.814-0.239 0.231-0.487 0.481-0.209 0.943 0.278 0.462 1.235 2.036 2.649 3.298 1.82 1.623 3.354 2.126 3.832 2.366 0.478 0.24 0.757 0.2 1.035-0.12 0.278-0.32 1.195-1.395 1.514-1.871 0.319-0.476 0.638-0.397 1.076-0.24 0.438 0.157 2.779 1.311 3.257 1.551 0.478 0.24 0.797 0.36 0.916 0.56 0.12 0.2 0.12 1.151-0.273 2.255z"/>
     </svg>
-  </a>
+    <svg class="close-icon" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    </svg>
+  </button>
 
   <!-- Pulso animado -->
   <div class="whatsapp-pulse"></div>
 </div>
+
+<script>
+  const toggleBtn = document.getElementById('whatsapp-toggle');
+  const menu = document.querySelector('.whatsapp-menu');
+  const container = document.querySelector('.whatsapp-container');
+
+  toggleBtn?.addEventListener('click', () => {
+    menu?.classList.toggle('active');
+    toggleBtn?.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!container?.contains(e.target as Node)) {
+      menu?.classList.remove('active');
+      toggleBtn?.classList.remove('active');
+    }
+  });
+</script>
 
 <style>
   .whatsapp-container {
@@ -49,53 +104,91 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(mess
     right: 25px;
     z-index: 1000;
     display: flex;
+    flex-direction: column;
     align-items: flex-end;
     gap: 12px;
   }
 
-  .whatsapp-bubble {
-    position: relative;
+  .whatsapp-menu {
     background: white;
     border-radius: 12px;
-    padding: 0;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-    max-width: 220px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
-    transform: translateX(20px) scale(0.8);
-    animation: slideInBubble 0.5s ease-out 1s forwards;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
   }
 
-  .bubble-content {
+  .whatsapp-menu.active {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: all;
+  }
+
+  .menu-header {
+    padding: 16px;
+    background: #075e54;
+    color: white;
+    font-size: 15px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .menu-options {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     padding: 14px 16px;
-  }
-
-  .bubble-header {
-    font-size: 13px;
-    color: #075e54;
-    margin-bottom: 6px;
-  }
-
-  .bubble-message {
-    font-size: 14px;
+    text-decoration: none;
     color: #333;
-    line-height: 1.4;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
   }
 
-  .bubble-submessage {
+  .option-emoji {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .menu-option:last-child {
+    border-bottom: none;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .menu-option:hover {
+    background: #f5f5f5;
+  }
+
+  .option-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+  }
+
+  .option-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #075e54;
+  }
+
+  .option-schedule {
     font-size: 12px;
     color: #666;
   }
 
-  .bubble-arrow {
-    position: absolute;
-    right: -8px;
-    bottom: 16px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 8px 0 8px 10px;
-    border-color: transparent transparent transparent white;
-    filter: drop-shadow(2px 0 2px rgba(0, 0, 0, 0.1));
+  .option-icon {
+    width: 20px;
+    height: 20px;
+    color: #999;
   }
 
   .whatsapp-button {
@@ -107,9 +200,10 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(mess
     height: 60px;
     background: #25D366;
     color: white;
+    border: none;
     border-radius: 50%;
     box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-    text-decoration: none;
+    cursor: pointer;
     transition: all 0.3s ease;
     animation: slideInButton 0.5s ease-out;
     z-index: 2;
@@ -128,6 +222,26 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(mess
   .whatsapp-icon {
     width: 32px;
     height: 32px;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .close-icon {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    opacity: 0;
+    transform: rotate(-90deg);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .whatsapp-button.active .whatsapp-icon {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+
+  .whatsapp-button.active .close-icon {
+    opacity: 1;
+    transform: rotate(0deg);
   }
 
   .whatsapp-pulse {
@@ -142,10 +256,10 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(mess
     z-index: 1;
   }
 
-  /* Ocultar burbuja en móviles pequeños */
   @media (max-width: 480px) {
-    .whatsapp-bubble {
-      display: none;
+    .whatsapp-menu {
+      width: calc(100vw - 40px);
+      max-width: 320px;
     }
 
     .whatsapp-container {
@@ -161,6 +275,11 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(mess
     .whatsapp-icon {
       width: 28px;
       height: 28px;
+    }
+
+    .close-icon {
+      width: 24px;
+      height: 24px;
     }
 
     .whatsapp-pulse {
@@ -181,16 +300,7 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(mess
     }
   }
 
-  @keyframes slideInBubble {
-    from {
-      opacity: 0;
-      transform: translateX(20px) scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0) scale(1);
-    }
-  }
+
 
   @keyframes pulse {
     0% {
