@@ -19,16 +19,6 @@ const heroSlides = [
     title: 'Educación que <span class="text-transparent bg-clip-text bg-gradient-to-r from-colegio-yellow via-yellow-300 to-amber-400">Inspira</span> el Futuro',
     subtitle: '✨ Ciclo Escolar 2026 - Inscripciones Abiertas',
     description: 'Formamos líderes con valores, excelencia académica y visión global para transformar el mundo.',
-    video: '/PROP 1.mp4',
-    cta: {
-      text: 'Proceso de Admisión',
-      link: '/admisiones'
-    }
-  },
-  {
-    title: 'Educación que <span class="text-transparent bg-clip-text bg-gradient-to-r from-colegio-yellow via-yellow-300 to-amber-400">Inspira</span> el Futuro',
-    subtitle: '✨ Ciclo Escolar 2026 - Inscripciones Abiertas',
-    description: 'Formamos líderes con valores, excelencia académica y visión global para transformar el mundo.',
     image: '/banner-rescale (2).webp',
     cta: {
       text: 'Proceso de Admisión',
@@ -95,7 +85,7 @@ const heroSlides = [
             </svg>
           </div>
           <div class="text-5xl font-black text-colegio-yellow mb-2 counter" data-target="600">0</div>
-          <div class="text-sm md:text-base font-semibold opacity-90">Estudiantes Activos</div>
+          <div class="text-sm md:text-base font-semibold opacity-90">Certificaciones Cambridge</div>
         </div>
         <div class="stat-item">
           <div class="mb-4 flex justify-center">
@@ -113,61 +103,79 @@ const heroSlides = [
             </svg>
           </div>
           <div class="text-5xl font-black text-colegio-yellow mb-2 counter" data-target="50">0</div>
-          <div class="text-sm md:text-base font-semibold opacity-90">Ingresantes Universitarios</div>
+          <div class="text-sm md:text-base font-semibold opacity-90">Certificaciones IBEC</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bienvenidos -->
-  <section class="py-24 bg-[#EDEDF6] relative overflow-hidden">
-    <!-- Decorative elements -->
-    <div class="absolute top-0 right-0 w-96 h-96 bg-colegio-yellow/5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-colegio-blue/5 rounded-full blur-3xl"></div>
-    
-    <div class="max-w-7xl mx-auto px-4 relative z-10">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Texto -->
-        <div class="fade-in-section order-2 md:order-1">
-          <span class="text-colegio-yellow font-bold text-sm tracking-wider uppercase mb-4 block">BRÜNING SCHOOL</span>
-          <h2 class="text-4xl md:text-6xl font-black text-colegio-blue mb-6 leading-tight">
-            Bienvenidos a Nuestra Comunidad Educativa
-          </h2>
-          <div class="w-24 h-1.5 bg-gradient-to-r from-colegio-yellow to-transparent mb-6"></div>
-          <p class="text-gray-700 text-lg leading-relaxed mb-6">
-            En <strong>BRÜNING SCHOOL</strong> formamos líderes con valores sólidos y excelencia académica. 
-            Nuestra institución se destaca por brindar una educación integral que combina conocimiento, 
-            tecnología y formación humana.
-          </p>
-          <p class="text-gray-700 text-lg leading-relaxed mb-8">
-            Con más de <strong>9 años de experiencia</strong>, nos enorgullecemos de ser parte del desarrollo 
-            de nuestros estudiantes, preparándolos para enfrentar los desafíos del mundo actual con 
-            responsabilidad, creatividad y pensamiento crítico.
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="/nosotros" class="inline-block bg-colegio-blue hover:bg-colegio-yellow text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              Conoce Más
-            </a>
-            <a href="/admision" class="inline-block bg-white hover:bg-colegio-blue text-colegio-blue hover:text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-colegio-blue">
-              Proceso de Admisión
-            </a>
-          </div>
-        </div>
+<!-- Sección Bienvenidos -->
+<section class="relative bg-white overflow-hidden">
 
-        <!-- Imagen -->
-        <div class="fade-in-section order-1 md:order-2" style="animation-delay: 0.2s;">
-          <div class="relative group">
-            <div class="absolute -inset-4 bg-gradient-to-r from-colegio-yellow to-colegio-blue rounded-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-300 blur-xl"></div>
-            <img 
-              src="/Bienvenidos/BIENVENIDOS.webp" 
-              alt="Bienvenidos a BRÜNING SCHOOL" 
-              class="relative rounded-3xl shadow-2xl w-full h-auto object-cover transform group-hover:scale-[1.02] transition-all duration-500"
-            />
-          </div>
-        </div>
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-[1.3fr_1fr] items-center min-h-[600px]">
+
+      <!-- TEXTO -->
+      <div class="py-14 md:py-20">
+        <span class="block w-16 h-1 bg-colegio-yellow mb-6"></span>
+
+        <h2 class="text-4xl md:text-5xl font-black text-colegio-blue leading-tight mb-6">
+          ¿Es <span class="text-colegio-yellow">BRÜNING SCHOOL</span><br />
+          el lugar ideal para tu hijo?
+        </h2>
+
+        <p class="text-gray-700 text-lg mb-8 max-w-2xl">
+          Sabemos que buscas un lugar donde tu hijo crezca feliz, seguro y con un
+          propósito claro. En Brünning School lo acompañamos a descubrir su
+          potencial y desarrollar confianza para el futuro.
+        </p>
+
+        <p class="text-colegio-yellow font-semibold mb-4">
+          Si deseas para tu hijo:
+        </p>
+
+        <ul class="space-y-4 mb-10 max-w-2xl">
+          <li class="flex items-start gap-3">
+            <span class="text-colegio-yellow text-xl">✓</span>
+            <span>Motivación diaria y un genuino interés por aprender.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-colegio-yellow text-xl">✓</span>
+            <span>Un equipo que fortalezca su carácter y confianza.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-colegio-yellow text-xl">✓</span>
+            <span>
+              Una metodología con herramientas para triunfar dentro y fuera del
+              país.
+            </span>
+          </li>
+        </ul>
+
+        <a
+          href="/contacto"
+          class="inline-block bg-colegio-yellow hover:bg-colegio-blue text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all duration-300"
+        >
+          Agenda una visita guiada
+        </a>
       </div>
+
     </div>
-  </section>
+  </div>
+
+  <!-- IMAGEN (NO LLEGA ABAJO) -->
+  <div class="absolute top-0 right-0 w-[40%] h-[650px] hidden md:block">
+    <img
+      src="/Bienvenidos/BIENVENIDOS.webp"
+      alt="Niños en Bruning School"
+      class="w-full h-full object-cover rounded-bl-[300px]"
+    />
+  </div>
+
+</section>
+
+
+
 
   <!-- Universidades -->
   <section class="py-24 bg-gradient-to-br from-colegio-blue via-colegio-blue/95 to-colegio-blue text-white relative overflow-hidden">
@@ -267,9 +275,6 @@ const heroSlides = [
                 alt="Certificación Cambridge" 
                 class="w-full h-full object-contain p-8 bg-white group-hover:scale-105 transition-transform duration-500"
               />
-              <div class="absolute top-4 right-4 bg-colegio-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                CERTIFICADO
-              </div>
             </div>
             <div class="p-6 border-t-4 border-colegio-yellow">
               <h3 class="text-xl font-black text-colegio-blue mb-3 group-hover:text-colegio-yellow transition-colors">
@@ -292,9 +297,6 @@ const heroSlides = [
                 alt="IBEC" 
                 class="w-full h-full object-contain p-8 bg-white group-hover:scale-105 transition-transform duration-500"
               />
-              <div class="absolute top-4 right-4 bg-colegio-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                CERTIFICADO
-              </div>
             </div>
             <div class="p-6 border-t-4 border-colegio-yellow">
               <h3 class="text-xl font-black text-colegio-blue mb-3 group-hover:text-colegio-yellow transition-colors">
@@ -317,9 +319,6 @@ const heroSlides = [
                 alt="IBEC CE" 
                 class="w-full h-full object-contain p-8 bg-white group-hover:scale-105 transition-transform duration-500"
               />
-              <div class="absolute top-4 right-4 bg-colegio-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                CERTIFICADO
-              </div>
             </div>
             <div class="p-6 border-t-4 border-colegio-yellow">
               <h3 class="text-xl font-black text-colegio-blue mb-3 group-hover:text-colegio-yellow transition-colors">
