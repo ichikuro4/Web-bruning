@@ -51,25 +51,103 @@ import '../styles/global.css'
           </div>
         </div>
 
-        <!-- Misión y Visión -->
-        <div class="grid md:grid-cols-2 gap-12">
-          <div class="bg-gradient-to-br from-colegio-blue to-blue-800 text-white p-8 rounded-2xl shadow-xl">
-            <h3 class="text-3xl font-bold mb-4">Misión</h3>
-            <p class="text-lg leading-relaxed">
-              Potenciar en nuestros alumnos  capacidades creativas e innovadoras, con una actitud emprendedora con visión empresarial.
-              De igual modo, ofrecemos una enseñanza de calidad, propiciando  la honestidad, el respeto  y la solidaridad.
-              Buscamos que nuestros alumnos se conviertan en personas responsables con la comunidad y la patria, con  respeto por la familia.
-              Para lograr esta meta, trabajamos constantemente para brindar nuestro mejor servicio.
-            </p>
+        <!-- Misión -->
+        <section class="relative bg-white overflow-hidden mb-20">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-[1.3fr_1fr] items-center min-h-[600px]">
+              
+              <!-- TEXTO -->
+              <div class="py-14 md:py-20">
+                <span class="block w-16 h-1 bg-colegio-yellow mb-6"></span>
+                
+                <h3 class="text-4xl md:text-5xl font-black text-colegio-blue leading-tight mb-6">
+                  Nuestra <span class="text-colegio-yellow">Misión</span>
+                </h3>
+                
+                <p class="text-gray-700 text-lg mb-8 max-w-2xl leading-relaxed">
+                  Potenciar en nuestros alumnos capacidades creativas e innovadoras, con una actitud emprendedora con visión empresarial.
+                </p>
+                
+                <p class="text-colegio-yellow font-semibold mb-4">
+                  Nuestro compromiso:
+                </p>
+                
+                <ul class="space-y-4 mb-10 max-w-2xl">
+                  <li class="flex items-start gap-3">
+                    <span class="text-colegio-yellow text-xl">✓</span>
+                    <span>Ofrecemos una enseñanza de calidad, propiciando la honestidad, el respeto y la solidaridad.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-colegio-yellow text-xl">✓</span>
+                    <span>Formamos personas responsables con la comunidad y la patria, con respeto por la familia.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-colegio-yellow text-xl">✓</span>
+                    <span>Trabajamos constantemente para brindar nuestro mejor servicio.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="bg-gradient-to-br from-colegio-yellow to-yellow-500 text-colegio-blue p-8 rounded-2xl shadow-xl">
-            <h3 class="text-3xl font-bold mb-4">Visión</h3>
-            <p class="text-lg leading-relaxed">
-              Ser reconocidos por la formación integral de calidad con visión empresarial. Permitiendo la formación de jóvenes líderes, seguros de sí mismos y con competencias personales. 
-              Constituyéndonos en un colegio líder en el país,  con alumnos egresados capaces de enfrentar las demandas del mundo universitario.
-            </p>
+          
+          <!-- IMAGEN -->
+          <div class="absolute top-0 right-0 w-[40%] h-[650px] hidden md:block">
+            <img
+              src="/Nosotros/mision.webp"
+              alt="Misión BRÜNING SCHOOL"
+              class="w-full h-full object-cover rounded-bl-[300px]"
+            />
           </div>
-        </div>
+        </section>
+
+        <!-- Visión -->
+        <section class="relative bg-[#F5F5F5] overflow-hidden">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-[1fr_1.3fr] items-center min-h-[600px]">
+              
+              <!-- IMAGEN -->
+              <div class="absolute top-0 left-0 w-[40%] h-[650px] hidden md:block">
+                <img
+                  src="/Nosotros/vision.webp"
+                  alt="Visión BRÜNING SCHOOL"
+                  class="w-full h-full object-cover rounded-br-[300px]"
+                />
+              </div>
+              
+              <!-- TEXTO -->
+              <div class="py-14 md:py-20 md:col-start-2">
+                <span class="block w-16 h-1 bg-colegio-blue mb-6"></span>
+                
+                <h3 class="text-4xl md:text-5xl font-black text-colegio-blue leading-tight mb-6">
+                  Nuestra <span class="text-colegio-yellow">Visión</span>
+                </h3>
+                
+                <p class="text-gray-700 text-lg mb-8 max-w-2xl leading-relaxed">
+                  Ser reconocidos por la formación integral de calidad con visión empresarial.
+                </p>
+                
+                <p class="text-colegio-blue font-semibold mb-4">
+                  Nos proyectamos como:
+                </p>
+                
+                <ul class="space-y-4 mb-10 max-w-2xl">
+                  <li class="flex items-start gap-3">
+                    <span class="text-colegio-blue text-xl">✓</span>
+                    <span>Formadores de jóvenes líderes, seguros de sí mismos y con competencias personales.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-colegio-blue text-xl">✓</span>
+                    <span>Un colegio líder en el país, referente de excelencia educativa.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-colegio-blue text-xl">✓</span>
+                    <span>Alumnos egresados capaces de enfrentar las demandas del mundo universitario.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
 
       <!-- SECCIÓN 2: FILOSOFÍA -->

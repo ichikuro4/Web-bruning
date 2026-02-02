@@ -1,0 +1,162 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+---
+
+<Layout title="Misión y Visión | BRÜNING SCHOOL">
+  <!-- Botón flotante de WhatsApp -->
+  <WhatsAppFloat phoneNumber="51999928258" message="¡Hola! Me gustaría obtener más información sobre BRÜNING SCHOOL." />
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-colegio-blue via-colegio-blue to-blue-900 text-white pt-40 pb-20">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+        Misión y Visión
+      </h1>
+      <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+        Nuestro propósito y proyección educativa
+      </p>
+    </div>
+  </section>
+
+  <!-- Misión -->
+  <section class="relative bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-[1.3fr_1fr] items-center min-h-[600px]">
+        
+        <!-- TEXTO -->
+        <div class="py-14 md:py-20">
+          <span class="block w-16 h-1 bg-colegio-yellow mb-6"></span>
+          
+          <h2 class="text-4xl md:text-5xl font-black text-colegio-blue leading-tight mb-6">
+            Nuestra <span class="text-colegio-yellow">Misión</span>
+          </h2>
+          
+          <p class="text-gray-700 text-lg mb-8 max-w-2xl leading-relaxed">
+            Potenciar en nuestros alumnos capacidades creativas e innovadoras, con una actitud emprendedora con visión empresarial.
+          </p>
+          
+          <p class="text-colegio-yellow font-semibold mb-4">
+            Nuestro compromiso:
+          </p>
+          
+          <ul class="space-y-4 mb-10 max-w-2xl">
+            <li class="flex items-start gap-3">
+              <span class="text-colegio-yellow text-xl">✓</span>
+              <span>Ofrecemos una enseñanza de calidad, propiciando la honestidad, el respeto y la solidaridad.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-colegio-yellow text-xl">✓</span>
+              <span>Formamos personas responsables con la comunidad y la patria, con respeto por la familia.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-colegio-yellow text-xl">✓</span>
+              <span>Trabajamos constantemente para brindar nuestro mejor servicio.</span>
+            </li>
+          </ul>
+
+          <a
+            href="/admision"
+            class="inline-block bg-colegio-yellow hover:bg-colegio-blue text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all duration-300"
+          >
+            Conoce más sobre nosotros
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- IMAGEN -->
+    <div class="absolute top-0 right-0 w-[40%] h-[650px] hidden md:block">
+      <img
+        src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80&w=800"
+        alt="Misión BRÜNING SCHOOL"
+        class="w-full h-full object-cover rounded-bl-[300px]"
+      />
+    </div>
+  </section>
+
+  <!-- Visión -->
+  <section class="relative bg-[#F5F5F5] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-[1fr_1.3fr] items-center min-h-[600px]">
+        
+        <!-- IMAGEN -->
+        <div class="absolute top-0 left-0 w-[40%] h-[650px] hidden md:block">
+          <img
+            src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800"
+            alt="Visión BRÜNING SCHOOL"
+            class="w-full h-full object-cover rounded-br-[300px]"
+          />
+        </div>
+        
+        <!-- TEXTO -->
+        <div class="py-14 md:py-20 md:col-start-2">
+          <span class="block w-16 h-1 bg-colegio-blue mb-6"></span>
+          
+          <h2 class="text-4xl md:text-5xl font-black text-colegio-blue leading-tight mb-6">
+            Nuestra <span class="text-colegio-yellow">Visión</span>
+          </h2>
+          
+          <p class="text-gray-700 text-lg mb-8 max-w-2xl leading-relaxed">
+            Ser reconocidos por la formación integral de calidad con visión empresarial.
+          </p>
+          
+          <p class="text-colegio-blue font-semibold mb-4">
+            Nos proyectamos como:
+          </p>
+          
+          <ul class="space-y-4 mb-10 max-w-2xl">
+            <li class="flex items-start gap-3">
+              <span class="text-colegio-blue text-xl">✓</span>
+              <span>Formadores de jóvenes líderes, seguros de sí mismos y con competencias personales.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-colegio-blue text-xl">✓</span>
+              <span>Un colegio líder en el país, referente de excelencia educativa.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-colegio-blue text-xl">✓</span>
+              <span>Alumnos egresados capaces de enfrentar las demandas del mundo universitario.</span>
+            </li>
+          </ul>
+
+          <a
+            href="/contacto"
+            class="inline-block bg-colegio-blue hover:bg-colegio-yellow text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all duration-300"
+          >
+            Contáctanos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="py-16 bg-white text-colegio-blue">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-black mb-4">
+        ¿Listo para ser parte de nuestra familia?
+      </h2>
+      <p class="text-xl mb-8 text-gray-600">
+        Descubre todo lo que BRÜNING SCHOOL puede ofrecer a tu hijo
+      </p>
+      <a
+        href="/admision"
+        class="inline-block bg-colegio-blue hover:bg-colegio-yellow text-white font-bold px-10 py-5 rounded-full shadow-xl transition-all duration-300 transform hover:scale-105"
+      >
+        Proceso de Admisión
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  section {
+    animation: fadeIn 0.8s ease-out;
+  }
+</style>
