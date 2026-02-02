@@ -3,4 +3,17 @@
 @theme {
   --color-colegio-blue: #27348B;
   --color-colegio-yellow: #FDC300;
+  
+  /* Fuentes personalizadas */
+  --font-family-heading: 'Montserrat', sans-serif;
+  --font-family-body: 'Raleway', sans-serif;
+}
+
+/* Aplicar fuentes globalmente */
+body {
+  font-family: var(--font-family-body);
+}
+
+h1, h2, h3, h4, h5, h6, .font-black, .font-bold {
+  font-family: var(--font-family-heading);
 }
