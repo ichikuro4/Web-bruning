@@ -1,11 +1,20 @@
 @import "tailwindcss";
 
+/* Fuente Panton Black Caps */
+@font-face {
+  font-family: 'Panton';
+  src: url('/fonts/Panton-BlackCaps.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-colegio-blue: #27348B;
   --color-colegio-yellow: #FDC300;
   
   /* Fuentes personalizadas */
-  --font-family-heading: 'Montserrat', sans-serif;
+  --font-family-heading: 'Panton', 'Montserrat', sans-serif;
   --font-family-body: 'Raleway', sans-serif;
 }
 
