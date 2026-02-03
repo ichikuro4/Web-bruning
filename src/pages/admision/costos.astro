@@ -1,0 +1,388 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+---
+
+<Layout title="Costos | BRÜNING SCHOOL">
+  <WhatsAppFloat />
+  
+  <main class="pt-24 md:pt-20">
+    
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-colegio-blue via-colegio-blue/90 to-colegio-blue text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+          Costos y <span class="text-colegio-yellow">Pensiones</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+          Información transparente sobre nuestras tarifas educativas 2026
+        </p>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 py-16 space-y-20">
+      
+      <!-- Costos Principales -->
+      <section>
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-colegio-blue mb-3">Costos 2026</h2>
+          <div class="w-24 h-1 bg-colegio-yellow mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          
+          <!-- Cuota de Ingreso -->
+          <div class="bg-gradient-to-br from-colegio-blue to-colegio-blue/80 rounded-2xl shadow-xl overflow-hidden">
+            <div class="p-8 text-white">
+              <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-center mb-2">Cuota de Ingreso</h3>
+              <p class="text-sm text-white/80 text-center mb-4">Pago único</p>
+              <div class="text-center bg-white/10 py-4 rounded-xl">
+                <span class="text-5xl font-black text-colegio-yellow">S/ 1,000</span>
+                <span class="text-white/80 text-sm">.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Derecho de Matrícula -->
+          <div class="bg-gradient-to-br from-colegio-yellow to-amber-400 rounded-2xl shadow-xl overflow-hidden">
+            <div class="p-8 text-colegio-blue">
+              <div class="w-16 h-16 bg-colegio-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-colegio-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-center mb-2">Derecho de Matrícula</h3>
+              <p class="text-sm text-colegio-blue/80 text-center mb-4">Pago anual</p>
+              <div class="text-center bg-white/30 py-4 rounded-xl">
+                <span class="text-5xl font-black text-colegio-blue">S/ 600</span>
+                <span class="text-colegio-blue/80 text-sm">.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pensión Mensual -->
+          <div class="bg-gradient-to-br from-colegio-blue to-colegio-blue/80 rounded-2xl shadow-xl overflow-hidden">
+            <div class="p-8 text-white">
+              <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-center mb-2">Pensión Mensual</h3>
+              <p class="text-sm text-white/80 text-center mb-4">10 cuotas mensuales</p>
+              <div class="text-center bg-white/10 py-4 rounded-xl">
+                <span class="text-5xl font-black text-colegio-yellow">S/ 600</span>
+                <span class="text-white/80 text-sm">.00</span>
+              </div>
+              <p class="text-xs text-center text-white/70 mt-4">Última cuota al término del servicio educativo</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA WhatsApp Principal -->
+        <div class="text-center">
+          <a 
+            href="https://wa.me/51999928258?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20sobre%20los%20costos%20de%20admisi%C3%B3n."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 32 32">
+              <path d="M16.003 0C7.17 0 0.008 7.162 0.008 15.997c0 2.84 0.748 5.508 2.052 7.82L0.142 31.95l8.375-2.185c2.19 1.166 4.692 1.831 7.486 1.831 8.833 0 15.995-7.162 15.995-15.997S24.836 0 16.003 0zm9.366 22.595c-0.393 1.104-2.312 2.148-3.213 2.245-0.825 0.088-1.893 0.127-3.052-0.193-0.703-0.193-1.604-0.452-2.755-0.883-4.836-1.822-8.004-6.674-8.246-6.98-0.232-0.306-1.922-2.579-1.922-4.92 0-2.342 1.209-3.486 1.648-3.962 0.438-0.476 0.955-0.595 1.274-0.595 0.319 0 0.638 0.003 0.916 0.014 0.294 0.012 0.69-0.112 1.079 0.827 0.398 0.962 1.362 3.303 1.482 3.543 0.12 0.24 0.2 0.52 0.04 0.825-0.16 0.306-0.24 0.496-0.478 0.767-0.239 0.271-0.502 0.606-0.717 0.814-0.239 0.231-0.487 0.481-0.209 0.943 0.278 0.462 1.235 2.036 2.649 3.298 1.82 1.623 3.354 2.126 3.832 2.366 0.478 0.24 0.757 0.2 1.035-0.12 0.278-0.32 1.195-1.395 1.514-1.871 0.319-0.476 0.638-0.397 1.076-0.24 0.438 0.157 2.779 1.311 3.257 1.551 0.478 0.24 0.797 0.36 0.916 0.56 0.12 0.2 0.12 1.151-0.273 2.255z"/>
+            </svg>
+            Consultar costos por WhatsApp
+          </a>
+        </div>
+      </section>
+
+      <!-- Información Importante -->
+      <section class="bg-amber-50 border-l-4 border-amber-500 p-6 md:p-8 rounded-r-xl">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-amber-900 mb-3">📌 Información Importante</h3>
+            <p class="text-gray-700 leading-relaxed">
+              El colegio retendrá los certificados de estudios correspondientes a periodos no pagados, de acuerdo a la 
+              <strong class="text-amber-900">Ley N.° 27665</strong>, que modifica el artículo 16° de la Ley N.° 26549.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Capacidad de Aulas -->
+      <section>
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-colegio-blue mb-3">🏫 Capacidad de Aulas</h2>
+          <div class="w-24 h-1 bg-colegio-yellow mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gradient-to-br from-colegio-blue to-colegio-blue/80 p-8 rounded-2xl shadow-xl text-white transform hover:scale-105 transition-all duration-300">
+            <div class="text-center">
+              <div class="text-5xl mb-4">👶</div>
+              <h4 class="font-bold text-xl mb-3">Primaria (1°, 2°, 3°)</h4>
+              <div class="bg-white/20 py-3 rounded-xl">
+                <div class="text-5xl font-black text-colegio-yellow">30</div>
+                <p class="text-sm text-white/90 mt-2">estudiantes por aula</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-colegio-yellow to-amber-400 p-8 rounded-2xl shadow-xl text-colegio-blue transform hover:scale-105 transition-all duration-300">
+            <div class="text-center">
+              <div class="text-5xl mb-4">📚</div>
+              <h4 class="font-bold text-xl mb-3">Primaria (4°, 5°, 6°)</h4>
+              <div class="bg-white/30 py-3 rounded-xl">
+                <div class="text-5xl font-black text-colegio-blue">32</div>
+                <p class="text-sm text-colegio-blue/90 mt-2">estudiantes por aula</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-colegio-blue to-colegio-blue/80 p-8 rounded-2xl shadow-xl text-white transform hover:scale-105 transition-all duration-300">
+            <div class="text-center">
+              <div class="text-5xl mb-4">🎓</div>
+              <h4 class="font-bold text-xl mb-3">Secundaria (1° a 5°)</h4>
+              <div class="bg-white/20 py-3 rounded-xl">
+                <div class="text-5xl font-black text-colegio-yellow">32</div>
+                <p class="text-sm text-white/90 mt-2">estudiantes por aula</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cronograma de Pagos -->
+      <section>
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-colegio-blue mb-3">📅 Cronograma de Pagos</h2>
+          <div class="w-24 h-1 bg-colegio-yellow mx-auto"></div>
+        </div>
+
+        <div class="bg-gradient-to-br from-colegio-blue/5 to-colegio-yellow/5 rounded-2xl shadow-lg p-8 md:p-10 border-2 border-colegio-blue/10">
+          <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- Fechas de Vencimiento -->
+            <div>
+              <h3 class="text-xl font-bold text-colegio-blue mb-6 flex items-center gap-2">
+                <span class="text-2xl">📆</span>
+                Vencimiento Mensual
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-center gap-3 p-4 bg-gradient-to-r from-colegio-blue to-colegio-blue/90 rounded-xl text-white shadow-md">
+                  <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center font-bold text-lg">
+                    30-31
+                  </div>
+                  <div>
+                    <p class="font-semibold">Entre el 30 y 31 de cada mes</p>
+                    <p class="text-sm text-white/80">Fechas regulares</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-center gap-3 p-4 bg-gradient-to-r from-colegio-yellow to-amber-400 rounded-xl shadow-md">
+                  <div class="w-12 h-12 bg-colegio-blue rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    19
+                  </div>
+                  <div>
+                    <p class="font-semibold text-colegio-blue">19 de diciembre</p>
+                    <p class="text-sm text-colegio-blue/80">⚠️ Excepción especial</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Meses de Pago -->
+            <div>
+              <h3 class="text-xl font-bold text-colegio-blue mb-6 flex items-center gap-2">
+                <span class="text-2xl">🗓️</span>
+                Meses de Pago
+              </h3>
+              <div class="grid grid-cols-2 gap-3">
+                {['Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'].map((mes) => (
+                  <div class="flex items-center gap-2 p-3 bg-gradient-to-r from-colegio-blue/10 to-colegio-blue/5 rounded-lg border border-colegio-blue/20 hover:border-colegio-yellow transition-colors">
+                    <svg class="w-5 h-5 text-colegio-yellow" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-sm font-semibold text-colegio-blue">{mes}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Histórico de Costos -->
+      <section>
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-colegio-blue mb-3">📊 Histórico de Costos</h2>
+          <div class="w-24 h-1 bg-colegio-yellow mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600">Evolución de nuestras tarifas en los últimos años</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          
+          <!-- Toggle Button (Mobile) -->
+          <button 
+            id="toggle-historico"
+            class="w-full md:hidden bg-colegio-blue text-white p-4 flex items-center justify-between font-bold"
+          >
+            <span>Ver histórico de costos</span>
+            <svg id="chevron-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+
+          <!-- Tabla de Histórico -->
+          <div id="historico-table" class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-colegio-blue text-white">
+                <tr>
+                  <th class="px-4 md:px-6 py-4 text-left font-bold">Año</th>
+                  <th class="px-4 md:px-6 py-4 text-center font-bold">Cuota de Ingreso</th>
+                  <th class="px-4 md:px-6 py-4 text-center font-bold">Matrícula</th>
+                  <th class="px-4 md:px-6 py-4 text-center font-bold">Pensión Mensual</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr class="hover:bg-gray-50 transition-colors">
+                  <td class="px-4 md:px-6 py-4 font-bold text-colegio-blue">2026</td>
+                  <td class="px-4 md:px-6 py-4 text-center">S/ 1,000.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center">S/ 600.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center">S/ 600.00</td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors">
+                  <td class="px-4 md:px-6 py-4 font-semibold text-gray-700">2025</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 950.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 570.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 570.00</td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors">
+                  <td class="px-4 md:px-6 py-4 font-semibold text-gray-700">2024</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 900.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 540.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 540.00</td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors">
+                  <td class="px-4 md:px-6 py-4 font-semibold text-gray-700">2023</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 850.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 510.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 510.00</td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors">
+                  <td class="px-4 md:px-6 py-4 font-semibold text-gray-700">2022</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 800.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 480.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 480.00</td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors">
+                  <td class="px-4 md:px-6 py-4 font-semibold text-gray-700">2021</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 750.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 450.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 450.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Final -->
+      <section class="bg-gradient-to-r from-colegio-blue via-colegio-blue/90 to-colegio-blue text-white rounded-3xl p-10 md:p-16 text-center shadow-2xl">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Tienes dudas sobre los costos?</h2>
+        <p class="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+          Nuestro equipo está listo para brindarte toda la información que necesitas para tomar la mejor decisión
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="https://wa.me/51999928258?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20sobre%20los%20costos%20de%20admisi%C3%B3n."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 32 32">
+              <path d="M16.003 0C7.17 0 0.008 7.162 0.008 15.997c0 2.84 0.748 5.508 2.052 7.82L0.142 31.95l8.375-2.185c2.19 1.166 4.692 1.831 7.486 1.831 8.833 0 15.995-7.162 15.995-15.997S24.836 0 16.003 0zm9.366 22.595c-0.393 1.104-2.312 2.148-3.213 2.245-0.825 0.088-1.893 0.127-3.052-0.193-0.703-0.193-1.604-0.452-2.755-0.883-4.836-1.822-8.004-6.674-8.246-6.98-0.232-0.306-1.922-2.579-1.922-4.92 0-2.342 1.209-3.486 1.648-3.962 0.438-0.476 0.955-0.595 1.274-0.595 0.319 0 0.638 0.003 0.916 0.014 0.294 0.012 0.69-0.112 1.079 0.827 0.398 0.962 1.362 3.303 1.482 3.543 0.12 0.24 0.2 0.52 0.04 0.825-0.16 0.306-0.24 0.496-0.478 0.767-0.239 0.271-0.502 0.606-0.717 0.814-0.239 0.231-0.487 0.481-0.209 0.943 0.278 0.462 1.235 2.036 2.649 3.298 1.82 1.623 3.354 2.126 3.832 2.366 0.478 0.24 0.757 0.2 1.035-0.12 0.278-0.32 1.195-1.395 1.514-1.871 0.319-0.476 0.638-0.397 1.076-0.24 0.438 0.157 2.779 1.311 3.257 1.551 0.478 0.24 0.797 0.36 0.916 0.56 0.12 0.2 0.12 1.151-0.273 2.255z"/>
+            </svg>
+            Consultar por WhatsApp
+          </a>
+          <a 
+            href="/admision/matricula"
+            class="inline-flex items-center justify-center gap-2 bg-white text-colegio-blue px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+          >
+            Ver Proceso de Admisión
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</Layout>
+
+<script>
+  // Toggle histórico en mobile
+  const toggleBtn = document.getElementById('toggle-historico');
+  const historicoTable = document.getElementById('historico-table');
+  const chevronIcon = document.getElementById('chevron-icon');
+
+  if (toggleBtn && historicoTable && chevronIcon) {
+    // Ocultar tabla en mobile por defecto
+    if (window.innerWidth < 768) {
+      historicoTable.classList.add('hidden');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      historicoTable.classList.toggle('hidden');
+      chevronIcon.classList.toggle('rotate-180');
+    });
+
+    // Mostrar tabla en desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) {
+        historicoTable.classList.remove('hidden');
+      }
+    });
+  }
+</script>
+
+<style>
+  /* Animación suave para la tabla */
+  #historico-table {
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  #historico-table.hidden {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  /* Responsive table */
+  @media (max-width: 768px) {
+    table {
+      font-size: 0.875rem;
+    }
+    
+    th, td {
+      padding: 0.75rem 0.5rem;
+    }
+  }
+
+  /* Hover effects en las filas */
+  tbody tr {
+    transition: background-color 0.2s ease;
+  }
+</style>
