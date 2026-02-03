@@ -12,6 +12,7 @@
 @theme {
   --color-colegio-blue: #27348B;
   --color-colegio-yellow: #FDC300;
+  --color-colegio-white: #FFFFFF;
   
   /* Fuentes personalizadas */
   --font-family-heading: 'Panton', 'Montserrat', sans-serif;
