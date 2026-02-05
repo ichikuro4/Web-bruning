@@ -49,18 +49,18 @@ import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
           </div>
 
           <!-- Derecho de Matrícula -->
-          <div class="bg-gradient-to-br from-colegio-yellow to-amber-400 rounded-2xl shadow-xl overflow-hidden">
-            <div class="p-8 text-colegio-blue">
-              <div class="w-16 h-16 bg-colegio-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="w-8 h-8 text-colegio-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="bg-gradient-to-br from-colegio-blue to-colegio-blue/80 rounded-2xl shadow-xl overflow-hidden">
+            <div class="p-8 text-white">
+              <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-colegio-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                 </svg>
               </div>
               <h3 class="text-xl font-bold text-center mb-2">Derecho de Matrícula</h3>
-              <p class="text-sm text-colegio-blue/80 text-center mb-4">Pago anual</p>
+              <p class="text-sm text-colegio-white text-center mb-4">Pago anual</p>
               <div class="text-center bg-white/30 py-4 rounded-xl">
-                <span class="text-5xl font-black text-colegio-blue">S/ 600</span>
-                <span class="text-colegio-blue/80 text-sm">.00</span>
+                <span class="text-5xl font-black text-colegio-yellow">S/ 600</span>
+                <span class="text-colegio-white/80 text-sm">.00</span>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@ import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                 </svg>
               </div>
-              <h3 class="text-xl font-bold text-center mb-2">Pensión Mensual</h3>
+              <h3 class="text-xl font-bold text-center mb-2">Pensión</h3>
               <p class="text-sm text-white/80 text-center mb-4">10 cuotas mensuales</p>
               <div class="text-center bg-white/10 py-4 rounded-xl">
                 <span class="text-5xl font-black text-colegio-yellow">S/ 600</span>
@@ -150,45 +150,39 @@ import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
                   <th class="px-4 md:px-6 py-4 text-left font-bold">Año</th>
                   <th class="px-4 md:px-6 py-4 text-center font-bold">Cuota de Ingreso</th>
                   <th class="px-4 md:px-6 py-4 text-center font-bold">Matrícula</th>
-                  <th class="px-4 md:px-6 py-4 text-center font-bold">Pensión Mensual</th>
+                  <th class="px-4 md:px-6 py-4 text-center font-bold">Pensión</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200">
                 <tr class="hover:bg-gray-50 transition-colors">
-                  <td class="px-4 md:px-6 py-4 font-bold text-colegio-blue">2026</td>
-                  <td class="px-4 md:px-6 py-4 text-center">S/ 1,000.00</td>
-                  <td class="px-4 md:px-6 py-4 text-center">S/ 600.00</td>
-                  <td class="px-4 md:px-6 py-4 text-center">S/ 600.00</td>
-                </tr>
-                <tr class="hover:bg-gray-50 transition-colors">
                   <td class="px-4 md:px-6 py-4 font-semibold text-gray-700">2025</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 950.00</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 570.00</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 570.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 600.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 500.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 500.00</td>
                 </tr>
                 <tr class="hover:bg-gray-50 transition-colors">
                   <td class="px-4 md:px-6 py-4 font-semibold text-gray-700">2024</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 900.00</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 540.00</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 540.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 500.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 500.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 500.00</td>
                 </tr>
                 <tr class="hover:bg-gray-50 transition-colors">
                   <td class="px-4 md:px-6 py-4 font-semibold text-gray-700">2023</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 850.00</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 510.00</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 510.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 500.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 500.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 500.00</td>
                 </tr>
                 <tr class="hover:bg-gray-50 transition-colors">
                   <td class="px-4 md:px-6 py-4 font-semibold text-gray-700">2022</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 800.00</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 480.00</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 480.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 500.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 500.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 500.00</td>
                 </tr>
                 <tr class="hover:bg-gray-50 transition-colors">
                   <td class="px-4 md:px-6 py-4 font-semibold text-gray-700">2021</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 750.00</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 450.00</td>
-                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 450.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 500.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 320.00</td>
+                  <td class="px-4 md:px-6 py-4 text-center text-gray-600">S/ 320.00</td>
                 </tr>
               </tbody>
             </table>
