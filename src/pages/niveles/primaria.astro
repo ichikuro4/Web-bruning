@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css'
+---
+
+<Layout title="Nivel Primaria | BRÜNING SCHOOL">
+  <main class="pt-24 md:pt-20">
+    
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-colegio-blue via-colegio-blue/90 to-colegio-blue text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+          Nivel <span class="text-colegio-yellow">Primaria</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+          Educación de calidad para el desarrollo integral de nuestros estudiantes
+        </p>
+      </div>
+    </section>
+
+    <!-- Contenido Principal - Imagen a ancho completo -->
+    <div class="w-full">
+      <img 
+        src="/Niveles/PÁGINA 1.webp" 
+        alt="Propuesta Educativa Nivel Primaria - BRÜNING SCHOOL"
+        class="w-full h-auto object-cover"
+      />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* Animaciones personalizadas */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  section {
+    animation: fadeInUp 0.6s ease-out;
+  }
+</style>
