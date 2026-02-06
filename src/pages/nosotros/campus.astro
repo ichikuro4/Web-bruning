@@ -33,86 +33,87 @@ import Layout from '../../layouts/Layout.astro';
         <!-- Grid de Instalaciones -->
         <div class="space-y-24">
         
-        <!-- Aulas Modernas -->
+        <!-- Campus -->
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="order-2 md:order-1">
             <div class="rounded-2xl overflow-hidden shadow-2xl group">
               <img 
-                src="/Campus/Cancha.webp" 
-                alt="Aulas Modernas"
+                src="/Campus/campus-general.jpg" 
+                alt="Campus BRÜNING SCHOOL"
                 class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=800'"
               />
             </div>
           </div>
           <div class="order-1 md:order-2 space-y-4">
             <span class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-4 py-2 rounded-full text-sm">
-              EDUCACIÓN
+              NUESTRA INSTITUCIÓN
             </span>
-            <h3 class="text-4xl font-bold text-colegio-blue">Aulas Modernas</h3>
+            <h3 class="text-4xl font-bold text-colegio-blue">Nuestro Campus</h3>
             <p class="text-gray-700 text-lg leading-relaxed">
-              Nuestras aulas están equipadas con tecnología de punta, proyectores multimedia, pizarras interactivas 
-              y mobiliario ergonómico que favorece la concentración y el trabajo en equipo.
+              BRÜNING SCHOOL cuenta con modernas instalaciones diseñadas para brindar un ambiente seguro, 
+              acogedor y estimulante que favorece el desarrollo integral de nuestros estudiantes.
             </p>
             <ul class="space-y-3">
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-gray-700">Capacidad óptima para atención personalizada</span>
+                <span class="text-gray-700">Espacios amplios y bien distribuidos</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-gray-700">Iluminación natural y ventilación adecuada</span>
+                <span class="text-gray-700">Infraestructura moderna y funcional</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-gray-700">Equipamiento tecnológico de última generación</span>
+                <span class="text-gray-700">Áreas verdes y zonas recreativas</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <!-- Laboratorios -->
+        <!-- Campo Deportivo -->
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="space-y-4">
             <span class="inline-block bg-colegio-blue text-white font-bold px-4 py-2 rounded-full text-sm">
-              CIENCIA Y TECNOLOGÍA
+              DEPORTES
             </span>
-            <h3 class="text-4xl font-bold text-colegio-blue">Laboratorios Equipados</h3>
+            <h3 class="text-4xl font-bold text-colegio-blue">Campo Deportivo</h3>
             <p class="text-gray-700 text-lg leading-relaxed">
-              Contamos con laboratorios de ciencias completamente equipados donde los estudiantes pueden 
-              realizar experimentos y desarrollar sus habilidades de investigación científica.
+              Amplias instalaciones deportivas que fomentan la actividad física, el trabajo en equipo y 
+              el desarrollo de habilidades deportivas en un entorno seguro y profesional.
             </p>
             <ul class="space-y-3">
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-gray-700">Laboratorio de Física, Química y Biología</span>
+                <span class="text-gray-700">Canchas multiuso para diversos deportes</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-gray-700">Equipamiento científico profesional</span>
+                <span class="text-gray-700">Superficies deportivas de calidad</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-gray-700">Normas de seguridad internacionales</span>
+                <span class="text-gray-700">Espacios para educación física y recreación</span>
               </li>
             </ul>
           </div>
           <div>
             <div class="rounded-2xl overflow-hidden shadow-2xl group">
               <img 
-                src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800" 
-                alt="Laboratorios"
+                src="/Campus/Cancha.jpeg" 
+                alt="Campo Deportivo"
                 class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -124,7 +125,7 @@ import Layout from '../../layouts/Layout.astro';
           <div class="order-2 md:order-1">
             <div class="rounded-2xl overflow-hidden shadow-2xl group">
               <img 
-                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800" 
+                src="/Campus/Auditorio.jpeg" 
                 alt="Auditorio"
                 class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -134,7 +135,7 @@ import Layout from '../../layouts/Layout.astro';
             <span class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-4 py-2 rounded-full text-sm">
               EVENTOS Y CULTURA
             </span>
-            <h3 class="text-4xl font-bold text-colegio-blue">Auditorio</h3>
+            <h3 class="text-4xl font-bold text-colegio-blue">Auditorio ROMELIA RUIZ CASTILLO</h3>
             <p class="text-gray-700 text-lg leading-relaxed">
               Un espacio moderno y versátil equipado con tecnología audiovisual de última generación para 
               presentaciones, ceremonias, eventos culturales y actividades académicas.
@@ -162,15 +163,156 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Sala de Cómputo -->
+        <!-- Aula Magna -->
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="space-y-4">
             <span class="inline-block bg-colegio-blue text-white font-bold px-4 py-2 rounded-full text-sm">
+              REUNIONES Y CONFERENCIAS
+            </span>
+            <h3 class="text-4xl font-bold text-colegio-blue">Aula Magna</h3>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              Espacio amplio diseñado para conferencias, reuniones institucionales y actividades especiales 
+              que requieren un ambiente formal y bien equipado.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Capacidad para reuniones institucionales</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Equipamiento audiovisual moderno</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Ambiente formal y profesional</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl group">
+              <img 
+                src="/Campus/aula-magna.jpg" 
+                alt="Aula Magna"
+                class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.src='https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=800'"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Laboratorio -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="order-2 md:order-1">
+            <div class="rounded-2xl overflow-hidden shadow-2xl group">
+              <img 
+                src="/Campus/Laboratorio.jpeg" 
+                alt="Laboratorio"
+                class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+          <div class="order-1 md:order-2 space-y-4">
+            <span class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-4 py-2 rounded-full text-sm">
+              CIENCIA Y TECNOLOGÍA
+            </span>
+            <h3 class="text-4xl font-bold text-colegio-blue">Laboratorio</h3>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              Contamos con laboratorios de ciencias completamente equipados donde los estudiantes pueden 
+              realizar experimentos y desarrollar sus habilidades de investigación científica.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Laboratorio de Física, Química y Biología</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Equipamiento científico profesional</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Normas de seguridad internacionales</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Salón de Robótica -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <span class="inline-block bg-colegio-blue text-white font-bold px-4 py-2 rounded-full text-sm">
+              INNOVACIÓN Y TECNOLOGÍA
+            </span>
+            <h3 class="text-4xl font-bold text-colegio-blue">Salón de Robótica</h3>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              Espacio especializado para el desarrollo de habilidades STEM mediante el diseño, programación 
+              y construcción de robots, fomentando la innovación y el pensamiento lógico.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Kits de robótica educativa avanzados</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Software de programación especializado</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Áreas de trabajo para proyectos colaborativos</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl group">
+              <img 
+                src="/Campus/Robotica.jpeg" 
+                alt="Salón de Robótica"
+                class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.src='https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800'"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Salón de Computación -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="order-2 md:order-1">
+            <div class="rounded-2xl overflow-hidden shadow-2xl group">
+              <img 
+                src="/Campus/computacion.jpg" 
+                alt="Salón de Computación"
+                class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.src='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800'"
+              />
+            </div>
+          </div>
+          <div class="order-1 md:order-2 space-y-4">
+            <span class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-4 py-2 rounded-full text-sm">
               TECNOLOGÍA
             </span>
-            <h3 class="text-4xl font-bold text-colegio-blue">Sala de Cómputo</h3>
+            <h3 class="text-4xl font-bold text-colegio-blue">Salón de Computación</h3>
             <p class="text-gray-700 text-lg leading-relaxed">
-              Equipadas con computadoras de última generación y software educativo especializado para 
+              Equipado con computadoras de última generación y software educativo especializado para 
               desarrollar habilidades digitales esenciales para el siglo XXI.
             </p>
             <ul class="space-y-3">
@@ -194,16 +336,52 @@ import Layout from '../../layouts/Layout.astro';
               </li>
             </ul>
           </div>
+        </div>
+
+        <!-- Aulas Modernas -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <span class="inline-block bg-colegio-blue text-white font-bold px-4 py-2 rounded-full text-sm">
+              EDUCACIÓN
+            </span>
+            <h3 class="text-4xl font-bold text-colegio-blue">Aulas Modernas</h3>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              Nuestras aulas están equipadas con tecnología de punta, proyectores multimedia, pizarras interactivas 
+              y mobiliario ergonómico que favorece la concentración y el trabajo en equipo.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Infraestructura antisísmica certificada</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Iluminación natural y ventilación adecuada</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Equipamiento tecnológico de última generación</span>
+              </li>
+            </ul>
+          </div>
           <div>
             <div class="rounded-2xl overflow-hidden shadow-2xl group">
               <img 
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800" 
-                alt="Sala de Cómputo"
+                src="/Campus/aulas.jpg" 
+                alt="Aulas Modernas"
                 class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.src='https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800'"
               />
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
