@@ -332,13 +332,93 @@ const heroSlides = [
       </div>
 
       <!-- Carrusel de Videos -->
-      <div class="relative">
+      <div class="relative max-w-[90rem] mx-auto">
         <div class="overflow-hidden">
           <div id="testimonios-carousel" class="flex transition-transform duration-500 ease-out">
-            <!-- Video Testimonio 1 -->
-            <div class="w-full flex-shrink-0 px-4 md:px-60">
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20 mx-auto">
-                <div class="relative h-[400px] md:h-[500px]">
+            <!-- Slides para Desktop: 2 grupos de 3 videos -->
+            <!-- Grupo Desktop 1 -->
+            <div class="w-full flex-shrink-0 hidden md:block">
+              <div class="grid grid-cols-3 gap-6 px-4">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                  <div class="relative h-[450px]">
+                    <iframe 
+                      src="https://player.vimeo.com/video/1158487706?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
+                      frameborder="0" 
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                      title="Testimonio 1"
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                  <div class="relative h-[450px]">
+                    <iframe 
+                      src="https://player.vimeo.com/video/1158488197?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
+                      frameborder="0" 
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                      title="Testimonio 2"
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                  <div class="relative h-[450px]">
+                    <iframe 
+                      src="https://player.vimeo.com/video/1158487706?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
+                      frameborder="0" 
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                      title="Testimonio 3"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Grupo Desktop 2 -->
+            <div class="w-full flex-shrink-0 hidden md:block">
+              <div class="grid grid-cols-3 gap-6 px-4">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                  <div class="relative h-[450px]">
+                    <iframe 
+                      src="https://player.vimeo.com/video/1158488197?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
+                      frameborder="0" 
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                      title="Testimonio 4"
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                  <div class="relative h-[450px]">
+                    <iframe 
+                      src="https://player.vimeo.com/video/1158487706?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
+                      frameborder="0" 
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                      title="Testimonio 5"
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                  <div class="relative h-[450px]">
+                    <iframe 
+                      src="https://player.vimeo.com/video/1158488197?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
+                      frameborder="0" 
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                      title="Testimonio 6"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slides para Móvil: 6 videos individuales -->
+            <!-- Video 1 Móvil -->
+            <div class="w-full flex-shrink-0 md:hidden px-4">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div class="relative h-[350px]">
                   <iframe 
                     src="https://player.vimeo.com/video/1158487706?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
                     frameborder="0" 
@@ -350,16 +430,76 @@ const heroSlides = [
               </div>
             </div>
 
-            <!-- Video Testimonio 2 -->
-            <div class="w-full flex-shrink-0 px-4 md:px-60">
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20 mx-auto">
-                <div class="relative h-[400px] md:h-[500px]">
+            <!-- Video 2 Móvil -->
+            <div class="w-full flex-shrink-0 md:hidden px-4">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div class="relative h-[350px]">
                   <iframe 
                     src="https://player.vimeo.com/video/1158488197?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
                     frameborder="0" 
                     allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
                     style="position:absolute;top:0;left:0;width:100%;height:100%;" 
                     title="Testimonio 2"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 3 Móvil -->
+            <div class="w-full flex-shrink-0 md:hidden px-4">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div class="relative h-[350px]">
+                  <iframe 
+                    src="https://player.vimeo.com/video/1158487706?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                    title="Testimonio 3"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 4 Móvil -->
+            <div class="w-full flex-shrink-0 md:hidden px-4">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div class="relative h-[350px]">
+                  <iframe 
+                    src="https://player.vimeo.com/video/1158488197?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                    title="Testimonio 4"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 5 Móvil -->
+            <div class="w-full flex-shrink-0 md:hidden px-4">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div class="relative h-[350px]">
+                  <iframe 
+                    src="https://player.vimeo.com/video/1158487706?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                    title="Testimonio 5"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 6 Móvil -->
+            <div class="w-full flex-shrink-0 md:hidden px-4">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div class="relative h-[350px]">
+                  <iframe 
+                    src="https://player.vimeo.com/video/1158488197?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                    title="Testimonio 6"
                   ></iframe>
                 </div>
               </div>
@@ -381,8 +521,16 @@ const heroSlides = [
 
         <!-- Indicadores -->
         <div class="flex justify-center gap-3 mt-8">
-          <button class="testimonio-dot w-3 h-3 rounded-full bg-colegio-yellow transition-all duration-300"></button>
-          <button class="testimonio-dot w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+          <!-- Dots para desktop (2) -->
+          <button class="testimonio-dot hidden md:block w-3 h-3 rounded-full bg-colegio-yellow transition-all duration-300"></button>
+          <button class="testimonio-dot hidden md:block w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+          <!-- Dots para móvil (6) -->
+          <button class="testimonio-dot md:hidden w-3 h-3 rounded-full bg-colegio-yellow transition-all duration-300"></button>
+          <button class="testimonio-dot md:hidden w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+          <button class="testimonio-dot md:hidden w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+          <button class="testimonio-dot md:hidden w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+          <button class="testimonio-dot md:hidden w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+          <button class="testimonio-dot md:hidden w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
         </div>
       </div>
     </div>
@@ -614,7 +762,13 @@ const heroSlides = [
   const nextTestimonio = document.getElementById('next-testimonio');
   const testimonioDots = document.querySelectorAll('.testimonio-dot');
   let currentTestimonioIndex = 0;
-  const totalTestimonios = 2;
+  
+  // Función para obtener el número total de testimonios según el tamaño de pantalla
+  function getTotalTestimonios() {
+    return window.innerWidth >= 768 ? 2 : 6; // md breakpoint de Tailwind es 768px
+  }
+  
+  let totalTestimonios = getTotalTestimonios();
 
   function updateTestimonioCarousel() {
     if (testimoniosCarousel) {
@@ -634,11 +788,13 @@ const heroSlides = [
   }
 
   prevTestimonio?.addEventListener('click', () => {
+    totalTestimonios = getTotalTestimonios();
     currentTestimonioIndex = (currentTestimonioIndex - 1 + totalTestimonios) % totalTestimonios;
     updateTestimonioCarousel();
   });
 
   nextTestimonio?.addEventListener('click', () => {
+    totalTestimonios = getTotalTestimonios();
     currentTestimonioIndex = (currentTestimonioIndex + 1) % totalTestimonios;
     updateTestimonioCarousel();
   });
@@ -648,6 +804,13 @@ const heroSlides = [
       currentTestimonioIndex = index;
       updateTestimonioCarousel();
     });
+  });
+
+  // Actualizar al cambiar el tamaño de la ventana
+  window.addEventListener('resize', () => {
+    totalTestimonios = getTotalTestimonios();
+    currentTestimonioIndex = 0; // Resetear al primer slide
+    updateTestimonioCarousel();
   });
 
   // Carrusel de Universidades Estilo Coverflow
