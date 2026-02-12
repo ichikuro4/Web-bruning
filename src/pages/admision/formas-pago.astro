@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css'
+---
+
+<Layout title="Nivel Primaria | BRÜNING SCHOOL">
+  <main class="pt-24 md:pt-20">
+    
+
+    <!-- Contenido Principal - Imagen a ancho completo -->
+    <div class="w-full bg-white pt-18 pb-15">
+      <img 
+        src="/Admision/Métodos de Pago.png" 
+        alt="Propuesta Educativa Nivel Primaria - BRÜNING SCHOOL"
+        class="w-full h-auto object-cover"
+      />
+    </div>
+</Layout>
+
+<style>
+  /* Animaciones personalizadas */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  section {
+    animation: fadeInUp 0.6s ease-out;
+  }
+</style>
