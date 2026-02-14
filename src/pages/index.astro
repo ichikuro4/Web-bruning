@@ -79,9 +79,7 @@ const heroSlides = [
 
         <div class="stat-item">
           <div class="mb-4 flex justify-center">
-            <svg class="w-16 h-16 text-colegio-yellow" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10.394 2.827a1 1 0 00-.788 0l-7 3a1 1 0 000 1.848L3.394 7.03A1.99 1.99 0 003 8v6a2 2 0 002 2h10a2 2 0 002-2V8c0-.345-.088-.666-.228-.961l.788-.338a1 1 0 000-1.848l-7-3zM10 12a3 3 0 100-6 3 3 0 000 6z"/>
-            </svg>
+            <img src="/Logos/ALUMNOS.webp" alt="Excelencia" class="w-30 h-20 object-contain" />
           </div>
           <div class="text-5xl font-black text-colegio-yellow mb-2 counter" data-target="500">0</div>
           <div class="text-sm md:text-base font-semibold opacity-90">Exalumnos</div>
@@ -656,10 +654,10 @@ const heroSlides = [
     const updateCounter = () => {
       current += increment;
       if (current < target) {
-        element.textContent = Math.floor(current).toString();
+        element.textContent = Math.floor(current).toString() + '+';
         requestAnimationFrame(updateCounter);
       } else {
-        element.textContent = target.toString();
+        element.textContent = target.toString() + '+';
       }
     };
 
