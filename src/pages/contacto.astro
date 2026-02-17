@@ -1,0 +1,431 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contáctanos | BRÜNING SCHOOL">
+  <main class="pt-24 md:pt-20">
+    
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-colegio-blue via-colegio-blue/90 to-colegio-blue text-white py-24 relative overflow-hidden">
+      <!-- Decorative elements -->
+      <div class="absolute top-0 right-0 w-96 h-96 bg-colegio-yellow/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+        <h1 class="text-5xl md:text-6xl font-black mb-6">
+          Contáctanos
+        </h1>
+        <div class="w-32 h-1.5 bg-gradient-to-r from-transparent via-colegio-yellow to-transparent mx-auto mb-6"></div>
+        <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+          Estamos aquí para atender tus consultas y brindarte la información que necesitas 
+          sobre nuestra propuesta educativa de excelencia.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección de Contacto - 2 Columnas -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+          
+          <!-- Columna Izquierda - Información de Contacto -->
+          <div class="space-y-8">
+            <div>
+              <h2 class="text-4xl font-black text-colegio-blue mb-3">Información de Contacto</h2>
+              <div class="w-20 h-1 bg-colegio-yellow mb-6"></div>
+              <p class="text-lg text-gray-700 leading-relaxed">
+                Nuestro equipo está disponible para resolver tus dudas y acompañarte en el proceso 
+                de admisión. Contáctanos a través de cualquiera de nuestros canales.
+              </p>
+            </div>
+
+            <!-- Tarjetas de Contacto -->
+            <div class="space-y-6">
+              
+              <!-- Dirección -->
+              <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group">
+                <div class="flex items-start gap-4">
+                  <div class="w-14 h-14 bg-gradient-to-br from-colegio-blue to-colegio-blue/80 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-lg font-bold text-colegio-blue mb-2">Dirección</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                      Av. Chan Chan N° 100 - Villa del Mar<br />
+                      (Carretera a Huanchaco) - Trujillo, La Libertad
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Teléfono -->
+              <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group">
+                <div class="flex items-start gap-4">
+                  <div class="w-14 h-14 bg-gradient-to-br from-colegio-yellow to-yellow-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-7 h-7 text-colegio-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-lg font-bold text-colegio-blue mb-2">Teléfono</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                      <a href="tel:+51999928258" class="hover:text-colegio-blue transition-colors font-medium">
+                        +51 999 928 258
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Correo Electrónico -->
+              <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group">
+                <div class="flex items-start gap-4">
+                  <div class="w-14 h-14 bg-gradient-to-br from-colegio-blue to-colegio-blue/80 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-lg font-bold text-colegio-blue mb-2">Correo Electrónico</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                      <a href="mailto:informes@bruningschool.edu.pe" class="hover:text-colegio-blue transition-colors font-medium break-all">
+                        informes@bruningschool.edu.pe
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Horario de Atención -->
+              <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group">
+                <div class="flex items-start gap-4">
+                  <div class="w-14 h-14 bg-gradient-to-br from-colegio-yellow to-yellow-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-7 h-7 text-colegio-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-lg font-bold text-colegio-blue mb-2">Horario de Atención</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                      <strong>Lunes a Viernes:</strong><br />
+                      8:00 AM - 5:00 PM
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-2">
+                      <strong>Sábados:</strong><br />
+                      9:00 AM - 1:00 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Redes Sociales -->
+              <div class="bg-gradient-to-br from-colegio-blue to-colegio-blue/90 rounded-2xl p-6 shadow-lg text-white">
+                <h3 class="text-lg font-bold mb-4">Síguenos en Redes Sociales</h3>
+                <div class="flex gap-4">
+                  <a 
+                    href="https://www.facebook.com/BruningSchoolOficial" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/20"
+                  >
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/bruningschool" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/20"
+                  >
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                  </a>
+                  <a 
+                    href="https://www.tiktok.com/@bruningschool?_d=secCgYIASAHKAESPgo83IZYec2LpryysDpukcrhoNGEHwTCWS4hWf1q%2FqkBsw3aVhZcq2BaZVd7e9fhMqQ4lIur5L1537xCozGBGgA%3D&_r=1&_svg=1&checksum=8369fa82b64e2976a87ba98ed845d8ae6c0540dc47dc4d897fbdb9133b66f62a&lang=es&sec_uid=MS4wLjABAAAAIsGXnu9xZKKHQEvxdE3dMODk2NEnwoGDEZpvy4qZuBKEk2criwkKS-TeOYt5v8Ra&sec_user_id=MS4wLjABAAAAVS-l37cAQnWIlsINUCzQnb7_XCktpIoSwp6rxu2pC0TmC0FSgPATcx8K8qe9yKOj&share_app_id=1340&share_author_id=7487290276677288965&share_link_id=da88d11d-6169-4470-bac2-1dfa69b7ab3f&share_region=PE&share_scene=1&sharer_language=es&source=h5_m&timestamp=1769108774&u_code=dc3h6emib7l5ck&ugbiz_name=Account&user_id=6819022859236279301" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/20"
+                  >
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Columna Derecha - Formulario de Contacto -->
+          <div>
+            <div class="bg-white rounded-3xl p-8 lg:p-10 shadow-2xl border border-gray-100">
+              <h2 class="text-3xl font-black text-colegio-blue mb-3">Envíanos un Mensaje</h2>
+              <div class="w-20 h-1 bg-colegio-yellow mb-6"></div>
+              <p class="text-gray-700 mb-8 leading-relaxed">
+                Completa el formulario y nos pondremos en contacto contigo a la brevedad posible.
+              </p>
+
+              <form class="space-y-6" id="contact-form">
+                
+                <!-- Nombre Completo -->
+                <div>
+                  <label for="nombre" class="block text-sm font-bold text-gray-700 mb-2">
+                    Nombre Completo <span class="text-red-500">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="nombre" 
+                    name="nombre" 
+                    required
+                    class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-colegio-blue focus:ring-4 focus:ring-colegio-blue/10 transition-all duration-300 outline-none text-gray-700 font-medium"
+                    placeholder="Ingresa tu nombre completo"
+                  />
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <label for="email" class="block text-sm font-bold text-gray-700 mb-2">
+                    Correo Electrónico <span class="text-red-500">*</span>
+                  </label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required
+                    class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-colegio-blue focus:ring-4 focus:ring-colegio-blue/10 transition-all duration-300 outline-none text-gray-700 font-medium"
+                    placeholder="correo@ejemplo.com"
+                  />
+                </div>
+
+                <!-- Teléfono -->
+                <div>
+                  <label for="telefono" class="block text-sm font-bold text-gray-700 mb-2">
+                    Teléfono <span class="text-red-500">*</span>
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="telefono" 
+                    name="telefono" 
+                    required
+                    class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-colegio-blue focus:ring-4 focus:ring-colegio-blue/10 transition-all duration-300 outline-none text-gray-700 font-medium"
+                    placeholder="+51 999 999 999"
+                  />
+                </div>
+
+                <!-- Asunto -->
+                <div>
+                  <label for="asunto" class="block text-sm font-bold text-gray-700 mb-2">
+                    Asunto <span class="text-red-500">*</span>
+                  </label>
+                  <select 
+                    id="asunto" 
+                    name="asunto" 
+                    required
+                    class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-colegio-blue focus:ring-4 focus:ring-colegio-blue/10 transition-all duration-300 outline-none text-gray-700 font-medium"
+                  >
+                    <option value="">Selecciona un asunto</option>
+                    <option value="admision">Proceso de Admisión</option>
+                    <option value="informacion">Información General</option>
+                    <option value="visita">Agendar Visita</option>
+                    <option value="costos">Costos y Pensiones</option>
+                    <option value="otros">Otros</option>
+                  </select>
+                </div>
+
+                <!-- Mensaje -->
+                <div>
+                  <label for="mensaje" class="block text-sm font-bold text-gray-700 mb-2">
+                    Mensaje <span class="text-red-500">*</span>
+                  </label>
+                  <textarea 
+                    id="mensaje" 
+                    name="mensaje" 
+                    rows="5" 
+                    required
+                    class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-colegio-blue focus:ring-4 focus:ring-colegio-blue/10 transition-all duration-300 outline-none text-gray-700 font-medium resize-none"
+                    placeholder="Escribe tu mensaje aquí..."
+                  ></textarea>
+                </div>
+
+                <!-- Botón de Envío -->
+                <button 
+                  type="submit" 
+                  class="w-full bg-gradient-to-r from-colegio-blue to-colegio-blue/90 text-white font-bold py-5 px-8 rounded-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-3"
+                >
+                  <span>Enviar Mensaje</span>
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </button>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Mapa -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-black text-colegio-blue mb-3">Nuestra Ubicación</h2>
+          <div class="w-24 h-1.5 bg-gradient-to-r from-transparent via-colegio-yellow to-transparent mx-auto mb-6"></div>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+            Visítanos y conoce nuestras instalaciones en Villa del Mar, carretera a Huanchaco. Te esperamos para mostrarte nuestra propuesta educativa de excelencia.
+          </p>
+        </div>
+
+        <!-- Mapa de Google Maps -->
+        <div class="rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.0118357297765!2d-79.0612349!3d-8.100274299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3db464fe96a9%3A0xc58f067710ea469d!2sBr%C3%BCning%20School!5e0!3m2!1ses!2spe!4v1769692220299!5m2!1ses!2spe" 
+            width="100%" 
+            height="500" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full"
+          ></iframe>
+        </div>
+
+        <!-- Indicaciones adicionales -->
+        <div class="mt-12 grid md:grid-cols-3 gap-6">
+          
+          <div class="bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center">
+            <div class="w-14 h-14 bg-colegio-blue rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-colegio-blue mb-2">Fácil Acceso</h3>
+            <p class="text-gray-600 text-sm">
+              Cerca de principales avenidas y con acceso a transporte público
+            </p>
+          </div>
+
+          <div class="bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center">
+            <div class="w-14 h-14 bg-colegio-yellow rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-colegio-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-colegio-blue mb-2">Agendar Visita</h3>
+            <p class="text-gray-600 text-sm">
+              Programa una cita y conoce nuestras instalaciones personalmente
+            </p>
+          </div>
+
+          <div class="bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center">
+            <div class="w-14 h-14 bg-colegio-blue rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-colegio-blue mb-2">Zona Segura</h3>
+            <p class="text-gray-600 text-sm">
+              Ambiente protegido con vigilancia permanente para tu tranquilidad
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="bg-gradient-to-br from-colegio-blue via-colegio-blue/95 to-colegio-blue text-white py-20 relative overflow-hidden">
+      <!-- Decorative elements -->
+      <div class="absolute top-0 right-0 w-96 h-96 bg-colegio-yellow/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+      
+      <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          ¿Listo para Formar Parte de Nuestra <span class="text-colegio-yellow">Comunidad Educativa</span>?
+        </h2>
+        <p class="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
+          Inicia el proceso de admisión y asegura un futuro brillante para tu hijo en Brüning School.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/admision/matricula" 
+            class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-10 py-4 rounded-full text-lg hover:bg-yellow-400 transition-all duration-300 hover:scale-105 shadow-2xl"
+          >
+            Proceso de Admisión
+          </a>
+          <a 
+            href="https://wa.me/51999928258?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20Brüning%20School" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-white/10 backdrop-blur-sm text-white font-bold px-10 py-4 rounded-full text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105 border-2 border-white/20"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<script>
+  // Manejo del formulario de contacto
+  const contactForm = document.getElementById('contact-form') as HTMLFormElement;
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Obtener los datos del formulario
+      const formData = new FormData(contactForm);
+      const data = {
+        nombre: formData.get('nombre'),
+        email: formData.get('email'),
+        telefono: formData.get('telefono'),
+        asunto: formData.get('asunto'),
+        mensaje: formData.get('mensaje')
+      };
+
+      // Aquí puedes implementar el envío del formulario
+      // Por ahora solo mostramos un mensaje de confirmación
+      alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+      
+      // Limpiar el formulario
+      contactForm.reset();
+
+      // También puedes redirigir a WhatsApp con el mensaje
+      const whatsappMessage = `Hola, soy ${data.nombre}. ${data.mensaje}`;
+      const whatsappUrl = `https://wa.me/51999928258?text=${encodeURIComponent(whatsappMessage)}`;
+      
+      // Descomentar si quieres abrir WhatsApp automáticamente
+      // window.open(whatsappUrl, '_blank');
+    });
+  }
+</script>
+
+<style>
+  /* Animaciones suaves */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Estilos adicionales para inputs */
+  input:focus,
+  textarea:focus,
+  select:focus {
+    box-shadow: 0 0 0 4px rgba(0, 51, 102, 0.1);
+  }
+</style>
