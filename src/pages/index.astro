@@ -87,14 +87,14 @@ const heroSlides = [
         
         <div class="stat-item">
           <div class="mb-4 flex justify-center">
-            <img src="/Logos/CAMBRIDGE.webp" alt="Cambridge" class="w-50 h-20 object-contain" />
+            <img src="/Logos/CAMBRIDGE.webp" alt="Cambridge" class="w-30 h-20 object-contain" />
           </div>
           <div class="text-5xl font-black text-colegio-yellow mb-2 counter" data-target="600">0</div>
           <div class="text-sm md:text-base font-semibold opacity-90">Certificaciones Cambridge</div>
         </div>
         <div class="stat-item">
           <div class="mb-4 flex justify-center">
-            <img src="/Logos/IBEC.webp" alt="IBEC" class="w-60 h-20 object-contain" />
+            <img src="/Logos/IBEC.webp" alt="IBEC" class="w-30 h-20 object-contain" />
           </div>
           <div class="text-5xl font-black text-colegio-yellow mb-2 counter" data-target="500">0</div>
           <div class="text-sm md:text-base font-semibold opacity-90">Certificaciones IBEC</div>
@@ -575,6 +575,40 @@ const heroSlides = [
       </div>
     </div>
   </section>
+
+  <!-- Modal de Imagen -->
+  <div id="imagen-modal" class="fixed inset-0 bg-black/90 backdrop-blur-md z-[200] hidden items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+    <!-- Botón Cerrar -->
+    <button id="modal-close" class="absolute top-4 right-4 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-300 hover:scale-110 border border-white/20">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <!-- Botón Anterior -->
+    <button id="modal-prev" class="absolute left-4 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-4 rounded-full transition-all duration-300 hover:scale-110 border border-white/20">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+    </button>
+
+    <!-- Botón Siguiente -->
+    <button id="modal-next" class="absolute right-4 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-4 rounded-full transition-all duration-300 hover:scale-110 border border-white/20">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </button>
+
+    <!-- Contenedor de Imagen -->
+    <div id="modal-image-container" class="max-w-6xl max-h-[90vh] flex items-center justify-center transform scale-95 transition-transform duration-300">
+      <img id="modal-image" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl" />
+    </div>
+
+    <!-- Contador de Imágenes -->
+    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-bold border border-white/20">
+      <span id="modal-counter">1 / 6</span>
+    </div>
+  </div>
 </Layout>
 
 
@@ -738,10 +772,17 @@ const heroSlides = [
   const galeriaGrid = document.getElementById('galeria-grid');
   const galeriaBotones = document.querySelectorAll('.galeria-btn');
 
+  // Variables para el modal
+  let currentCategoriaPhotos: string[] = [];
+  let currentPhotoIndex = 0;
+
   function mostrarFotos(categoria: string) {
     const data = galeriasData[categoria as keyof typeof galeriasData];
     
     if (data && galeriaGrid) {
+      // Guardar las fotos de la categoría actual para el modal
+      currentCategoriaPhotos = data.photos;
+      
       // Efecto de salida más rápido
       galeriaGrid.style.opacity = '0';
       galeriaGrid.style.transform = 'scale(0.98)';
@@ -749,13 +790,26 @@ const heroSlides = [
       // Cambiar contenido después de animación corta
       setTimeout(() => {
         galeriaGrid.innerHTML = data.photos.map((photo, index) => `
-          <div class="galeria-item group cursor-pointer overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" style="animation-delay: ${index * 0.05}s">
+          <div class="galeria-item group cursor-pointer overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" style="animation-delay: ${index * 0.05}s" data-photo-index="${index}">
             <div class="relative aspect-square">
               <img src="${photo}" alt="${data.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-colegio-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-colegio-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <svg class="w-16 h-16 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                </svg>
+              </div>
             </div>
           </div>
         `).join('');
+        
+        // Agregar event listeners a las imágenes
+        const galeriaItems = document.querySelectorAll('.galeria-item');
+        galeriaItems.forEach(item => {
+          item.addEventListener('click', () => {
+            const photoIndex = parseInt(item.getAttribute('data-photo-index') || '0');
+            abrirModal(photoIndex);
+          });
+        });
         
         // Efecto de entrada inmediato
         requestAnimationFrame(() => {
@@ -765,6 +819,89 @@ const heroSlides = [
       }, 150);
     }
   }
+
+  // Funciones del Modal
+  const modal = document.getElementById('imagen-modal');
+  const modalImage = document.getElementById('modal-image') as HTMLImageElement;
+  const modalCounter = document.getElementById('modal-counter');
+  const modalClose = document.getElementById('modal-close');
+  const modalPrev = document.getElementById('modal-prev');
+  const modalNext = document.getElementById('modal-next');
+  const modalImageContainer = document.getElementById('modal-image-container');
+
+  function abrirModal(index: number) {
+    currentPhotoIndex = index;
+    actualizarModalImagen();
+    
+    if (modal && modalImageContainer) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden'; // Prevenir scroll
+      
+      requestAnimationFrame(() => {
+        modal.style.opacity = '1';
+        modalImageContainer.style.transform = 'scale(1)';
+      });
+    }
+  }
+
+  function cerrarModal() {
+    if (modal && modalImageContainer) {
+      modal.style.opacity = '0';
+      modalImageContainer.style.transform = 'scale(0.95)';
+      
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = ''; // Restaurar scroll
+      }, 300);
+    }
+  }
+
+  function actualizarModalImagen() {
+    if (modalImage && modalCounter) {
+      modalImage.src = currentCategoriaPhotos[currentPhotoIndex];
+      modalCounter.textContent = `${currentPhotoIndex + 1} / ${currentCategoriaPhotos.length}`;
+    }
+  }
+
+  function navegarModal(direccion: number) {
+    currentPhotoIndex += direccion;
+    
+    // Loop circular
+    if (currentPhotoIndex < 0) {
+      currentPhotoIndex = currentCategoriaPhotos.length - 1;
+    } else if (currentPhotoIndex >= currentCategoriaPhotos.length) {
+      currentPhotoIndex = 0;
+    }
+    
+    actualizarModalImagen();
+  }
+
+  // Event Listeners del Modal
+  modalClose?.addEventListener('click', cerrarModal);
+  modalPrev?.addEventListener('click', () => navegarModal(-1));
+  modalNext?.addEventListener('click', () => navegarModal(1));
+
+  // Cerrar modal al hacer click en el overlay (fuera de la imagen)
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      cerrarModal();
+    }
+  });
+
+  // Navegación con teclado
+  document.addEventListener('keydown', (e) => {
+    if (modal && !modal.classList.contains('hidden')) {
+      if (e.key === 'Escape') {
+        cerrarModal();
+      } else if (e.key === 'ArrowLeft') {
+        navegarModal(-1);
+      } else if (e.key === 'ArrowRight') {
+        navegarModal(1);
+      }
+    }
+  });
 
   galeriaBotones.forEach(btn => {
     btn.addEventListener('click', () => {
