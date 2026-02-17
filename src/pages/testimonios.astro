@@ -1,0 +1,237 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const testimonios = [
+  {
+    nombre: "María González",
+    relacion: "Madre de Familia",
+    nivel: "Primaria",
+    cita: "Brüning School ha transformado la vida de mi hijo. Los docentes son excepcionales y el ambiente educativo es único.",
+    video: "/Testimonios/testimonio1.mp4",
+    thumbnail: "/Testimonios/thumb1.jpg"
+  },
+  {
+    nombre: "Carlos Ramírez",
+    relacion: "Padre de Familia",
+    nivel: "Secundaria",
+    cita: "La formación integral que reciben nuestros hijos va más allá de lo académico. Desarrollan valores y liderazgo.",
+    video: "/Testimonios/testimonio2.mp4",
+    thumbnail: "/Testimonios/thumb2.jpg"
+  },
+  {
+    nombre: "Ana Martínez",
+    relacion: "Madre de Familia",
+    nivel: "Inicial",
+    cita: "Elegir Brüning School fue la mejor decisión. Mi hija está feliz, segura y aprendiendo cada día con entusiasmo.",
+    video: "/Testimonios/testimonio3.mp4",
+    thumbnail: "/Testimonios/thumb3.jpg"
+  },
+  {
+    nombre: "José Pérez",
+    relacion: "Padre de Familia",
+    nivel: "Primaria",
+    cita: "El nivel académico es sobresaliente. Los resultados en los exámenes Cambridge demuestran la calidad educativa.",
+    video: "/Testimonios/testimonio4.mp4",
+    thumbnail: "/Testimonios/thumb4.jpg"
+  },
+  {
+    nombre: "Sofía Mendoza",
+    relacion: "Estudiante",
+    nivel: "5to de Secundaria",
+    cita: "Gracias a la preparación que recibí, logré ingresar a la universidad que soñé. Brüning me dio las herramientas necesarias.",
+    video: "/Testimonios/testimonio5.mp4",
+    thumbnail: "/Testimonios/thumb5.jpg"
+  },
+  {
+    nombre: "Roberto Torres",
+    relacion: "Padre de Familia",
+    nivel: "Secundaria",
+    cita: "La comunicación con los docentes es excelente. Siempre están atentos al desarrollo integral de nuestros hijos.",
+    video: "/Testimonios/testimonio6.mp4",
+    thumbnail: "/Testimonios/thumb6.jpg"
+  },
+  {
+    nombre: "Patricia Silva",
+    relacion: "Madre de Familia",
+    nivel: "Primaria",
+    cita: "Las instalaciones son modernas y seguras. El compromiso con la educación bilingüe es evidente en cada clase.",
+    video: "/Testimonios/testimonio7.mp4",
+    thumbnail: "/Testimonios/thumb7.jpg"
+  },
+  {
+    nombre: "Diego Flores",
+    relacion: "Estudiante",
+    nivel: "4to de Secundaria",
+    cita: "Los talleres de robótica y programación me apasionan. Estoy preparándome para los desafíos del futuro.",
+    video: "/Testimonios/testimonio8.mp4",
+    thumbnail: "/Testimonios/thumb8.jpg"
+  },
+  {
+    nombre: "Carmen López",
+    relacion: "Madre de Familia",
+    nivel: "Inicial",
+    cita: "El trato personalizado y el ambiente familiar hacen que los niños se sientan como en casa. Es excepcional.",
+    video: "/Testimonios/testimonio9.mp4",
+    thumbnail: "/Testimonios/thumb9.jpg"
+  }
+];
+
+const frasesDestacadas = [
+  {
+    texto: "Brüning School no solo educa, forma líderes con valores que transforman su entorno y la sociedad.",
+    autor: "María González",
+    cargo: "Madre de Familia - Primaria"
+  },
+  {
+    texto: "La excelencia académica combinada con la formación humana hace la diferencia. Nuestros hijos están preparados para el futuro.",
+    autor: "Carlos Ramírez",
+    cargo: "Padre de Familia - Secundaria"
+  },
+  {
+    texto: "Cada día agradezco haber elegido Brüning. Mi hija está feliz, aprende con entusiasmo y desarrolla todo su potencial.",
+    autor: "Ana Martínez",
+    cargo: "Madre de Familia - Inicial"
+  }
+];
+---
+
+<Layout title="Testimonios | BRÜNING SCHOOL">
+  <main class="pt-24 md:pt-20">
+    
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-colegio-blue via-colegio-blue/90 to-colegio-blue text-white py-24 relative overflow-hidden">
+      <!-- Decorative elements -->
+      <div class="absolute top-0 right-0 w-96 h-96 bg-colegio-yellow/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+          Testimonios de Nuestra <span class="text-colegio-yellow">Comunidad</span>
+        </h1>
+        <div class="w-32 h-1.5 bg-gradient-to-r from-transparent via-colegio-yellow to-transparent mx-auto mb-6"></div>
+        <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+          Las voces de nuestra comunidad educativa reflejan el compromiso, la confianza 
+          y los resultados que nos distinguen como institución de excelencia.
+        </p>
+      </div>
+    </section>
+
+    <!-- Grid de Testimonios -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-colegio-blue mb-3">Experiencias que Inspiran</h2>
+          <div class="w-24 h-1 bg-colegio-yellow mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          {testimonios.map((testimonio, index) => (
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              
+              <!-- Thumbnail del Video con Play Button -->
+              <div class="relative group cursor-pointer aspect-video bg-gray-200">
+                <img 
+                  src={testimonio.thumbnail} 
+                  alt={`Testimonio de ${testimonio.nombre}`}
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80&w=800'"
+                />
+                <!-- Overlay oscuro -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent group-hover:from-black/70 transition-all duration-300"></div>
+                
+                <!-- Play Button -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="w-20 h-20 bg-colegio-yellow rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                    <svg class="w-10 h-10 text-colegio-blue ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Badge del Nivel -->
+                <div class="absolute top-4 left-4 bg-colegio-blue/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-xs font-bold border border-white/20">
+                  {testimonio.nivel}
+                </div>
+              </div>
+
+              <!-- Contenido -->
+              <div class="p-6">
+                <div class="mb-4">
+                  <h3 class="text-xl font-bold text-colegio-blue mb-1">{testimonio.nombre}</h3>
+                  <p class="text-sm text-gray-500 font-semibold">{testimonio.relacion}</p>
+                </div>
+
+                <!-- Cita -->
+                <div class="relative">
+                  <svg class="w-8 h-8 text-colegio-yellow/30 absolute -top-2 -left-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p class="text-gray-700 leading-relaxed pl-8 italic">
+                    "{testimonio.cita}"
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Frases Destacadas -->
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      <!-- Decorative background -->
+      <div class="absolute top-0 right-0 w-96 h-96 bg-colegio-yellow/5 rounded-full blur-3xl"></div>
+      
+      <div class="max-w-6xl mx-auto px-4 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-colegio-blue mb-3">Voces que Transforman</h2>
+          <div class="w-24 h-1 bg-colegio-yellow mx-auto"></div>
+        </div>
+
+        <div class="space-y-12">
+          {frasesDestacadas.map((frase, index) => (
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
+              <div class="flex flex-col items-center text-center">
+                <!-- Comillas decorativas grandes -->
+                <svg class="w-16 h-16 text-colegio-yellow/40 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+
+                <!-- Texto de la cita -->
+                <p class="text-2xl md:text-3xl text-gray-700 font-light leading-relaxed mb-8 max-w-4xl italic">
+                  {frase.texto}
+                </p>
+
+                <!-- Separador decorativo -->
+                <div class="w-20 h-1 bg-gradient-to-r from-transparent via-colegio-yellow to-transparent mb-6"></div>
+
+                <!-- Autor -->
+                <div>
+                  <p class="text-xl font-bold text-colegio-blue mb-1">{frase.autor}</p>
+                  <p class="text-gray-500 font-medium">{frase.cargo}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  /* Animaciones suaves para las cards */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
