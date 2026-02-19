@@ -2,61 +2,64 @@
 const departments = [
   {
     name: "Atención al Cliente",
-    phone: "51999999999",
-    schedule: "Lun-Vie: 8:00am - 5:00pm",
-    icon: "💬"
+    phone: "51999928258",
+    icon: "💬",
+    schedules: [
+      "Lun - Vie: 8:00 a.m – 3:00 p.m  /  4:00 – 6:00 p.m",
+      "Sábados: 8:00 a.m – 1:00 p.m"
+    ]
   },
   {
     name: "Dirección General",
-    phone: "51988888888",
-    schedule: "Lun-Vie: 9:00am - 4:00pm",
-    icon: "👔"
+    phone: "51999135300",
+    icon: "👔",
+    schedules: [
+      "Lun - Vie: 8:00 a.m – 3:00 p.m",
+      "Sábados: 8:00 a.m – 1:00 p.m"
+    ]
   },
   {
-    name: "Coordinación Primaria",
-    phone: "51977777777",
-    schedule: "Lun-Vie: 8:00am - 3:00pm",
-    icon: "📚"
-  },
-  {
-    name: "Coordinación Secundaria",
-    phone: "51966666666",
-    schedule: "Lun-Vie: 8:00am - 3:00pm",
-    icon: "🎓"
-  },
-  {
-    name: "Coordinación TI",
-    phone: "51955555555",
-    schedule: "Lun-Vie: 8:00am - 5:00pm",
-    icon: "💻"
+    name: "Coordinación Académica Prim. – Sec.",
+    phone: "51986124565",
+    icon: "📚",
+    schedules: [
+      "Lun - Vie: 8:00 a.m – 3:00 p.m",
+      "Sábados: 8:00 a.m – 1:00 p.m"
+    ]
   }
 ];
 ---
 
 <!-- Botón flotante de WhatsApp -->
 <div class="whatsapp-container">
-  <!-- Panel de selección de áreas -->
+  <!-- Panel de horarios de atención -->
   <div class="whatsapp-menu">
     <div class="menu-header">
-      <strong>Selecciona un área</strong>
+      <strong>Horarios de Atención</strong>
     </div>
     <div class="menu-options">
-      {departments.map(dept => (
-        <a 
-          href={`https://wa.me/${dept.phone}?text=${encodeURIComponent("¡Hola! Me gustaría obtener más información.")}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="menu-option"
-        >
-          <span class="option-emoji">{dept.icon}</span>
-          <div class="option-content">
-            <span class="option-name">{dept.name}</span>
-            <span class="option-schedule">{dept.schedule}</span>
-          </div>
-          <svg class="option-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
-          </svg>
-        </a>
+      {departments.map((dept, i) => (
+        <>
+          {i > 0 && <div class="menu-divider"></div>}
+          <a 
+            href={`https://wa.me/${dept.phone}?text=${encodeURIComponent("¡Hola! Me gustaría obtener más información.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="menu-option"
+          >
+            <span class="option-emoji">{dept.icon}</span>
+            <div class="option-content">
+              <span class="option-name">{dept.name}</span>
+              <span class="option-phone">📞 {dept.phone.replace("51", "+51 ")}</span>
+              {dept.schedules.map(s => (
+                <span class="option-schedule">{s}</span>
+              ))}
+            </div>
+            <svg class="option-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+            </svg>
+          </a>
+        </>
       ))}
     </div>
   </div>
@@ -80,21 +83,34 @@ const departments = [
 </div>
 
 <script>
-  const toggleBtn = document.getElementById('whatsapp-toggle');
-  const menu = document.querySelector('.whatsapp-menu');
-  const container = document.querySelector('.whatsapp-container');
+  function initWhatsApp() {
+    const toggleBtn = document.getElementById('whatsapp-toggle');
+    const menu = document.querySelector('.whatsapp-menu');
+    const container = document.querySelector('.whatsapp-container');
 
-  toggleBtn?.addEventListener('click', () => {
-    menu?.classList.toggle('active');
-    toggleBtn?.classList.toggle('active');
-  });
+    if (!toggleBtn || !menu || !container) return;
 
-  document.addEventListener('click', (e) => {
-    if (!container?.contains(e.target as Node)) {
-      menu?.classList.remove('active');
-      toggleBtn?.classList.remove('active');
-    }
-  });
+    // Evitar registrar listeners duplicados
+    if ((toggleBtn as HTMLElement & { _wsp?: boolean })._wsp) return;
+    (toggleBtn as HTMLElement & { _wsp?: boolean })._wsp = true;
+
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      toggleBtn.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!container.contains(e.target as Node)) {
+        menu.classList.remove('active');
+        toggleBtn.classList.remove('active');
+      }
+    });
+  }
+
+  // Carga inicial (sin View Transitions)
+  initWhatsApp();
+  // Después de cada navegación con View Transitions
+  document.addEventListener('astro:page-load', initWhatsApp);
 </script>
 
 <style>
@@ -123,7 +139,7 @@ const departments = [
   }
 
   .whatsapp-menu.active {
-    max-height: 500px;
+    max-height: 600px;
     opacity: 1;
     transform: translateY(0) scale(1);
     pointer-events: all;
@@ -175,14 +191,26 @@ const departments = [
   }
 
   .option-name {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 600;
     color: #075e54;
   }
 
-  .option-schedule {
+  .option-phone {
     font-size: 12px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .option-schedule {
+    font-size: 11px;
     color: #666;
+  }
+
+  .menu-divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 0 16px;
   }
 
   .option-icon {

@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import NivelCard from '../components/NivelCard.astro';
 import HeroCarousel from '../components/HeroCarousel.astro';
-import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 
 const heroSlides = [
   {
@@ -59,9 +58,6 @@ const heroSlides = [
 ---
 
 <Layout title="Bienvenidos | BRÜNING SCHOOL">
-  <!-- Botón flotante de WhatsApp -->
-  <WhatsAppFloat phoneNumber="51999928258" message="¡Hola! Me gustaría obtener más información sobre el proceso de admisión." />
-  
   <!-- Hero Carousel -->
   <HeroCarousel slides={heroSlides} autoplayInterval={6000} />
 
