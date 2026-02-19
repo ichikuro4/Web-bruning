@@ -50,7 +50,6 @@ const departments = [
             <span class="option-emoji">{dept.icon}</span>
             <div class="option-content">
               <span class="option-name">{dept.name}</span>
-              <span class="option-phone">📞 {dept.phone.replace("51", "+51 ")}</span>
               {dept.schedules.map(s => (
                 <span class="option-schedule">{s}</span>
               ))}
@@ -194,12 +193,6 @@ const departments = [
     font-size: 13px;
     font-weight: 600;
     color: #075e54;
-  }
-
-  .option-phone {
-    font-size: 12px;
-    font-weight: 500;
-    color: #333;
   }
 
   .option-schedule {
