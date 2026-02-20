@@ -3,28 +3,87 @@ import '../styles/global.css'
 import Navbar from '../components/Navbar.astro';
 import Sidebar from '../components/Sidebar.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
-import { ClientRouter } from 'astro:transitions'; //
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
-	title: string;
+  title: string;
+  description?: string;
+  ogImage?: string;
 }
-const { title } = Astro.props;
 
+const {
+  title,
+  description = 'Brüning School – Educación de excelencia en Trujillo, Perú. Formamos líderes con valores, visión global y certificaciones internacionales.',
+  ogImage = '/PORTADA.webp',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
 ---
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Sitio web del colegio" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		
+
+		<!-- SEO -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="es_PE" />
+		<meta property="og:site_name" content="Brüning School" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImageURL} />
+		<meta property="og:url" content={canonicalURL} />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageURL} />
+
 		<!-- Google Fonts: Raleway Medium + Montserrat Black -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Raleway:wght@500&display=swap" rel="stylesheet">
-		
-		<title>{title}</title>
+
+		<!-- JSON-LD: Datos estructurados del colegio -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "School",
+			"name": "Brüning School",
+			"alternateName": "Bruning School",
+			"url": "https://bruningschool.edu.pe",
+			"logo": "https://bruningschool.edu.pe/LOGO BLANCO.webp",
+			"image": "https://bruningschool.edu.pe/PORTADA.webp",
+			"description": "Institución educativa privada de excelencia en Trujillo, Perú. Niveles Primaria y Secundaria con certificaciones Cambridge e IBEC.",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "Av. Chan Chan N° 100 - Villa del Mar",
+				"addressLocality": "Trujillo",
+				"addressRegion": "La Libertad",
+				"addressCountry": "PE"
+			},
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+51-999-928-258",
+				"contactType": "admissions",
+				"email": "informes@bruningschool.edu.pe",
+				"availableLanguage": "Spanish"
+			},
+			"sameAs": [
+				"https://www.facebook.com/BruningSchoolOficial",
+				"https://www.instagram.com/bruningschool",
+				"https://www.tiktok.com/@bruningschool"
+			]
+		}
+		</script>
 	</head>
 	<body class="antialiased">
 		<Navbar />
@@ -119,7 +178,7 @@ const { title } = Astro.props;
 
 							<!-- TikTok -->
 							<a 
-								href="https://www.tiktok.com/@bruningschool?_d=secCgYIASAHKAESPgo83IZYec2LpryysDpukcrhoNGEHwTCWS4hWf1q%2FqkBsw3aVhZcq2BaZVd7e9fhMqQ4lIur5L1537xCozGBGgA%3D&_r=1&_svg=1&checksum=8369fa82b64e2976a87ba98ed845d8ae6c0540dc47dc4d897fbdb9133b66f62a&lang=es&sec_uid=MS4wLjABAAAAIsGXnu9xZKKHQEvxdE3dMODk2NEnwoGDEZpvy4qZuBKEk2criwkKS-TeOYt5v8Ra&sec_user_id=MS4wLjABAAAAVS-l37cAQnWIlsINUCzQnb7_XCktpIoSwp6rxu2pC0TmC0FSgPATcx8K8qe9yKOj&share_app_id=1340&share_author_id=7487290276677288965&share_link_id=da88d11d-6169-4470-bac2-1dfa69b7ab3f&share_region=PE&share_scene=1&sharer_language=es&source=h5_m&timestamp=1769108774&u_code=dc3h6emib7l5ck&ugbiz_name=Account&user_id=6819022859236279301" 
+								href="https://www.tiktok.com/@bruningschool" 
 								target="_blank"
 								rel="noopener noreferrer"
 								class="group relative w-12 h-12 bg-white/10 hover:bg-black rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
