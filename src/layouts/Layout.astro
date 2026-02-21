@@ -6,15 +6,15 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 import { ClientRouter } from 'astro:transitions';
 
 interface Props {
-  title: string;
-  description?: string;
-  ogImage?: string;
+	title: string;
+	description?: string;
+	ogImage?: string;
 }
 
 const {
-  title,
-  description = 'Brüning School – Educación de excelencia en Trujillo, Perú. Formamos líderes con valores, visión global y certificaciones internacionales.',
-  ogImage = '/PORTADA.webp',
+	title,
+	description = 'Brüning School – Educación de excelencia en Trujillo, Perú. Formamos líderes con valores, visión global y certificaciones internacionales.',
+	ogImage = '/PORTADA.webp',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -46,11 +46,6 @@ const ogImageURL = new URL(ogImage, Astro.site);
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={ogImageURL} />
-
-		<!-- Google Fonts: Raleway Medium + Montserrat Black -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Raleway:wght@500&display=swap" rel="stylesheet">
 
 		<!-- JSON-LD: Datos estructurados del colegio -->
 		<script type="application/ld+json">
