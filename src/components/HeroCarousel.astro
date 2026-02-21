@@ -5,6 +5,7 @@ interface Slide {
   description: string;
   image?: string;
   video?: string;
+  duration?: number;
   cta?: {
     text: string;
     link: string;
@@ -17,6 +18,7 @@ interface Props {
 }
 
 const { slides, autoplayInterval = 5000 } = Astro.props;
+const slideDurations = slides.map(s => s.duration ?? autoplayInterval);
 ---
 
 <div class="hero-carousel relative w-full min-h-[calc(100vh-80px)] pt-20 overflow-hidden bg-slate-900">
@@ -37,6 +39,7 @@ const { slides, autoplayInterval = 5000 } = Astro.props;
               muted
               loop
               playsinline
+              preload="metadata"
               data-slide-video={index}
             />
           ) : (
@@ -44,7 +47,7 @@ const { slides, autoplayInterval = 5000 } = Astro.props;
               src={slide.image} 
               alt={slide.title}
               class="w-full h-full object-cover object-right"
-              loading="eager"
+              loading={index === 0 ? 'eager' : 'lazy'}
             />
           )}
         </div>
@@ -156,40 +159,36 @@ const { slides, autoplayInterval = 5000 } = Astro.props;
   }
 </style>
 
-<script define:vars={{ autoplayInterval }}>
+<script define:vars={{ autoplayInterval, slideDurations }}>
   let currentSlide = 0;
   let autoplayTimer = null;
   let isPaused = false;
   let pauseTimer = null;
 
-  const slides = document.querySelectorAll('.slide');
+  const slideEls = document.querySelectorAll('.slide');
   const indicators = document.querySelectorAll('.indicator');
   const prevBtn = document.querySelector('.carousel-btn.prev');
   const nextBtn = document.querySelector('.carousel-btn.next');
-  const carousel = document.querySelector('.hero-carousel');
-  const videos = document.querySelectorAll('[data-slide-video]');
+
+  function getSlideDuration(index) {
+    return slideDurations[index] ?? autoplayInterval;
+  }
 
   function showSlide(index) {
-    slides.forEach((slide, i) => {
+    slideEls.forEach((slide, i) => {
       if (i === index) {
         slide.classList.add('opacity-100', 'z-10');
         slide.classList.remove('opacity-0', 'z-0');
-        
-        // Play video if this slide has one
         const video = slide.querySelector('video');
         if (video) {
           video.currentTime = 0;
-          video.play().catch(e => console.log('Video autoplay failed:', e));
+          video.play().catch(() => {});
         }
       } else {
         slide.classList.remove('opacity-100', 'z-10');
         slide.classList.add('opacity-0', 'z-0');
-        
-        // Pause video if leaving a video slide
         const video = slide.querySelector('video');
-        if (video) {
-          video.pause();
-        }
+        if (video) video.pause();
       }
     });
 
@@ -207,78 +206,48 @@ const { slides, autoplayInterval = 5000 } = Astro.props;
   }
 
   function nextSlide() {
-    const next = (currentSlide + 1) % slides.length;
-    showSlide(next);
+    showSlide((currentSlide + 1) % slideEls.length);
   }
 
   function prevSlide() {
-    const prev = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(prev);
+    showSlide((currentSlide - 1 + slideEls.length) % slideEls.length);
   }
 
   function stopAutoplay() {
-    if (autoplayTimer) {
-      clearInterval(autoplayTimer);
-      autoplayTimer = null;
-    }
+    if (autoplayTimer) { clearTimeout(autoplayTimer); autoplayTimer = null; }
   }
 
-  function startAutoplay() {
-    stopAutoplay(); // Siempre limpia el timer anterior antes de crear uno nuevo
+  function scheduleNext() {
+    stopAutoplay();
     if (!isPaused) {
-      autoplayTimer = setInterval(nextSlide, autoplayInterval);
+      const duration = getSlideDuration(currentSlide);
+      autoplayTimer = setTimeout(() => {
+        nextSlide();
+        scheduleNext();
+      }, duration);
     }
   }
 
-  function pauseAutoplayTemporarily(duration = 10000) {
+  function pauseTemporarily(ms = 10000) {
     isPaused = true;
     stopAutoplay();
-    
-    // Limpiar timeout anterior si existe
-    if (pauseTimer) {
-      clearTimeout(pauseTimer);
-    }
-    
+    if (pauseTimer) clearTimeout(pauseTimer);
     pauseTimer = setTimeout(() => {
       isPaused = false;
-      startAutoplay();
+      scheduleNext();
       pauseTimer = null;
-    }, duration);
+    }, ms);
   }
 
-  // Event Listeners
-  prevBtn?.addEventListener('click', () => {
-    prevSlide();
-    pauseAutoplayTemporarily();
-  });
-
-  nextBtn?.addEventListener('click', () => {
-    nextSlide();
-    pauseAutoplayTemporarily();
-  });
+  prevBtn?.addEventListener('click', () => { prevSlide(); pauseTemporarily(); });
+  nextBtn?.addEventListener('click', () => { nextSlide(); pauseTemporarily(); });
 
   indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-      showSlide(index);
-      pauseAutoplayTemporarily();
-    });
+    indicator.addEventListener('click', () => { showSlide(index); pauseTemporarily(); });
   });
 
-  // Pause on hover
-  carousel?.addEventListener('mouseenter', () => {
-    stopAutoplay();
-  });
+  scheduleNext();
 
-  carousel?.addEventListener('mouseleave', () => {
-    if (!isPaused) {
-      startAutoplay();
-    }
-  });
-
-  // Start autoplay
-  startAutoplay();
-
-  // Cleanup on page unload
   window.addEventListener('beforeunload', () => {
     stopAutoplay();
     if (pauseTimer) clearTimeout(pauseTimer);

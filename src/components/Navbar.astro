@@ -34,29 +34,9 @@ const menuItems = [
   { name: 'Logros', href: '/logros', subItems: [] },
 ];
 
-// Elementos para el menú "Más"
-const moreMenuItems = [
-  {
-    name: 'Talleres',
-    href: '/talleres',
-    subItems: [
-      { name: 'Artísticos', href: '/talleres/artisticos' },
-      { name: 'Deportivos', href: '/talleres/deportivos' },
-    ]
-  },
-  {
-    name: 'Logros',
-    href: '/logros',
-    subItems: [
-      { name: 'Académicos', href: '/logros/academicos' },
-      { name: 'Empresariales', href: '/logros/empresariales' },
-      { name: 'Deportivos', href: '/logros/deportivos' },
-    ]
-  },
-];
 ---
 
-<nav id="navbar" class="fixed top-0 w-full z-[100] transition-all duration-500 bg-colegio-blue/95 backdrop-blur-lg border-b border-white/10">
+<nav id="navbar"class="fixed top-0 w-full z-[100] transition-all duration-500 bg-colegio-blue/95 backdrop-blur-lg border-b border-white/10">
   <!-- Franja superior -->
   
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -281,15 +261,13 @@ const moreMenuItems = [
   
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
     if (currentScroll > 50) {
       navbar?.classList.add('scrolled');
     } else {
       navbar?.classList.remove('scrolled');
     }
-    
     lastScroll = currentScroll;
-  });
+  }, { passive: true });
 
   // Mobile menu toggle
   const mobileMenuButton = document.getElementById('mobile-menu-button');
