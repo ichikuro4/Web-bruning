@@ -1,0 +1,118 @@
+<section class="py-24 bg-gradient-to-br from-colegio-blue via-colegio-blue/95 to-colegio-blue text-white relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-96 h-96 bg-colegio-yellow/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+
+  <div class="max-w-5xl mx-auto px-4 relative z-10">
+    <div class="text-center mb-16 fade-in-section">
+      <span class="text-colegio-yellow font-bold text-sm tracking-wider uppercase mb-2 block">Experiencias Reales</span>
+      <h2 class="text-4xl md:text-5xl font-black mb-4">Testimonios de Nuestra Comunidad</h2>
+      <div class="w-24 h-1.5 bg-gradient-to-r from-transparent via-colegio-yellow to-transparent mx-auto"></div>
+      <p class="mt-6 text-white/90 text-lg max-w-2xl mx-auto">
+        Conoce las experiencias de familias que forman parte de nuestra comunidad educativa.
+      </p>
+    </div>
+
+    <div class="relative max-w-[90rem] mx-auto">
+      <div class="overflow-hidden">
+        <div id="testimonios-carousel" class="flex transition-transform duration-500 ease-out">
+          <!-- Desktop: grupo 1 -->
+          <div class="w-full flex-shrink-0 hidden md:block">
+            <div class="grid grid-cols-3 gap-6 px-4">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div class="relative h-[450px]">
+                  <iframe src="https://player.vimeo.com/video/1158487706?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonio 1"></iframe>
+                </div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div class="relative h-[450px]">
+                  <iframe src="https://player.vimeo.com/video/1158488197?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonio 2"></iframe>
+                </div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div class="relative h-[450px]">
+                  <iframe src="https://player.vimeo.com/video/1158487706?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonio 3"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Desktop: grupo 2 -->
+          <div class="w-full flex-shrink-0 hidden md:block">
+            <div class="grid grid-cols-3 gap-6 px-4">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div class="relative h-[450px]">
+                  <iframe src="https://player.vimeo.com/video/1158488197?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonio 4"></iframe>
+                </div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div class="relative h-[450px]">
+                  <iframe src="https://player.vimeo.com/video/1158487706?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonio 5"></iframe>
+                </div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div class="relative h-[450px]">
+                  <iframe src="https://player.vimeo.com/video/1158488197?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonio 6"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Móvil: videos individuales -->
+          {[
+            { id: '1158487706', n: 1 }, { id: '1158488197', n: 2 }, { id: '1158487706', n: 3 },
+            { id: '1158488197', n: 4 }, { id: '1158487706', n: 5 }, { id: '1158488197', n: 6 },
+          ].map(({ id, n }) => (
+            <div class="w-full flex-shrink-0 md:hidden px-4">
+              <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div class="relative h-[350px]">
+                  <iframe src={`https://player.vimeo.com/video/${id}?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0`} frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title={`Testimonio ${n}`}></iframe>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <button id="prev-testimonio" class="absolute left-0 top-1/2 -translate-y-1/2 bg-colegio-yellow hover:bg-white text-colegio-blue p-4 rounded-full shadow-2xl transition-all duration-300 z-10 hover:scale-110">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path></svg>
+      </button>
+      <button id="next-testimonio" class="absolute right-0 top-1/2 -translate-y-1/2 bg-colegio-yellow hover:bg-white text-colegio-blue p-4 rounded-full shadow-2xl transition-all duration-300 z-10 hover:scale-110">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
+      </button>
+
+      <div class="flex justify-center gap-3 mt-8">
+        <button class="testimonio-dot hidden md:block w-3 h-3 rounded-full bg-colegio-yellow transition-all duration-300"></button>
+        <button class="testimonio-dot hidden md:block w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+        <button class="testimonio-dot md:hidden w-3 h-3 rounded-full bg-colegio-yellow transition-all duration-300"></button>
+        <button class="testimonio-dot md:hidden w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+        <button class="testimonio-dot md:hidden w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+        <button class="testimonio-dot md:hidden w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+        <button class="testimonio-dot md:hidden w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+        <button class="testimonio-dot md:hidden w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const carousel = document.getElementById('testimonios-carousel');
+  const dots     = document.querySelectorAll('.testimonio-dot');
+  let idx = 0;
+
+  function getTotal() { return window.innerWidth >= 768 ? 2 : 6; }
+
+  function update() {
+    if (carousel) carousel.style.transform = `translateX(-${idx * 100}%)`;
+    dots.forEach((d, i) => {
+      d.classList.toggle('bg-colegio-yellow', i === idx);
+      d.classList.toggle('bg-white/30', i !== idx);
+    });
+  }
+
+  document.getElementById('prev-testimonio')?.addEventListener('click', () => {
+    idx = (idx - 1 + getTotal()) % getTotal(); update();
+  });
+  document.getElementById('next-testimonio')?.addEventListener('click', () => {
+    idx = (idx + 1) % getTotal(); update();
+  });
+  dots.forEach((d, i) => d.addEventListener('click', () => { idx = i; update(); }));
+  window.addEventListener('resize', () => { idx = 0; update(); }, { passive: true });
+</script>
