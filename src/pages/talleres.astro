@@ -17,282 +17,376 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- Introducción Institucional -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
+    <!-- Filtros de categoría -->
+    <section class="py-10 bg-white sticky top-16 z-40 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-3">
+        <button class="talleres-btn active bg-colegio-yellow text-colegio-blue font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105" data-seccion="academicos">📚 Académicos</button>
+        <button class="talleres-btn bg-white border-2 border-colegio-blue/20 hover:bg-colegio-yellow text-colegio-blue font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105" data-seccion="artisticos">🎨 Artísticos</button>
+        <button class="talleres-btn bg-white border-2 border-colegio-blue/20 hover:bg-colegio-yellow text-colegio-blue font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105" data-seccion="deportivos">🏆 Deportivos</button>
+      </div>
+    </section>
+
+    <!-- ── ACADÉMICOS ── -->
+    <section data-talleres-section="academicos" class="py-16 bg-gradient-to-br from-gray-50 to-white">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-colegio-blue mb-3">Formación Complementaria</h2>
+          <h2 class="text-4xl font-bold text-colegio-blue mb-3">Talleres Académicos</h2>
           <div class="w-24 h-1 bg-colegio-yellow mx-auto mb-6"></div>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Nuestros talleres formativos están diseñados para desarrollar competencias transversales, fomentar el talento artístico y deportivo, 
-            y contribuir al crecimiento personal de cada estudiante dentro de un marco de excelencia educativa.
+            Espacios de enriquecimiento intelectual que refuerzan y amplían las competencias académicas de nuestros estudiantes, preparándolos para los más altos estándares educativos.
           </p>
         </div>
-
-        <!-- Grid de Talleres -->
         <div class="space-y-24">
-        
-          <!-- Taller de Robótica y Programación -->
+
+          <!-- Francés -->
           <div class="grid md:grid-cols-2 gap-8 items-center">
             <div class="order-2 md:order-1">
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
-                <img 
-                  src="/Talleres/robotica.jpg" 
-                  alt="Taller de Robótica y Programación"
+                <img src="/Talleres/frances.jpg" alt="Taller de Francés"
                   class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
-                  onerror="this.src='https://images.unsplash.com/photo-1518314916381-77a37c2a49ae?auto=format&fit=crop&q=80&w=800'"
-                />
+                  onerror="this.src='https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
             <div class="order-1 md:order-2 space-y-4">
-              <span class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-4 py-2 rounded-full text-sm">
-                TECNOLOGÍA
-              </span>
-              <h3 class="text-4xl font-bold text-colegio-blue">Robótica y Programación</h3>
+              <span class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-4 py-2 rounded-full text-sm">ACADÉMICO</span>
+              <h3 class="text-4xl font-bold text-colegio-blue">Francés</h3>
               <p class="text-gray-700 text-lg leading-relaxed">
-                Los estudiantes desarrollan habilidades tecnológicas del siglo XXI mediante el diseño, construcción y programación 
-                de robots educativos, fortaleciendo su pensamiento lógico y creatividad aplicada.
+                Formación en el idioma francés que amplía el horizonte cultural e internacional de nuestros estudiantes, abriendo puertas a oportunidades académicas y profesionales en el mundo francófono.
               </p>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-gray-700">Desarrollo de pensamiento computacional y lógica</span>
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Desarrollo de habilidades comunicativas en un tercer idioma</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-gray-700">Participación en competencias de robótica educativa</span>
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Enriquecimiento cultural e intercultural</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-gray-700">Preparación para desafíos tecnológicos del futuro</span>
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Ventaja competitiva en acceso a universidades internacionales</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <!-- Taller de Música y Coro -->
+          <!-- Oratorio y Declamación -->
           <div class="grid md:grid-cols-2 gap-8 items-center">
             <div class="space-y-4">
-              <span class="inline-block bg-colegio-blue text-white font-bold px-4 py-2 rounded-full text-sm">
-                MÚSICA
-              </span>
-              <h3 class="text-4xl font-bold text-colegio-blue">Música y Coro</h3>
+              <span class="inline-block bg-colegio-blue text-white font-bold px-4 py-2 rounded-full text-sm">ACADÉMICO</span>
+              <h3 class="text-4xl font-bold text-colegio-blue">Oratorio y Declamación</h3>
               <p class="text-gray-700 text-lg leading-relaxed">
-                Formación musical integral que desarrolla la sensibilidad artística, el trabajo en equipo y la expresión emocional 
-                mediante el aprendizaje de instrumentos, técnica vocal y presentaciones en eventos institucionales.
+                Desarrollo del arte de la palabra y la expresión oral, formando oradores seguros y elocuentes capaces de comunicarse con claridad, persuasión y confianza en cualquier escenario.
               </p>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Fortalecimiento de la oratoria y expresión verbal</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Desarrollo de la confianza y seguridad personal</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Participación en concursos de oratoria y declamación</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="rounded-2xl overflow-hidden shadow-2xl group">
+                <img src="/Talleres/oratorio.jpg" alt="Taller de Oratorio y Declamación"
+                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=800'" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Círculo de Excelencia -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+              <div class="rounded-2xl overflow-hidden shadow-2xl group">
+                <img src="/Talleres/circulo-excelencia.jpg" alt="Círculo de Excelencia"
+                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800'" />
+              </div>
+            </div>
+            <div class="order-1 md:order-2 space-y-4">
+              <span class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-4 py-2 rounded-full text-sm">ACADÉMICO</span>
+              <h3 class="text-4xl font-bold text-colegio-blue">Círculo de Excelencia</h3>
+              <p class="text-gray-700 text-lg leading-relaxed">
+                Programa de alto rendimiento académico orientado a potenciar a los estudiantes más destacados, preparándolos para competencias nacionales e internacionales con metodologías avanzadas.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Metodología de aprendizaje acelerado y profundo</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Preparación para olimpiadas y concursos nacionales</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Mentoría personalizada con docentes especializados</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Preparación Internacional Cambridge -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+              <span class="inline-block bg-colegio-blue text-white font-bold px-4 py-2 rounded-full text-sm">ACADÉMICO</span>
+              <h3 class="text-4xl font-bold text-colegio-blue">Preparación Internacional Cambridge</h3>
+              <p class="text-gray-700 text-lg leading-relaxed">
+                Programa intensivo de preparación para las certificaciones Cambridge de inglés, con estándares internacionales que abren puertas a universidades y oportunidades profesionales en todo el mundo.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Preparación para exámenes Movers (A1), KET (A2) y PET (B1)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Convenio con Universidad César Vallejo (UCV)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Certificación de reconocimiento mundial</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="rounded-2xl overflow-hidden shadow-2xl group">
+                <img src="/Talleres/cambridge.jpg" alt="Preparación Internacional Cambridge"
+                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800'" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTÍSTICOS ── -->
+    <section data-talleres-section="artisticos" class="hidden py-16 bg-gradient-to-br from-gray-50 to-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-colegio-blue mb-3">Talleres Artísticos</h2>
+          <div class="w-24 h-1 bg-colegio-yellow mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Espacios de expresión creativa donde nuestros estudiantes descubren y desarrollan su talento artístico, cultivando la sensibilidad, la creatividad y el amor por el arte.
+          </p>
+        </div>
+        <div class="space-y-24">
+
+          <!-- Danza -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+              <div class="rounded-2xl overflow-hidden shadow-2xl group">
+                <img src="/Talleres/danza.jpg" alt="Taller de Danza"
+                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?auto=format&fit=crop&q=80&w=800'" />
+              </div>
+            </div>
+            <div class="order-1 md:order-2 space-y-4">
+              <span class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-4 py-2 rounded-full text-sm">ARTÍSTICO</span>
+              <h3 class="text-4xl font-bold text-colegio-blue">Danza</h3>
+              <p class="text-gray-700 text-lg leading-relaxed">
+                Preservación y difusión del patrimonio cultural peruano mediante el aprendizaje de danzas tradicionales y contemporáneas, fomentando la identidad nacional y la expresión corporal.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Fortalecimiento de la identidad cultural peruana</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Desarrollo de coordinación motriz y expresión corporal</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Representación en eventos institucionales y culturales</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Música -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+              <span class="inline-block bg-colegio-blue text-white font-bold px-4 py-2 rounded-full text-sm">ARTÍSTICO</span>
+              <h3 class="text-4xl font-bold text-colegio-blue">Música</h3>
+              <p class="text-gray-700 text-lg leading-relaxed">
+                Formación musical integral que desarrolla la sensibilidad artística, el trabajo en equipo y la expresión emocional mediante el aprendizaje de instrumentos, técnica vocal y teoría musical.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                   <span class="text-gray-700">Estimulación de la creatividad y expresión artística</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                   <span class="text-gray-700">Fortalecimiento de la confianza y autoestima</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                   <span class="text-gray-700">Participación en eventos culturales y presentaciones</span>
                 </li>
               </ul>
             </div>
-            <div class="order-2">
+            <div>
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
-                <img 
-                  src="/Talleres/musica.jpg" 
-                  alt="Taller de Música y Coro"
+                <img src="/Talleres/musica.jpg" alt="Taller de Música"
                   class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
-                  onerror="this.src='https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&q=80&w=800'"
-                />
+                  onerror="this.src='https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
           </div>
 
-          <!-- Taller de Danza Folclórica -->
+          <!-- Dibujo y Pintura -->
           <div class="grid md:grid-cols-2 gap-8 items-center">
             <div class="order-2 md:order-1">
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
-                <img 
-                  src="/Talleres/danza.jpg" 
-                  alt="Taller de Danza Folclórica"
+                <img src="/Talleres/dibujo.jpg" alt="Taller de Dibujo y Pintura"
                   class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
-                  onerror="this.src='https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?auto=format&fit=crop&q=80&w=800'"
-                />
+                  onerror="this.src='https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
             <div class="order-1 md:order-2 space-y-4">
-              <span class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-4 py-2 rounded-full text-sm">
-                ARTE
-              </span>
-              <h3 class="text-4xl font-bold text-colegio-blue">Danza Folclórica</h3>
+              <span class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-4 py-2 rounded-full text-sm">ARTÍSTICO</span>
+              <h3 class="text-4xl font-bold text-colegio-blue">Dibujo y Pintura</h3>
               <p class="text-gray-700 text-lg leading-relaxed">
-                Preservación del patrimonio cultural peruano mediante el aprendizaje de danzas tradicionales, 
-                fomentando la identidad nacional, el trabajo en equipo y la disciplina artística.
+                Exploración de las artes plásticas mediante técnicas de dibujo y pintura que desarrollan la percepción visual, la creatividad y la capacidad de expresar ideas y emociones a través del arte.
               </p>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-gray-700">Fortalecimiento de la identidad cultural peruana</span>
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Desarrollo de la percepción visual y creatividad</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-gray-700">Desarrollo de coordinación motriz y expresión corporal</span>
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Aprendizaje de técnicas de acuarela, acrílico y lápiz</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-gray-700">Representación institucional en eventos culturales</span>
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Participación en exposiciones artísticas institucionales</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <!-- Taller de Fútbol -->
-          <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="space-y-4">
-              <span class="inline-block bg-colegio-blue text-white font-bold px-4 py-2 rounded-full text-sm">
-                DEPORTE
-              </span>
-              <h3 class="text-4xl font-bold text-colegio-blue">Fútbol</h3>
-              <p class="text-gray-700 text-lg leading-relaxed">
-                Formación deportiva integral que promueve valores como el trabajo en equipo, la disciplina y el espíritu competitivo, 
-                desarrollando habilidades técnicas y tácticas del deporte más popular del país.
-              </p>
-              <ul class="space-y-3">
-                <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-gray-700">Desarrollo físico y hábitos de vida saludable</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-gray-700">Formación de valores deportivos y compañerismo</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-gray-700">Participación en campeonatos interescolares</span>
-                </li>
-              </ul>
-            </div>
-            <div class="order-2">
-              <div class="rounded-2xl overflow-hidden shadow-2xl group">
-                <img 
-                  src="/Talleres/futbol.jpg" 
-                  alt="Taller de Fútbol"
-                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
-                  onerror="this.src='https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80&w=800'"
-                />
-              </div>
-            </div>
-          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Taller de Voleibol -->
+    <!-- ── DEPORTIVOS ── -->
+    <section data-talleres-section="deportivos" class="hidden py-16 bg-gradient-to-br from-gray-50 to-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-colegio-blue mb-3">Talleres Deportivos</h2>
+          <div class="w-24 h-1 bg-colegio-yellow mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Programas deportivos que forjan el carácter, la disciplina y el trabajo en equipo, promoviendo hábitos de vida saludable y el espíritu competitivo en nuestros estudiantes.
+          </p>
+        </div>
+        <div class="space-y-24">
+
+          <!-- Ajedrez -->
           <div class="grid md:grid-cols-2 gap-8 items-center">
             <div class="order-2 md:order-1">
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
-                <img 
-                  src="/Talleres/voleibol.jpg" 
-                  alt="Taller de Voleibol"
+                <img src="/Talleres/ajedrez.jpg" alt="Taller de Ajedrez"
                   class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
-                  onerror="this.src='https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&q=80&w=800'"
-                />
+                  onerror="this.src='https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
             <div class="order-1 md:order-2 space-y-4">
-              <span class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-4 py-2 rounded-full text-sm">
-                DEPORTE
-              </span>
-              <h3 class="text-4xl font-bold text-colegio-blue">Voleibol</h3>
-              <p class="text-gray-700 text-lg leading-relaxed">
-                Desarrollo de habilidades deportivas específicas mediante la práctica sistemática del voleibol, 
-                fomentando el trabajo coordinado, la comunicación efectiva y el espíritu de superación constante.
-              </p>
-              <ul class="space-y-3">
-                <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-gray-700">Mejora de coordinación y agilidad física</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-gray-700">Fortalecimiento de habilidades de comunicación</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-gray-700">Competencias deportivas a nivel regional</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Taller de Ajedrez -->
-          <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="space-y-4">
-              <span class="inline-block bg-colegio-blue text-white font-bold px-4 py-2 rounded-full text-sm">
-                DEPORTE
-              </span>
+              <span class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-4 py-2 rounded-full text-sm">DEPORTIVO</span>
               <h3 class="text-4xl font-bold text-colegio-blue">Ajedrez</h3>
               <p class="text-gray-700 text-lg leading-relaxed">
-                Estimulación del razonamiento estratégico, la concentración y la toma de decisiones mediante el aprendizaje 
-                sistemático del ajedrez, reconocido como deporte ciencia que potencia las capacidades cognitivas.
+                Estimulación del razonamiento estratégico, la concentración y la toma de decisiones mediante el aprendizaje sistemático del ajedrez, reconocido como deporte ciencia que potencia las capacidades cognitivas.
               </p>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                   <span class="text-gray-700">Desarrollo de pensamiento estratégico y analítico</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                   <span class="text-gray-700">Mejora de concentración y memoria</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                   <span class="text-gray-700">Participación en torneos escolares y regionales</span>
                 </li>
               </ul>
             </div>
-            <div class="order-2">
+          </div>
+
+          <!-- Vóley -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+              <span class="inline-block bg-colegio-blue text-white font-bold px-4 py-2 rounded-full text-sm">DEPORTIVO</span>
+              <h3 class="text-4xl font-bold text-colegio-blue">Vóley</h3>
+              <p class="text-gray-700 text-lg leading-relaxed">
+                Desarrollo de habilidades deportivas específicas mediante la práctica sistemática del vóley, fomentando el trabajo coordinado, la comunicación efectiva y el espíritu de superación constante.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Mejora de coordinación y agilidad física</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Fortalecimiento del trabajo en equipo y comunicación</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Competencias deportivas a nivel regional</span>
+                </li>
+              </ul>
+            </div>
+            <div>
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
-                <img 
-                  src="/Talleres/ajedrez.jpg" 
-                  alt="Taller de Ajedrez"
+                <img src="/Talleres/voleibol.jpg" alt="Taller de Vóley"
                   class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
-                  onerror="this.src='https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=800'"
-                />
+                  onerror="this.src='https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&q=80&w=800'" />
               </div>
+            </div>
+          </div>
+
+          <!-- Fútbol -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+              <div class="rounded-2xl overflow-hidden shadow-2xl group">
+                <img src="/Talleres/futbol.jpg" alt="Taller de Fútbol"
+                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80&w=800'" />
+              </div>
+            </div>
+            <div class="order-1 md:order-2 space-y-4">
+              <span class="inline-block bg-colegio-yellow text-colegio-blue font-bold px-4 py-2 rounded-full text-sm">DEPORTIVO</span>
+              <h3 class="text-4xl font-bold text-colegio-blue">Fútbol</h3>
+              <p class="text-gray-700 text-lg leading-relaxed">
+                Formación deportiva integral que promueve valores como el trabajo en equipo, la disciplina y el espíritu competitivo, desarrollando habilidades técnicas y tácticas del deporte más popular del país.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Desarrollo físico y hábitos de vida saludable</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Formación de valores deportivos y compañerismo</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-colegio-yellow flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span class="text-gray-700">Participación en campeonatos interescolares</span>
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -356,3 +450,41 @@ import Layout from '../layouts/Layout.astro';
 
   </main>
 </Layout>
+
+<script>
+  const botones = document.querySelectorAll('.talleres-btn');
+  const secciones = document.querySelectorAll('[data-talleres-section]');
+
+  function mostrarSeccion(seccion: string) {
+    secciones.forEach(s => {
+      const el = s as HTMLElement;
+      if (el.dataset.talleresSection === seccion) {
+        el.classList.remove('hidden');
+        el.style.opacity = '0';
+        requestAnimationFrame(() => { el.style.opacity = '1'; });
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+  }
+
+  botones.forEach(btn => {
+    btn.addEventListener('click', () => {
+      botones.forEach(b => {
+        b.classList.remove('active', 'bg-colegio-yellow');
+        b.classList.add('bg-white');
+      });
+      btn.classList.add('active', 'bg-colegio-yellow');
+      btn.classList.remove('bg-white');
+      const sec = (btn as HTMLElement).dataset.seccion;
+      if (sec) mostrarSeccion(sec);
+    });
+  });
+
+  mostrarSeccion('academicos');
+</script>
+
+<style>
+  img { transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+  [data-talleres-section] { transition: opacity 0.25s ease; }
+</style>

@@ -17,8 +17,17 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
+    <!-- Filtros de categoría -->
+    <section class="py-10 bg-white sticky top-16 z-40 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-3">
+        <button class="logros-btn active bg-colegio-yellow text-colegio-blue font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105" data-seccion="academicos">🎓 Académicos</button>
+        <button class="logros-btn bg-white border-2 border-colegio-blue/20 hover:bg-colegio-yellow text-colegio-blue font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105" data-seccion="universidades">🏫 Universidades</button>
+        <button class="logros-btn bg-white border-2 border-colegio-blue/20 hover:bg-colegio-yellow text-colegio-blue font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105" data-seccion="estandares">⭐ Estándares</button>
+      </div>
+    </section>
+
     <!-- Logros Académicos -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
+    <section data-logros-section="academicos" class="py-16 bg-gradient-to-br from-gray-50 to-white">
       <div class="max-w-7xl mx-auto px-4">
         <!-- Introducción -->
         <div class="text-center mb-16">
@@ -302,7 +311,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- Ingresantes a Universidades - Sección Destacada -->
-    <section class="py-20 bg-gradient-to-br from-colegio-blue to-blue-900 text-white">
+    <section data-logros-section="universidades" class="hidden py-20 bg-gradient-to-br from-colegio-blue to-blue-900 text-white">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-16">
           <div class="w-24 h-24 bg-colegio-yellow rounded-full flex items-center justify-center mx-auto mb-8">
@@ -388,12 +397,12 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- Certificaciones Académicas Internacionales -->
-    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <!-- Estándares Académicos Internacionales -->
+    <section data-logros-section="estandares" class="hidden py-20 bg-gradient-to-br from-gray-50 to-white">
       <div class="max-w-7xl mx-auto px-4">
         <!-- Introducción -->
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-colegio-blue mb-3">CERTIFICACIONES Académicas Internacionales</h2>
+          <h2 class="text-4xl font-bold text-colegio-blue mb-3">Estándares Académicos Internacionales</h2>
           <div class="w-24 h-1 bg-colegio-yellow mx-auto mb-6"></div>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Brindamos a nuestros estudiantes certificaciones de reconocimiento internacional que 
@@ -625,4 +634,41 @@ import Layout from '../layouts/Layout.astro';
   img {
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
+  [data-logros-section] {
+    transition: opacity 0.25s ease;
+  }
 </style>
+
+<script>
+  const botones = document.querySelectorAll('.logros-btn');
+  const secciones = document.querySelectorAll('[data-logros-section]');
+
+  function mostrarSeccion(seccion: string) {
+    secciones.forEach(s => {
+      const el = s as HTMLElement;
+      if (el.dataset.logrosSection === seccion) {
+        el.classList.remove('hidden');
+        el.style.opacity = '0';
+        requestAnimationFrame(() => { el.style.opacity = '1'; });
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+  }
+
+  botones.forEach(btn => {
+    btn.addEventListener('click', () => {
+      botones.forEach(b => {
+        b.classList.remove('active', 'bg-colegio-yellow');
+        b.classList.add('bg-white');
+      });
+      btn.classList.add('active', 'bg-colegio-yellow');
+      btn.classList.remove('bg-white');
+      const sec = (btn as HTMLElement).dataset.seccion;
+      if (sec) mostrarSeccion(sec);
+    });
+  });
+
+  // Mostrar académicos por defecto
+  mostrarSeccion('academicos');
+</script>
