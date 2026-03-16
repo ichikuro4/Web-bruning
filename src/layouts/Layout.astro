@@ -15,7 +15,7 @@ interface Props {
 const {
 	title,
 	description = 'Brüning School – Educación de excelencia en Trujillo, Perú. Formamos líderes con valores, visión global y certificaciones internacionales.',
-	ogImage = '/PORTADA.webp',
+	ogImage = '/portada.webp',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -56,8 +56,8 @@ const ogImageURL = new URL(ogImage, Astro.site);
 			"name": "Brüning School",
 			"alternateName": "Bruning School",
 			"url": "https://bruningschool.edu.pe",
-			"logo": "https://bruningschool.edu.pe/LOGO BLANCO.webp",
-			"image": "https://bruningschool.edu.pe/PORTADA.webp",
+			"logo": "https://bruningschool.edu.pe/logo-blanco.webp",
+			"image": "https://bruningschool.edu.pe/portada.webp",
 			"description": "Institución educativa privada de excelencia en Trujillo, Perú. Niveles Primaria y Secundaria con certificaciones Cambridge e IBEC.",
 			"address": {
 				"@type": "PostalAddress",
