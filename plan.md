@@ -4,6 +4,7 @@
 - La normalización de nombres para hosting Linux ya quedó aplicada.
 - Ahora el foco es responsive y UX móvil.
 - **Decisión vigente:** Fase 1 (assets faltantes) queda pospuesta temporalmente; se mantiene `onerror` como fallback hasta completar el banco final de imágenes.
+- **Avance:** Fase 2 completada (fallback visual móvil en secciones críticas), Fase 3 completada (sticky offset + carruseles táctiles) y Fase 4 completada (escala móvil de títulos + textos y reducción de alturas rígidas clave).
 
 ## Hallazgos del análisis
 1. **Imágenes/medios faltantes (impacto alto):**
@@ -55,3 +56,6 @@
 - Carruseles navegables por touch con feedback claro.
 - Sin scroll horizontal no intencional.
 - Build de producción en verde.
+
+## Próximo paso sugerido
+- Ejecutar Fase 5 de QA responsive completo y ajuste fino final por página.

@@ -97,7 +97,7 @@ const slideDurations = slides.map(s => s.duration ?? autoplayInterval);
 
   <!-- Navigation Arrows -->
   <button 
-    class="carousel-btn prev absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110 group"
+    class="carousel-btn prev touch-manipulation absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110 group"
     aria-label="Anterior"
   >
     <svg class="w-6 h-6 text-white group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,7 +106,7 @@ const slideDurations = slides.map(s => s.duration ?? autoplayInterval);
   </button>
 
   <button 
-    class="carousel-btn next absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110 group"
+    class="carousel-btn next touch-manipulation absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110 group"
     aria-label="Siguiente"
   >
     <svg class="w-6 h-6 text-white group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,13 +149,11 @@ const slideDurations = slides.map(s => s.duration ?? autoplayInterval);
   .animate-slide-up-delay { animation: slideUp 0.8s ease-out 0.2s backwards; }
   .animate-slide-up-delay-2 { animation: slideUp 0.8s ease-out 0.4s backwards; }
 
-  .carousel-btn {
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .hero-carousel:hover .carousel-btn {
-    opacity: 1;
+  .carousel-btn { opacity: 1; transition: opacity 0.3s; }
+  .hero-carousel:focus-within .carousel-btn { opacity: 1; }
+  @media (hover: hover) and (pointer: fine) {
+    .carousel-btn { opacity: 0; }
+    .hero-carousel:hover .carousel-btn { opacity: 1; }
   }
 </style>
 

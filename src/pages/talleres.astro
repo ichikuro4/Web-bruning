@@ -8,17 +8,17 @@ import Layout from '../layouts/Layout.astro';
     <!-- Hero Section -->
     <section class="bg-gradient-to-br from-colegio-blue via-colegio-blue/90 to-colegio-blue text-white py-20">
       <div class="max-w-7xl mx-auto px-4 text-center">
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-6">
           Nuestros <span class="text-colegio-yellow">Talleres</span>
         </h1>
-        <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+        <p class="text-base sm:text-lg md:text-2xl text-white/90 max-w-3xl mx-auto">
           Espacios de formación integral que complementan la excelencia académica y potencian las habilidades de nuestros estudiantes
         </p>
       </div>
     </section>
 
     <!-- Filtros de categoría -->
-    <section class="py-10 bg-white sticky top-16 z-40 shadow-sm">
+    <section class="py-10 bg-white sticky top-[80px] md:top-[88px] lg:top-[96px] z-40 shadow-sm">
       <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-3">
         <button class="talleres-btn active bg-colegio-yellow text-colegio-blue font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105" data-seccion="academicos">📚 Académicos</button>
         <button class="talleres-btn bg-white border-2 border-colegio-blue/20 hover:bg-colegio-yellow text-colegio-blue font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105" data-seccion="artisticos">🎨 Artísticos</button>
@@ -32,7 +32,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-colegio-blue mb-3">Talleres Académicos</h2>
           <div class="w-24 h-1 bg-colegio-yellow mx-auto mb-6"></div>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Espacios de enriquecimiento intelectual que refuerzan y amplían las competencias académicas de nuestros estudiantes, preparándolos para los más altos estándares educativos.
           </p>
         </div>
@@ -43,7 +43,7 @@ import Layout from '../layouts/Layout.astro';
             <div class="order-2 md:order-1">
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
                 <img src="/talleres/frances.jpg" alt="Taller de Francés"
-                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-[260px] sm:h-[320px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
                   onerror="this.src='https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
@@ -68,7 +68,7 @@ import Layout from '../layouts/Layout.astro';
             <div>
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
                 <img src="/talleres/oratorio.jpg" alt="Taller de Oratorio y Declamación"
-                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-[260px] sm:h-[320px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
                   onerror="this.src='https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
@@ -79,7 +79,7 @@ import Layout from '../layouts/Layout.astro';
             <div class="order-2 md:order-1">
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
                 <img src="/talleres/circulo-excelencia.jpg" alt="Círculo de Excelencia"
-                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-[260px] sm:h-[320px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
                   onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
@@ -104,7 +104,7 @@ import Layout from '../layouts/Layout.astro';
             <div>
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
                 <img src="/talleres/cambridge.jpg" alt="Preparación Internacional Cambridge"
-                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-[260px] sm:h-[320px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
                   onerror="this.src='https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
@@ -120,7 +120,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-colegio-blue mb-3">Talleres Artísticos</h2>
           <div class="w-24 h-1 bg-colegio-yellow mx-auto mb-6"></div>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Espacios de expresión creativa donde nuestros estudiantes descubren y desarrollan su talento artístico, cultivando la sensibilidad, la creatividad y el amor por el arte.
           </p>
         </div>
@@ -131,7 +131,7 @@ import Layout from '../layouts/Layout.astro';
             <div class="order-2 md:order-1">
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
                 <img src="/talleres/danza.jpg" alt="Taller de Danza"
-                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-[260px] sm:h-[320px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
                   onerror="this.src='https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
@@ -156,7 +156,7 @@ import Layout from '../layouts/Layout.astro';
             <div>
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
                 <img src="/talleres/musica.jpg" alt="Taller de Música"
-                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-[260px] sm:h-[320px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
                   onerror="this.src='https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
@@ -167,7 +167,7 @@ import Layout from '../layouts/Layout.astro';
             <div class="order-2 md:order-1">
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
                 <img src="/talleres/dibujo.jpg" alt="Taller de Dibujo y Pintura"
-                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-[260px] sm:h-[320px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
                   onerror="this.src='https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
@@ -190,7 +190,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-colegio-blue mb-3">Talleres Deportivos</h2>
           <div class="w-24 h-1 bg-colegio-yellow mx-auto mb-6"></div>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Programas deportivos que forjan el carácter, la disciplina y el trabajo en equipo, promoviendo hábitos de vida saludable y el espíritu competitivo en nuestros estudiantes.
           </p>
         </div>
@@ -201,7 +201,7 @@ import Layout from '../layouts/Layout.astro';
             <div class="order-2 md:order-1">
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
                 <img src="/talleres/ajedrez.jpg" alt="Taller de Ajedrez"
-                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-[260px] sm:h-[320px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
                   onerror="this.src='https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
@@ -226,7 +226,7 @@ import Layout from '../layouts/Layout.astro';
             <div>
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
                 <img src="/talleres/voleibol.jpg" alt="Taller de Vóley"
-                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-[260px] sm:h-[320px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
                   onerror="this.src='https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
@@ -237,7 +237,7 @@ import Layout from '../layouts/Layout.astro';
             <div class="order-2 md:order-1">
               <div class="rounded-2xl overflow-hidden shadow-2xl group">
                 <img src="/talleres/futbol.jpg" alt="Taller de Fútbol"
-                  class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-[260px] sm:h-[320px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
                   onerror="this.src='https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80&w=800'" />
               </div>
             </div>
