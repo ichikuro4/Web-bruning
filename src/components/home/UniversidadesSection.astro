@@ -13,36 +13,38 @@
     </div>
 
     <div class="relative max-w-6xl mx-auto px-4">
-      <div class="flex items-center justify-center gap-4 md:gap-8 perspective-1000">
-        <div id="universidad-left" class="hidden md:block cursor-pointer transform scale-75 opacity-50 hover:opacity-75 transition-all duration-300 hover:scale-80">
-          <div class="bg-white rounded-2xl shadow-xl p-4 w-40 flex items-center justify-center">
-            <img src="" alt="" class="max-w-full h-auto object-contain" />
+      <div class="relative">
+        <div class="flex items-center justify-center gap-4 md:gap-8 perspective-1000">
+          <div id="universidad-left" class="hidden md:block cursor-pointer transform scale-75 opacity-50 hover:opacity-75 transition-all duration-300 hover:scale-80">
+            <div class="bg-white rounded-2xl shadow-xl p-4 w-40 flex items-center justify-center">
+              <img src="" alt="" class="max-w-full h-auto object-contain" />
+            </div>
+          </div>
+
+          <div id="universidad-center" class="transform scale-100 z-10">
+            <div class="bg-white rounded-3xl shadow-lg p-8 w-64 md:w-80 flex items-center justify-center">
+              <img src="" alt="" class="max-w-full h-auto object-contain" />
+            </div>
+          </div>
+
+          <div id="universidad-right" class="hidden md:block cursor-pointer transform scale-75 opacity-50 hover:opacity-75 transition-all duration-300 hover:scale-80">
+            <div class="bg-white rounded-2xl shadow-xl p-4 w-40 flex items-center justify-center">
+              <img src="" alt="" class="max-w-full h-auto object-contain" />
+            </div>
           </div>
         </div>
 
-        <div id="universidad-center" class="transform scale-100 z-10">
-          <div class="bg-white rounded-3xl shadow-lg p-8 w-64 md:w-80 flex items-center justify-center">
-            <img src="" alt="" class="max-w-full h-auto object-contain" />
-          </div>
-        </div>
-
-        <div id="universidad-right" class="hidden md:block cursor-pointer transform scale-75 opacity-50 hover:opacity-75 transition-all duration-300 hover:scale-80">
-          <div class="bg-white rounded-2xl shadow-xl p-4 w-40 flex items-center justify-center">
-            <img src="" alt="" class="max-w-full h-auto object-contain" />
-          </div>
-        </div>
+        <button id="prev-universidad" class="absolute left-0 md:left-4 top-1/2 -translate-y-1/2 bg-colegio-yellow hover:bg-white text-white hover:text-colegio-blue p-4 rounded-full shadow-xl transition-all duration-300 z-20 hover:scale-110">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <button id="next-universidad" class="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 bg-colegio-yellow hover:bg-white text-white hover:text-colegio-blue p-4 rounded-full shadow-xl transition-all duration-300 z-20 hover:scale-110">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
       </div>
-
-      <button id="prev-universidad" class="absolute left-0 md:left-4 top-1/2 -translate-y-1/2 bg-colegio-yellow hover:bg-white text-white hover:text-colegio-blue p-4 rounded-full shadow-xl transition-all duration-300 z-20 hover:scale-110">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path>
-        </svg>
-      </button>
-      <button id="next-universidad" class="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 bg-colegio-yellow hover:bg-white text-white hover:text-colegio-blue p-4 rounded-full shadow-xl transition-all duration-300 z-20 hover:scale-110">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </button>
 
       <div class="flex justify-center gap-3 mt-12">
         <button class="universidad-dot w-3 h-3 rounded-full bg-colegio-yellow transition-all duration-300" data-index="0"></button>
