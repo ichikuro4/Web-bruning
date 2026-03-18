@@ -27,7 +27,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- ── ACADÉMICOS ── -->
-    <section id="academicos" data-talleres-section="academicos" class="py-16 bg-gradient-to-br from-gray-50 to-white">
+    <section data-talleres-section="academicos" class="py-16 bg-gradient-to-br from-gray-50 to-white">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-colegio-blue mb-3">Talleres Académicos</h2>
@@ -115,7 +115,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- ── ARTÍSTICOS ── -->
-    <section id="artisticos" data-talleres-section="artisticos" class="hidden py-16 bg-gradient-to-br from-gray-50 to-white">
+    <section data-talleres-section="artisticos" class="hidden py-16 bg-gradient-to-br from-gray-50 to-white">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-colegio-blue mb-3">Talleres Artísticos</h2>
@@ -185,7 +185,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- ── DEPORTIVOS ── -->
-    <section id="deportivos" data-talleres-section="deportivos" class="hidden py-16 bg-gradient-to-br from-gray-50 to-white">
+    <section data-talleres-section="deportivos" class="hidden py-16 bg-gradient-to-br from-gray-50 to-white">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-colegio-blue mb-3">Talleres Deportivos</h2>
@@ -364,6 +364,7 @@ import Layout from '../layouts/Layout.astro';
 
   window.addEventListener('hashchange', () => {
     activarSeccion(obtenerSeccionDesdeHash());
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   activarSeccion(obtenerSeccionDesdeHash());
