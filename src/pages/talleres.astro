@@ -27,7 +27,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- ── ACADÉMICOS ── -->
-    <section data-talleres-section="academicos" class="py-16 bg-gradient-to-br from-gray-50 to-white">
+    <section id="academicos" data-talleres-section="academicos" class="py-16 bg-gradient-to-br from-gray-50 to-white">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-colegio-blue mb-3">Talleres Académicos</h2>
@@ -115,7 +115,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- ── ARTÍSTICOS ── -->
-    <section data-talleres-section="artisticos" class="hidden py-16 bg-gradient-to-br from-gray-50 to-white">
+    <section id="artisticos" data-talleres-section="artisticos" class="hidden py-16 bg-gradient-to-br from-gray-50 to-white">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-colegio-blue mb-3">Talleres Artísticos</h2>
@@ -185,7 +185,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- ── DEPORTIVOS ── -->
-    <section data-talleres-section="deportivos" class="hidden py-16 bg-gradient-to-br from-gray-50 to-white">
+    <section id="deportivos" data-talleres-section="deportivos" class="hidden py-16 bg-gradient-to-br from-gray-50 to-white">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-colegio-blue mb-3">Talleres Deportivos</h2>
@@ -314,6 +314,8 @@ import Layout from '../layouts/Layout.astro';
 <script>
   const botones = document.querySelectorAll('.talleres-btn');
   const secciones = document.querySelectorAll('[data-talleres-section]');
+  const seccionesValidas = new Set(['academicos', 'artisticos', 'deportivos']);
+  const seccionPorDefecto = 'academicos';
 
   function mostrarSeccion(seccion: string) {
     secciones.forEach(s => {
@@ -328,20 +330,43 @@ import Layout from '../layouts/Layout.astro';
     });
   }
 
+  function actualizarBotonActivo(seccion: string) {
+    botones.forEach(btn => {
+      const boton = btn as HTMLElement;
+      const esActivo = boton.dataset.seccion === seccion;
+      boton.classList.toggle('active', esActivo);
+      boton.classList.toggle('bg-colegio-yellow', esActivo);
+      boton.classList.toggle('bg-white', !esActivo);
+    });
+  }
+
+  function obtenerSeccionDesdeHash() {
+    const hash = window.location.hash.replace('#', '').toLowerCase();
+    return seccionesValidas.has(hash) ? hash : seccionPorDefecto;
+  }
+
+  function activarSeccion(seccion: string, actualizarHash = false) {
+    mostrarSeccion(seccion);
+    actualizarBotonActivo(seccion);
+    if (actualizarHash) {
+      history.replaceState(null, '', `#${seccion}`);
+    }
+  }
+
   botones.forEach(btn => {
     btn.addEventListener('click', () => {
-      botones.forEach(b => {
-        b.classList.remove('active', 'bg-colegio-yellow');
-        b.classList.add('bg-white');
-      });
-      btn.classList.add('active', 'bg-colegio-yellow');
-      btn.classList.remove('bg-white');
       const sec = (btn as HTMLElement).dataset.seccion;
-      if (sec) mostrarSeccion(sec);
+      if (sec && seccionesValidas.has(sec)) {
+        activarSeccion(sec, true);
+      }
     });
   });
 
-  mostrarSeccion('academicos');
+  window.addEventListener('hashchange', () => {
+    activarSeccion(obtenerSeccionDesdeHash());
+  });
+
+  activarSeccion(obtenerSeccionDesdeHash());
 </script>
 
 <style>
