@@ -20,17 +20,38 @@
             <div class="grid grid-cols-3 gap-6 px-4">
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                 <div class="relative h-[280px] sm:h-[360px] md:h-[450px]">
-                  <iframe src="https://player.vimeo.com/video/1158487706?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonio 1"></iframe>
+                  <video
+                    class="absolute top-0 left-0 w-full h-full object-cover"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    title="Testimonio 1"
+                    src="/testimonios/TESTIMONIO-1.mp4"
+                  ></video>
                 </div>
               </div>
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                 <div class="relative h-[280px] sm:h-[360px] md:h-[450px]">
-                  <iframe src="https://player.vimeo.com/video/1158488197?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonio 2"></iframe>
+                  <video
+                    class="absolute top-0 left-0 w-full h-full object-cover"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    title="Testimonio 2"
+                    src="/testimonios/TESTIMONIO-1.mp4"
+                  ></video>
                 </div>
               </div>
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                 <div class="relative h-[280px] sm:h-[360px] md:h-[450px]">
-                  <iframe src="https://player.vimeo.com/video/1158487706?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonio 3"></iframe>
+                  <video
+                    class="absolute top-0 left-0 w-full h-full object-cover"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    title="Testimonio 3"
+                    src="/testimonios/TESTIMONIO-1.mp4"
+                  ></video>
                 </div>
               </div>
             </div>
@@ -40,30 +61,55 @@
             <div class="grid grid-cols-3 gap-6 px-4">
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                 <div class="relative h-[280px] sm:h-[360px] md:h-[450px]">
-                  <iframe src="https://player.vimeo.com/video/1158488197?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonio 4"></iframe>
+                  <video
+                    class="absolute top-0 left-0 w-full h-full object-cover"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    title="Testimonio 4"
+                    src="/testimonios/TESTIMONIO-1.mp4"
+                  ></video>
                 </div>
               </div>
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                 <div class="relative h-[280px] sm:h-[360px] md:h-[450px]">
-                  <iframe src="https://player.vimeo.com/video/1158487706?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonio 5"></iframe>
+                  <video
+                    class="absolute top-0 left-0 w-full h-full object-cover"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    title="Testimonio 5"
+                    src="/testimonios/TESTIMONIO-1.mp4"
+                  ></video>
                 </div>
               </div>
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                 <div class="relative h-[280px] sm:h-[360px] md:h-[450px]">
-                  <iframe src="https://player.vimeo.com/video/1158488197?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Testimonio 6"></iframe>
+                  <video
+                    class="absolute top-0 left-0 w-full h-full object-cover"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    title="Testimonio 6"
+                    src="/testimonios/TESTIMONIO-1.mp4"
+                  ></video>
                 </div>
               </div>
             </div>
           </div>
           <!-- Móvil: videos individuales -->
-          {[
-            { id: '1158487706', n: 1 }, { id: '1158488197', n: 2 }, { id: '1158487706', n: 3 },
-            { id: '1158488197', n: 4 }, { id: '1158487706', n: 5 }, { id: '1158488197', n: 6 },
-          ].map(({ id, n }) => (
+          {[1, 2, 3, 4, 5, 6].map((n) => (
             <div class="w-full flex-shrink-0 md:hidden px-4">
               <div class="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                 <div class="relative h-[350px]">
-                  <iframe src={`https://player.vimeo.com/video/${id}?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0`} frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title={`Testimonio ${n}`}></iframe>
+                  <video
+                    class="absolute top-0 left-0 w-full h-full object-cover"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    title={`Testimonio ${n}`}
+                    src="/testimonios/TESTIMONIO-1.mp4"
+                  ></video>
                 </div>
               </div>
             </div>
