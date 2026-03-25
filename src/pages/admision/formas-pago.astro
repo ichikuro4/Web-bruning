@@ -9,11 +9,17 @@ import '../../styles/global.css'
 
     <!-- Contenido Principal - Imagen a ancho completo -->
     <div class="w-full bg-white pt-18 pb-15">
-      <img 
-        src="/admision/metodos-de-pago.jpeg" 
-        alt="Propuesta Educativa Nivel Primaria - BRÜNING SCHOOL"
-        class="w-full h-auto object-cover"
-      />
+      <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset="/admision/metodos-de-pago-vertical.jpeg"
+        />
+        <img 
+          src="/admision/metodos-de-pago.jpeg" 
+          alt="Métodos de pago - BRÜNING SCHOOL"
+          class="w-full h-auto object-cover"
+        />
+      </picture>
     </div>
 </Layout>
 
